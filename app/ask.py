@@ -28,6 +28,13 @@ def ask(question: str) -> str:
     # TODO(Lecture 01 exercise): use response.usage_metadata to
     #   display input and output token counts (you may ask Copilot)
 
+    usage = response.usage_metadata
+
+    if usage is not None:
+        print(f"[tokens input] {usage.prompt_token_count}")
+        print(f"[tokens output] {usage.candidates_token_count}")
+        print(f"[tokens total] {usage.total_token_count}\n")
+
     return response.text
 
 
