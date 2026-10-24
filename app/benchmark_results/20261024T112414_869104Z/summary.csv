@@ -1,0 +1,7 @@
+﻿model,question_id,question,attempted,successful,failed,mean_elapsed_s,median_elapsed_s,mean_input_tokens,samples_input_tokens,mean_output_tokens,samples_output_tokens,mean_thinking_tokens,samples_thinking_tokens,mean_cached_input_tokens,samples_cached_input_tokens,mean_total_tokens,samples_total_tokens
+gemini-3.5-flash-lite,1,What is LoRA? Answer in one sentence.,3,3,0,4.04301036666656,4.108523199999809,11,3,39.666666666666664,3,,0,,0,50.666666666666664,3
+gemini-3.8-flash,1,What is LoRA? Answer in one sentence.,3,1,2,65.84411360000001,65.84411360000001,11,1,47,1,450,1,,0,508,1
+gemini-3.5-flash-lite,2,Compare LoRA with full fine-tuning. Answer in at most 200 words.,3,3,0,4.007217066666764,4.118408900000077,20,3,242.33333333333334,3,,0,,0,262.3333333333333,3
+gemini-3.8-flash,2,Compare LoRA with full fine-tuning. Answer in at most 200 words.,3,2,1,65.60512080000001,65.60512080000001,20,2,241,2,528.5,2,,0,789.5,2
+gemini-3.5-flash-lite,3,What are the 3 homework levels in the AIE2026 course?,3,3,0,3.4155873999999735,4.524134399999866,18,3,128,3,,0,,0,146,3
+gemini-3.8-flash,3,What are the 3 homework levels in the AIE2026 course?,3,1,2,50.52733069999999,50.52733069999999,18,1,302,1,1475,1,,0,1795,1

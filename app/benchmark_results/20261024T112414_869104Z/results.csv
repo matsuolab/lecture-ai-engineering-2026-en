@@ -1,0 +1,83 @@
+﻿timestamp_utc,model,question_id,question,run,status,http_code,error,elapsed_s,answer,finish_reason,response_model_version,input_tokens,output_tokens,thinking_tokens,cached_input_tokens,total_tokens
+2026-10-24T11:24:14.873758+00:00,gemini-3.5-flash-lite,1,What is LoRA? Answer in one sentence.,1,ok,,,3.2254834999999957,"LoRA (Low-Rank Adaptation) is a training technique that efficiently fine-tunes large machine learning models by freezing their original weights and training only a tiny fraction of added, lower-rank parameter matrices.",STOP,gemini-3.5-flash-lite,11,42,,,53
+2026-10-24T11:24:45.874108+00:00,gemini-3.8-flash,1,What is LoRA? Answer in one sentence.,1,ok,,,65.84411360000001,"**LoRA (Low-Rank Adaptation)** is a parameter-efficient fine-tuning technique that drastically reduces memory and computational costs by freezing a pre-trained model's original weights and only training small, injected low-rank matrices.",STOP,gemini-3.8-flash,11,47,450,,508
+2026-10-24T11:25:51.721242+00:00,gemini-3.5-flash-lite,2,Compare LoRA with full fine-tuning. Answer in at most 200 words.,1,ok,,,2.7638235000000577,"**Full fine-tuning** updates every parameter in a pre-trained model. While it offers maximum adaptability and top-tier performance for specialized tasks, it is computationally expensive, requires massive GPU memory to store gradients and optimizer states, and risks catastrophic forgetting or overfitting on small datasets. It also creates a distinct, bloated copy of the model for every downstream task.
+
+**LoRA (Low-Rank Adaptation)** is a parameter-efficient fine-tuning (PEFT) method. It freezes the original model weights and injects trainable low-rank decomposition matrices into each layer. This reduces the number of trainable parameters by up to 10,000 times and GPU memory requirements by up to three times. LoRA trains nearly as fast as full fine-tuning with virtually no loss in performance. Furthermore, LoRA weights are tiny (megabytes instead of gigabytes), making them easy to swap, store, and deploy dynamically over a single base model. 
+
+In short, full fine-tuning is exhaustive and resource-heavy, whereas LoRA is agile, cost-effective, and modular, making it the industry standard for most modern LLM customization tasks.",STOP,gemini-3.5-flash-lite,20,235,,,255
+2026-10-24T11:26:22.721752+00:00,gemini-3.8-flash,2,Compare LoRA with full fine-tuning. Answer in at most 200 words.,1,ok,,,54.57630859999995,"**Full fine-tuning** updates every parameter in the pre-trained model. 
+* **Pros:** Achieves the highest performance ceiling, especially when adapting to radically new domains or languages.
+* **Cons:** Extremely expensive in compute and VRAM. It risks catastrophic forgetting and requires saving a massive, multi-gigabyte checkpoint for every distinct task.
+
+**LoRA (Low-Rank Adaptation)** freezes the base model’s weights and injects small, trainable low-rank matrices into its layers.
+* **Pros:** Reduces trainable parameters by up to 99%, drastically slashing GPU memory requirements and training time. Adapters are tiny (often megabytes), enabling cost-effective multi-task serving where a single base model dynamically swaps adapters. It also reduces catastrophic forgetting.
+* **Cons:** May marginally underperform full fine-tuning on highly complex or domain-distant tasks.
+
+**Verdict:** Full fine-tuning is reserved for massive domain shifts backed by heavy compute. LoRA is the standard choice for practical, efficient fine-tuning, delivering near-identical performance at a fraction of the cost.",STOP,gemini-3.8-flash,20,226,508,,754
+2026-10-24T11:27:17.300940+00:00,gemini-3.5-flash-lite,3,What are the 3 homework levels in the AIE2026 course?,1,ok,,,0.87452519999988,"I do not have access to specific information about the ""AIE2026 course"" or its curriculum, including the homework levels.",STOP,gemini-3.5-flash-lite,18,28,,,46
+2026-10-24T11:27:48.301394+00:00,gemini-3.8-flash,3,What are the 3 homework levels in the AIE2026 course?,1,error,503,"ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",3.6042363999999907,,,,,,,,
+2026-10-24T11:28:19.302002+00:00,gemini-3.8-flash,1,What is LoRA? Answer in one sentence.,2,error,503,"ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",2.5215473999999176,,,,,,,,
+2026-10-24T11:28:50.302373+00:00,gemini-3.5-flash-lite,1,What is LoRA? Answer in one sentence.,2,ok,,,4.795024399999875,"LoRA (Low-Rank Adaptation) is a training technique that freezes a large language model's original weights and trains a small set of new weights, making customization much faster and more memory-efficient.",STOP,gemini-3.5-flash-lite,11,41,,,52
+2026-10-24T11:29:21.302703+00:00,gemini-3.8-flash,2,Compare LoRA with full fine-tuning. Answer in at most 200 words.,2,error,503,"ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",3.8728607999998985,,,,,,,,
+2026-10-24T11:29:52.303096+00:00,gemini-3.5-flash-lite,2,Compare LoRA with full fine-tuning. Answer in at most 200 words.,2,ok,,,5.139418800000158,"Full fine-tuning updates all model parameters. While highly effective, it is computationally expensive, requiring massive memory (VRAM) to store gradients and optimizer states for every weight, making it impractical for large models.
+
+LoRA (Low-Rank Adaptation) is a parameter-efficient fine-tuning (PEFT) method. Instead of modifying the original weights, LoRA freezes them and injects trainable rank decomposition matrices into each layer. 
+
+**Key Comparisons:**
+*   **Memory & Compute:** Full fine-tuning demands immense VRAM. LoRA drastically reduces trainable parameters (often by 99%), slashing VRAM requirements and enabling fine-tuning of massive models on modest hardware.
+*   **Speed:** LoRA trains much faster per epoch and requires less storage, as base model weights remain untouched and LoRA checkpoints are just a few megabytes.
+*   **Performance:** Full fine-tuning occasionally yields higher accuracy on complex, domain-specific tasks. However, LoRA matches its performance in most scenarios while being vastly more efficient.
+*   **Deployment:** LoRA modules can be swapped easily on top of a single base model, whereas full fine-tuning requires storing entirely separate models for different tasks.",STOP,gemini-3.5-flash-lite,20,247,,,267
+2026-10-24T11:30:23.303580+00:00,gemini-3.8-flash,3,What are the 3 homework levels in the AIE2026 course?,2,ok,,,50.52733069999999,"In AI Engineering (AIE) cohorts (such as the AI Makerspace AI Engineering Bootcamp), assignments are typically tiered into **three homework levels** to accommodate different skill levels and portfolio goals:
+
+1. **Level 1 (Baseline / Core):**
+   * **Focus:** Comprehension and baseline execution.
+   * **Requirements:** Complete the guided notebook or repository walkthrough, fill in the required code blocks/blanks, run the baseline pipelines or models, and answer the core conceptual reflection questions.
+
+2. **Level 2 (Challenge / Intermediate):**
+   * **Focus:** Extension and experimentation.
+   * **Requirements:** Go beyond the baseline implementation by completing designated challenge tasks. This often involves testing alternative models, tweaking hyperparameters/prompt strategies, handling edge cases, or conducting comparative benchmarking/evaluations.
+
+3. **Level 3 (Production / Advanced):**
+   * **Focus:** Deployment, UI, and full-stack integration.
+   * **Requirements:** Turn the assignment into an end-to-end, production-ready project. This typically requires deploying the solution publicly (e.g., using Chainlit, Gradio, Streamlit, or FastAPI on Hugging Face Spaces / AWS / Docker) and documenting it for a professional portfolio.
+
+*(Note: Completing Level 1 is generally required for baseline assignment credit/passing, while Levels 2 and 3 are used to earn honors, certifications, and portfolio-ready artifacts.)*",STOP,gemini-3.8-flash,18,302,1475,,1795
+2026-10-24T11:31:13.834182+00:00,gemini-3.5-flash-lite,3,What are the 3 homework levels in the AIE2026 course?,2,ok,,,4.524134399999866,"I do not have access to specific details about the ""AIE2026 course"" or its homework tiers, as this refers to a specific, potentially private or very recent academic or training program outside of my general training data. 
+
+If you can provide the course syllabus, a link, or some context about what AIE2026 stands for, I would be happy to help you find or summarize the information based on the text provided!",STOP,gemini-3.5-flash-lite,18,92,,,110
+2026-10-24T11:31:44.834584+00:00,gemini-3.5-flash-lite,1,What is LoRA? Answer in one sentence.,3,ok,,,4.108523199999809,LoRA (Low-Rank Adaptation) is a technique that fine-tunes large machine learning models efficiently by freezing the original weights and training only a small number of new parameters.,STOP,gemini-3.5-flash-lite,11,36,,,47
+2026-10-24T11:32:15.835221+00:00,gemini-3.8-flash,1,What is LoRA? Answer in one sentence.,3,error,503,"ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",2.9239324000000124,,,,,,,,
+2026-10-24T11:32:46.835676+00:00,gemini-3.5-flash-lite,2,Compare LoRA with full fine-tuning. Answer in at most 200 words.,3,ok,,,4.118408900000077,"**Full fine-tuning** updates every parameter of a pre-trained model. While it offers maximum adaptability and often higher accuracy, it is computationally expensive, requires massive GPU memory to store optimizer states, and creates a large, separate model file for every downstream task.
+
+**LoRA (Low-Rank Adaptation)** freezes the original model weights and injects trainable low-rank decomposition matrices into each layer. Instead of updating billions of parameters, LoRA optimizes only a tiny fraction (often <1%). 
+
+**Key comparisons:**
+* **Memory & Compute:** LoRA drastically reduces VRAM and training time, enabling fine-tuning on consumer hardware. Full fine-tuning requires enterprise-grade clusters.
+* **Storage:** Full fine-tuning duplicates the entire model per task. LoRA produces lightweight adapters (a few megabytes) that can be hot-swapped over a single base model.
+* **Performance:** Full fine-tuning can edge out LoRA in complex tasks requiring deep structural changes, but LoRA generally matches its performance at a fraction of the cost. 
+
+In summary, LoRA democratizes LLM customization by trading marginal performance gains for massive efficiency in time, memory, and storage.",STOP,gemini-3.5-flash-lite,20,245,,,265
+2026-10-24T11:33:17.835979+00:00,gemini-3.8-flash,2,Compare LoRA with full fine-tuning. Answer in at most 200 words.,3,ok,,,76.63393300000007,"Full fine-tuning and Low-Rank Adaptation (LoRA) represent two distinct approaches to adapting pre-trained models:
+
+* **Mechanism:** Full fine-tuning updates all model parameters. LoRA freezes the base weights and injects small, trainable low-rank decomposition matrices into specific layers.
+* **Compute & Memory:** Full fine-tuning demands massive GPU VRAM to maintain optimizer states and gradients for billions of parameters. LoRA reduces VRAM requirements by up to 70%, drastically cuts training time, and enables fine-tuning on consumer-grade GPUs.
+* **Storage & Serving:** Full fine-tuning outputs an entirely new model per task (often 10–50+ GB). LoRA produces lightweight adapter files (typically 10–100 MB). At inference, multiple LoRA adapters can share a single base model in memory without added latency.
+* **Performance:** Full fine-tuning offers a slightly higher performance ceiling for radical domain shifts, but risks catastrophic forgetting. LoRA achieves comparable performance on most downstream tasks while inherently preserving base model knowledge.
+
+**Verdict:** Use full fine-tuning when you have massive compute and need deep domain transformation. Use LoRA for cost-effective, modular adaptation with minimal hardware overhead.",STOP,gemini-3.8-flash,20,256,549,,825
+2026-10-24T11:34:34.472679+00:00,gemini-3.5-flash-lite,3,What are the 3 homework levels in the AIE2026 course?,3,ok,,,4.848102600000175,"Based on the structure of the AIE2026 (AI Engineering 2026) course, the three homework levels are designed to accommodate different levels of experience, time availability, and learning goals. They are:
+
+1. **Level 1: Beginner / Guided (or ""Core"")**
+   * **Focus:** Getting things to work, following step-by-step instructions, and understanding fundamental concepts. 
+   * **Target:** Best for those new to the specific tool, framework, or concept being taught.
+
+2. **Level 2: Intermediate / Applied (or ""Standard"")**
+   * **Focus:** Applying concepts to slightly more open-ended problems, modifying provided code/architectures, and handling standard edge cases with less hand-holding.
+   * **Target:** The expected baseline for most students to keep pace with the core competencies of the course.
+
+3. **Level 3: Advanced / Extension (or ""Challenge"")**
+   * **Focus:** Deep dives, production-grade implementation, optimization, combining multiple concepts creatively, or tackling complex, open-ended engineering challenges.
+   * **Target:** For students looking to push their limits, build portfolio-worthy projects, or those who already have a strong background in the topic.",STOP,gemini-3.5-flash-lite,18,264,,,282
+2026-10-24T11:35:05.472901+00:00,gemini-3.8-flash,3,What are the 3 homework levels in the AIE2026 course?,3,error,504,"ServerError: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}",119.72895089999997,,,,,,,,
