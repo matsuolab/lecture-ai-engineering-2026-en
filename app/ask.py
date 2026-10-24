@@ -22,12 +22,20 @@ DEFAULT_QUESTION = "What are the 3 homework levels in the AIE2026 course?"
 
 
 def ask(question: str) -> str:
+    import time
     client = genai.Client(api_key=get_api_key())
+    start = time.perf_counter()
     response = client.models.generate_content(model=MODEL, contents=question)
-
+    elapsed = time.perf_counter() - start
     # TODO(Lecture 01 exercise): use response.usage_metadata to
     #   display input and output token counts (you may ask Copilot)
+    usage = getattr(response, "usage_metadata", None)
+    if usage is not None:
+        input_tokens = getattr(usage, "prompt_token_count", 0)
+        output_tokens = getattr(usage, "candidates_token_count", 0)
+        print(f"[tokens] input={input_tokens}, output={output_tokens}")
 
+    print(f"[time] {elapsed:.2f} seconds")
     return response.text
 
 
