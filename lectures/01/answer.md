@@ -8,15 +8,20 @@
 
 ## Homework
 
-### Level attempted: Advanced
+### Level attempted: Advanced, Implementation and Basic.
 ### What you did:
+
+#### Basic:
+I used three models: gemini-3.5-flash, gemini-3.5-flash-lite and gemma-4-26b-a4b-it (A different free model)
+
+Question => "Q2 Compare LoRA with full fine-tuning. Answer in at most 200 words."
+
+#### Advanced:
 I tested two Gemini models using three questions, with three attempts per model/question pair: 18 calls were made where 13 were successfull, and 5 were failures.
 
 Models used: `gemini-3.5-flash-lite` and `gemini-3.8-flash`.
 
 Timing: `perf_counter()` around `generate_content`, measuring time until the complete response arrives. Network and service time are included; client construction, pacing waits, and file writing are excluded.
-
-Evidence: supplied `results.json`, `results.csv`, and `summary.csv`. Raw records and aggregates were cross-checked, and summary means were recalculated.
 
 Questions: 
 Q1 What is LoRA? Answer in one sentence.
@@ -25,6 +30,18 @@ Q3 What are the 3 homework levels in the AIE2026 course?
 
 ### Results:
 
+#### Basic:
+
+Flash: relied more on comparison and covering resources, storage, performance and catastrophic forgetting. It mainly enumerated ideas and concepts.
+
+Flash-lite: Provided a comparison between the two models and 
+
+Gamma: Provided a full in depth explanation between LoRa and Fine-Tuning, providing more details about its implementation.
+
+In other words, each model explained the same concept through different strategies and different level of depth.
+
+
+#### Advanced:
 The table reports means and medians for successful responses only. All token columns are mean counts per successful response. N/R means not reported.
 
 
@@ -39,6 +56,12 @@ The table reports means and medians for successful responses only. All token col
 
 ### Observations and questions:
 
+#### Basic:
+
+The model choice affected how the ideas were presented, elaborated, depth of the explanation and even the strategy on how the question was answered.
+
+
+#### Advanced:
 #### Response time and reliability:
 
 In this experiment, gemini-3.8-flash had fewer successful responses and higher mean response times than gemini-3.5-flash-lite for every question. Its successful-response means were approximately 14.8–16.4 times higher. The sample was small and unequal because of failures, so these results do not establish a general speed ranking.
