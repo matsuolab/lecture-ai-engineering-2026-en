@@ -7,9 +7,11 @@ import os
 
 # Default model. Set the AIE_MODEL environment variable to switch models.
 #   Example: export AIE_MODEL=gemini-3.5-flash
-DEFAULT_MODEL = "gemini-3.5-flash-lite"
+DEFAULT_MODEL = "gemini-3.5-flash-lite" #"gemini-2.5-flash" "gemini-3.8-flash" "gemini-3.5-flash-lite"
 MODEL = os.getenv("AIE_MODEL", DEFAULT_MODEL)
 
+DEFAULT_TEMPERATURE = 0.9
+TEMPERATURE = float(os.getenv("AIE_TEMPERATURE", DEFAULT_TEMPERATURE))
 
 def api_error_message(status: int, detail: str = "") -> str:
     """Convert an HTTP status code into a student-friendly explanation (shared by ask.py and agent.py)."""
