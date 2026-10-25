@@ -8,7 +8,7 @@
 
 ## Homework
 
-- Level attempted: Basic / Implementation / Advanced
+- Level attempted: Basic
 - What you did:
   Ran the same prompt three times using different generation settings:
   *AIE_MODEL=gemini-3.5-flash-lite uv run python -m app.ask "What is LoRA?"
@@ -25,6 +25,43 @@
   *Model choice affected clarity, brevity, and how much supporting detail was included.
   *Temperature mainly changed creativity and variability, not the underlying factual concept.
   *For course-specific questions, it is safest to check the glossary before trusting the answer.
+
+- Level attempted: Implementation
+- What I did:
+  - Updated `app/ask.py` so the function accepts an optional `conversation_history` argument.
+  - Kept the original single-question behavior working for existing usage.
+  - Added an interactive mode using a loop so the user can ask multiple follow-up questions.
+  - Stored both user messages and assistant responses in a history list and sent the full list back to the model for the next request.
+  - Added an exit command (`exit` or `quit`) to stop the chat loop cleanly.
+
+- Results:
+  - The program can now answer a follow-up question using context from earlier turns.
+  - Example conversation:
+    1. User: Explain retrieval-augmented generation.
+    2. Assistant: ...
+    3. User: What are its two main advantages?
+    4. Assistant: ...
+  - The second question is answered with awareness of the previous answer instead of as an isolated input.
+
+- Observations and questions:
+  - Preserving full conversation history is important because follow-up questions often refer to previous statements.
+  - As the conversation grows longer, the request size increases and can eventually consume more tokens and context window space.
+  - This is a good foundation for later lessons where the agent uses tools and richer memory.
+
+## Implementation Notes
+
+The core idea is that each new request sends the accumulated conversation history together with the latest question. In practice, the history is stored as a list of message objects like this:
+
+```python
+conversation = [
+    {"role": "user", "content": "What is AI engineering?"},
+    {"role": "assistant", "content": "AI engineering is ..."},
+    {"role": "user", "content": "Can you summarize that?"},
+]
+```
+
+Then the next API call uses the full list as input instead of only the latest question. This preserves context and supports natural multi-turn conversations.
+
 
 - Level attempted: Advanced
 - What I did:

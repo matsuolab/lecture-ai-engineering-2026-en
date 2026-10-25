@@ -20,12 +20,42 @@ from app.config import MODEL, api_error_message, get_api_key
 # A course-specific question. The correct answer is in homework-levels in data/glossary.json
 DEFAULT_QUESTION = "What are the 3 homework levels in the AIE2026 course?"
 
+def _normalize_history(conversation_history):
+    """Convert a simple list of dicts into the message format expected by the Gemini API."""
+    if not conversation_history:
+        return []
 
-def ask(question: str) -> str:
+    normalized = []
+    for message in conversation_history:
+        if isinstance(message, dict):
+            role = message.get("role", "user")
+            content = message.get("content")
+            if content is None and "parts" in message:
+                parts = message["parts"]
+                content = " ".join(
+                    part.get("text", "") if isinstance(part, dict) else str(part)
+                    for part in parts
+                )
+            normalized.append({"role": role, "parts": [{"text": str(content)}]})
+        else:
+            normalized.append({"role": "user", "parts": [{"text": str(message)}]})
+    return normalized
+
+def ask(question: str, conversation_history=None) -> str:
+    """Ask a question with optional conversation history."""
+
     import time
     client = genai.Client(api_key=get_api_key())
     start = time.perf_counter()
-    response = client.models.generate_content(model=MODEL, contents=question)
+    #response = client.models.generate_content(model=MODEL, contents=question)
+    history = _normalize_history(conversation_history)
+    if history:
+        payload = history + [{"role": "user", "parts": [{"text": question}]}]
+    else:
+        payload = question
+
+    response = client.models.generate_content(model=MODEL, contents=payload)
+
     elapsed = time.perf_counter() - start
     # TODO(Lecture 01 exercise): use response.usage_metadata to
     #   display input and output token counts (you may ask Copilot)
@@ -42,9 +72,38 @@ def ask(question: str) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Ask a bare LLM a question")
     parser.add_argument("question", nargs="?", default=DEFAULT_QUESTION)
+    parser.add_argument(
+        "--interactive",
+        action="store_true",
+        help="Ask follow-up questions while preserving conversation history",
+    )
     args = parser.parse_args()
 
     print(f"[model] {MODEL}")
+    
+    if args.interactive:
+        print("[mode] interactive conversation")
+        history = []
+        while True:
+            try:
+                user_input = input("You: ").strip()
+            except EOFError:
+                print()
+                break
+
+            if user_input.lower() in {"exit", "quit"}:
+                print("Goodbye!")
+                break
+            if not user_input:
+                print("Please enter a question.")
+                continue
+
+            response = ask(user_input, history)
+            history.append({"role": "user", "content": user_input})
+            history.append({"role": "assistant", "content": response})
+            print(f"Assistant: {response}\n")
+        return
+
     print(f"[question] {args.question}\n")
     try:
         print(ask(args.question))
