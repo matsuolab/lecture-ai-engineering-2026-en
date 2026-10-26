@@ -224,7 +224,7 @@
       "aliases": ["SFT", "Supervised Fine-Tuning", "instruction tuning"],
       "lecture": 2,
       "category": "Fine-tuning",
-      "definition": "A method of further training a model using pairs of inputs and desired outputs, such as questions and model answers. A representative method for teaching instruction-following behavior.",
+      "definition": "A method of further training a model using pairs of inputs and desired outputs, such as questions and reference answers. A representative method for teaching instruction-following behavior.",
       "related": ["fine-tuning", "lora"]
     },
     {
@@ -242,7 +242,7 @@
       "aliases": ["Low-Rank Adaptation"],
       "lecture": 2,
       "category": "Fine-tuning",
-      "definition": "A PEFT method that freezes pretrained weights, represents weight updates as the product of two small matrices (low-rank matrices), and trains only those small matrices. It trains few parameters and saves the results (adapters) in small files. The Lecture 02 exercises cover LoRA.",
+      "definition": "A PEFT method that freezes pretrained weights, represents weight updates as a low-rank product of two small matrices, and trains only those small matrices. It trains few parameters and saves the results (adapters) in small files. The Lecture 02 exercises cover LoRA.",
       "related": ["peft", "lora-rank", "qlora"]
     },
     {
