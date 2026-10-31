@@ -1,13 +1,13 @@
 [project]
 name = "aie2026-exercises"
 version = "0.1.0"
-description = "AIE2026 演習・宿題用リポジトリ（学習支援エージェントを育てる）"
+description = "AIE2026 exercises and homework repository (develop a learning support agent)"
 readme = "README.md"
 requires-python = ">=3.12"
-# 年度中に壊れないよう、バージョンは固定する
+# Pin versions to avoid breakage during the course year
 dependencies = [
     "google-genai==2.31.0",
-    "pydantic-ai-slim[google,mcp]==2.57.0",  # mcp は第5回（MCP サーバー・クライアント）で使う
+    "pydantic-ai-slim[google,mcp]==2.57.0",  # mcp is used in Lecture 05 (MCP servers and clients)
 ]
 
 [dependency-groups]

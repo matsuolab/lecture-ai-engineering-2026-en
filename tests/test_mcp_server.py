@@ -1,7 +1,7 @@
-"""第5回: MCP サーバーとクライアントの配線テスト（LLM も API キーも使わない）。
+"""Lecture 05: MCP server/client wiring tests (no LLM or API key used).
 
-app/mcp_servers.json の glossary サーバーを実際に起動し（stdio）、TestModel で
-「ツールが MCP 経由で公開され、呼ばれ、結果が戻るか」を確かめる。
+Actually start the glossary server from app/mcp_servers.json (stdio), and use TestModel
+to check that tools are exposed through MCP, called, and return results.
 """
 
 import json
@@ -11,13 +11,13 @@ from pydantic_ai.models.test import TestModel
 
 from app.agent import MCP_CONFIG, build_mcp_agent
 
-GLOSSARY_TOOL = "glossary_search_glossary"  # 設定ファイルのサーバー名 "glossary" が前に付く
+GLOSSARY_TOOL = "glossary_search_glossary"  # Prefixed with the configuration file server name "glossary"
 
 
 def _glossary_only_config(tmp_path):
-    """設定のうち glossary サーバーだけを使う（演習で足した fetch などの外部サーバーは起動しない）。"""
+    """Use only the glossary server from the configuration (do not start external servers such as fetch added in exercises)."""
     config = json.loads(MCP_CONFIG.read_text(encoding="utf-8"))
-    assert "glossary" in config["mcpServers"], "app/mcp_servers.json に glossary サーバーが必要"
+    assert "glossary" in config["mcpServers"], "app/mcp_servers.json must include a glossary server"
     path = tmp_path / "mcp_servers.json"
     path.write_text(
         json.dumps({"mcpServers": {"glossary": config["mcpServers"]["glossary"]}}), encoding="utf-8"
@@ -31,18 +31,18 @@ def _parts(result, kind):
 
 def test_glossary_server_exposes_search_tool(tmp_path):
     model = TestModel(call_tools=[])
-    build_mcp_agent(_glossary_only_config(tmp_path)).run_sync("ツール一覧", model=model)
+    build_mcp_agent(_glossary_only_config(tmp_path)).run_sync("Tool list", model=model)
 
     offered = {t.name for t in model.last_model_request_parameters.function_tools}
-    assert GLOSSARY_TOOL in offered  # 演習でツールを足しても壊れないよう「含む」で判定
+    assert GLOSSARY_TOOL in offered  # Check inclusion so adding tools in the exercises does not break the test
 
 
 def test_glossary_result_comes_back_through_mcp(tmp_path):
     model = TestModel(call_tools=[GLOSSARY_TOOL])
-    result = build_mcp_agent(_glossary_only_config(tmp_path)).run_sync("LoRAとは？", model=model)
+    result = build_mcp_agent(_glossary_only_config(tmp_path)).run_sync("What is LoRA?", model=model)
 
     assert [p.tool_name for p in _parts(result, ToolCallPart)] == [GLOSSARY_TOOL]
     returns = _parts(result, ToolReturnPart)
     assert returns and returns[0].tool_name == GLOSSARY_TOOL
-    assert str(returns[0].content).strip()  # 検索結果（または「見つかりませんでした」）が戻っている
+    assert str(returns[0].content).strip()  # A search result (or a "not found" message) was returned
     assert result.output

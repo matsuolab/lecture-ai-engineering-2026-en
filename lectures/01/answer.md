@@ -1,14 +1,14 @@
-# 第1回 解答
+# Lecture 01 Answers
 
-## 演習
+## Exercises
 
-- 講座に固有の質問（宿題の3レベル）へのモデルの回答（要約でよい）：
-- 用語集の正しい意味と比べて気づいたこと：
-- 表示できたトークン数（入力 / 出力）：
+- Model's answer to the course-specific question (the 3 homework levels; a summary is fine):
+- What you noticed when comparing it with the correct meaning in the glossary:
+- Token counts you displayed (input / output):
 
-## 宿題
+## Homework
 
-- 取り組んだレベル：基礎 / 実装 / 発展
-- やったこと：
-- 結果：
-- 気づき・疑問：
+- Level attempted: Basic / Implementation / Advanced
+- What you did:
+- Results:
+- Observations and questions:

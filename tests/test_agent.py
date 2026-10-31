@@ -1,8 +1,8 @@
-"""エージェントの配線テスト。
+"""Agent wiring tests.
 
-TestModel は実際のLLMを呼ばない偽モデルで、登録されたツールを全部呼んでから
-ダミーの回答を返す。APIキーも利用枠も使わずに、
-「ツールが登録され、呼ばれ、結果がモデルに戻るか」を確かめられる。
+TestModel is a fake model that calls all registered tools and returns a dummy answer
+without calling a real LLM. Check that tools are registered, called, and return results
+to the model, without using an API key or consuming usage allowances.
 """
 
 from pydantic_ai.messages import ToolCallPart, ToolReturnPart
@@ -20,10 +20,10 @@ def _parts(result, kind):
 def test_base_tools_are_registered_and_called():
     model = TestModel()
     with agent.override(model=model):
-        result = agent.run_sync("LoRAとは？")
+        result = agent.run_sync("What is LoRA?")
 
     offered = {t.name for t in model.last_model_request_parameters.function_tools}
-    assert BASE_TOOLS <= offered  # 演習でツールを足しても壊れないよう「含む」で判定
+    assert BASE_TOOLS <= offered  # Check inclusion so adding tools in the exercises does not break the test
 
     called = {p.tool_name for p in _parts(result, ToolCallPart)}
     assert BASE_TOOLS <= called
@@ -34,6 +34,6 @@ def test_base_tools_are_registered_and_called():
 def test_glossary_result_reaches_the_model():
     model = TestModel(call_tools=["search_glossary"])
     with agent.override(model=model):
-        result = agent.run_sync("RAGとは？")
+        result = agent.run_sync("What is RAG?")
     returns = _parts(result, ToolReturnPart)
     assert returns and returns[0].tool_name == "search_glossary"

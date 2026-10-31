@@ -1,85 +1,85 @@
-# 第3回 演習・宿題：学習支援エージェントを作る
+# Lecture 03 Exercises and Homework: Build a Learning Support Agent
 
-## この回のゴール
+## Goals for This Session
 
-- エージェントが「モデル＋ループ＋ツール」でできていることを、自分のコードで確かめる
-- どのツールが、どの引数で呼ばれたかを読める
-- ツールを1つ追加できる
+- Verify in your own code that an agent consists of "model + loop + tools"
+- Read which tools were called with which arguments
+- Add one tool
 
-## 準備
+## Preparation
 
-前の回までの作業が終わっている場合は、`main` から `lec03` ブランチを作ります。
+If you have completed the work from previous sessions, create branch `lec03` from `main`.
 
 ```bash
 git switch main && git switch -c lec03
 ```
 
-終わっていない場合は、講座 repo の開始時点のコード（`lec03-start` タグ）からブランチを作れます。
+Otherwise, you can create a branch from the course repository's starting code (the `lec03-start` tag).
 
 ```bash
-git remote -v                     # upstream がなければ次の行で登録する
+git remote -v                     # If upstream is missing, add it with the next line
 git remote add upstream https://github.com/matsuolab/lecture-ai-engineering-2026.git
 git fetch upstream --tags
 git switch -c lec03 lec03-start
 ```
 
-## 演習（30分）
+## Exercises (30 Minutes)
 
-### 1. 第1回と同じ質問をエージェントに投げる
+### 1. Ask the Agent the Same Question as in Lecture 01
 
 ```bash
-uv run python -m app.agent "AIE2026の講座で使う「lecNN-start タグ」とは何ですか？"
+uv run python -m app.agent "What is a lecNN-start tag in the AIE2026 course?"
 ```
 
-第1回の `app.ask` の回答と比べてみましょう。
+Compare the answer with `app.ask` in Lecture 01.
 
-### 2. ツール呼び出しを読む
+### 2. Read Tool Calls
 
 ```bash
-uv run python -m app.agent --trace "LoRAとQLoRAの違いは？"
+uv run python -m app.agent --trace "What is the difference between LoRA and QLoRA?"
 ```
 
-`[tool call]` の行で、モデルがどのツールをどんな引数で呼んだかを確認します。`[usage]` の `requests` は、1つの質問で LLM を何回呼んだかを表します。
+On the `[tool call]` lines, check which tools the model called and with which arguments. `requests` in `[usage]` shows how many LLM calls were made for one question.
 
-### 3. ツールを1つ追加する
+### 3. Add One Tool
 
-`app/tools.py` に `make_quiz` を追加し、`app/agent.py` の `TODO(第3回 演習)` の場所で登録します。
+Add `make_quiz` to `app/tools.py` and register it at `TODO(Lecture 03 exercise)` in `app/agent.py`.
 
-- 例：指定した回（`lecture: int`）の用語から1つを選び、「この用語の意味は？」という問題と答えを返す
-- docstring には「いつ、何のために使うツールか」を書く（モデルはこれを読んで使うかどうかを決める）
+- Example: choose one term from the specified session (`lecture: int`) and return a "What does this term mean?" question and its answer
+- In the docstring, explain "when and why to use this tool" (the model reads this to decide whether to use it)
 
 ```bash
-uv run python -m app.agent --trace "第2回の内容から確認問題を1問出して"
+uv run python -m app.agent --trace "Give me one review question from Lecture 02"
 uv run pytest -q
 ```
 
-### 4. 提出
+### 4. Submit
 
-`lectures/03/answer.md` を書き、`lec03` → 自分の fork の `main` へ PR を出します。
+Fill in `lectures/03/answer.md` and open a PR from `lec03` to `main` in your own fork.
 
-## 宿題（どれか1つで完了）
+## Homework (Complete Any One Level)
 
-| レベル | 内容 |
+| Level | Task |
 |---|---|
-| 基礎 | `INSTRUCTIONS` やツールの docstring を書き換え、ツールの呼ばれ方や回答がどう変わるかを `--trace` で比べて記録する |
-| 実装 | 学習の記録を `learning_log/` に保存する `save_learning_log` ツールを作る。保存の前に利用者の確認を挟む（Pydantic AI の `requires_approval=True`）。TestModel を使ったテストも書く |
-| 発展 | 次のどちらか。(a) 同じエージェントを Google の ADK で作り直し、書き方や `adk web` での見え方を比較する。(b) 講義で紹介した Pi を Codespaces 上で動かし、公開されている Pi のシステムプロンプトと自分のエージェントの `INSTRUCTIONS` を比較する |
+| Basic | Rewrite `INSTRUCTIONS` or tool docstrings, and use `--trace` to compare and record changes in tool calls and answers |
+| Implementation | Create a `save_learning_log` tool that saves learning records in `learning_log/`. Request user confirmation before saving (Pydantic AI's `requires_approval=True`). Write tests using TestModel too |
+| Advanced | Choose one: (a) Rebuild the same agent with Google's ADK and compare how you write it and how it appears in `adk web`. (b) Run Pi, introduced in the lecture, in Codespaces and compare Pi's public system prompt with your agent's `INSTRUCTIONS` |
 
-### 発展（b）の進め方
+### How to Approach Advanced Option (b)
 
-Pi はファイルの読み書きやコマンドの実行ができるコーディングエージェントで、ツールを実行するたびに確認は求めません。自分のPCではなく、Codespaces の中で試してください。
+Pi is a coding agent that can read and write files and run commands. It does not request confirmation for every tool execution. Try it inside Codespaces rather than on your own PC.
 
 ```bash
 npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 pi
 ```
 
-- Gemini は環境変数 `GEMINI_API_KEY` を読むので、Codespaces secret があればそのまま使えます。Pi の中で `/model` と入力し、Gemini のモデルを選びます
-- npm のパッケージ名は `@earendil-works/pi-coding-agent` です（古い記事にある `@mariozechner/...` は旧名です）
-- Pi のシステムプロンプトは、公開リポジトリ https://github.com/earendil-works/pi の `packages/coding-agent/src/core/system-prompt.ts` にあります。自分の `INSTRUCTIONS` と比べ、何が書かれていて何が書かれていないかを見てみましょう
-- 公式ドキュメント：https://github.com/earendil-works/pi/tree/main/packages/coding-agent/docs
+- Gemini reads the `GEMINI_API_KEY` environment variable, so a Codespaces secret works as is. In Pi, type `/model` and select a Gemini model
+- The npm package name is `@earendil-works/pi-coding-agent` (`@mariozechner/...` in older articles is the old name)
+- Pi's system prompt is in `packages/coding-agent/src/core/system-prompt.ts` in its public repository, https://github.com/earendil-works/pi. Compare it with your `INSTRUCTIONS` and see what it includes and omits
+- Official documentation: https://github.com/earendil-works/pi/tree/main/packages/coding-agent/docs
 
-## 参考
+## References
 
 - Pydantic AI: https://ai.pydantic.dev/
 - ADK: https://google.github.io/adk-docs/

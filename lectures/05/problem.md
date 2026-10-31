@@ -1,71 +1,71 @@
-# 第5回 演習・宿題：ツールを MCP サーバーにして使う
+# Lecture 05 Exercises and Homework: Expose and Use Tools Through an MCP Server
 
-## この回のゴール
+## Goals for This Session
 
-- 第3回で作ったツールを **MCP サーバー**として切り出し、同じエージェントから **MCP 経由**で使える
-- モデルに見えている「ツールの名前・説明文・引数」を読める
-- **設定ファイルを書き換えるだけ**で、既製の外部ツールを足せる
+- Extract the tools built in Lecture 03 into an **MCP server** and use them **through MCP** from the same agent
+- Read the "tool names, descriptions, and arguments" visible to the model
+- Add ready-made external tools **just by editing a configuration file**
 
-## 準備
+## Preparation
 
-前の回までの作業が終わっている場合は、`main` から `lec05` ブランチを作ります。
-この回から依存パッケージが増えているので、`uv sync --frozen` を一度実行してください。
+If you have completed the work from previous sessions, create branch `lec05` from `main`.
+This session adds dependencies, so run `uv sync --frozen` once.
 
 ```bash
 git switch main && git switch -c lec05
 uv sync --frozen
 ```
 
-終わっていない場合は、講座 repo の開始時点のコード（`lec05-start` タグ）からブランチを作れます。
+Otherwise, you can create a branch from the course repository's starting code (the `lec05-start` tag).
 
 ```bash
-git remote -v                     # upstream がなければ次の行で登録する
+git remote -v                     # If upstream is missing, add it with the next line
 git remote add upstream https://github.com/matsuolab/lecture-ai-engineering-2026.git
 git fetch upstream --tags
 git switch -c lec05 lec05-start
 uv sync --frozen
 ```
 
-## 演習（30分）
+## Exercises (30 Minutes)
 
-### 1. モデルに見えているツールを一覧する
-
-```bash
-uv run python -m app.agent --list-tools          # 第3回：関数を直接登録したツール
-uv run python -m app.agent --mcp --list-tools    # 第5回：MCP サーバーから受け取ったツール
-```
-
-どちらも LLM は呼ばないので、API キーなしで動きます。
-2つ目は `app/mcp_servers.json` に書かれたサーバー（`app/mcp_server.py`）をサブプロセスとして起動し、公開されているツールの名前・説明文・引数を表示します。
-
-- 名前が `glossary_search_glossary` のように **「サーバー名_」付き**になっていることを確認しましょう。複数のサーバーに同じ名前のツールがあっても区別できるようにするためです
-- 説明文は `app/tools.py` の docstring そのものです。**モデルから見れば、関数ツールも MCP のツールも同じ形**をしています
-
-### 2. エージェントから MCP 経由で使う
+### 1. List the Tools Visible to the Model
 
 ```bash
-uv run python -m app.agent --mcp --trace "AIE2026の講座の宿題にある「3レベル」とは何ですか？"
+uv run python -m app.agent --list-tools          # Lecture 03: tools registered directly as functions
+uv run python -m app.agent --mcp --list-tools    # Lecture 05: tools received from MCP servers
 ```
 
-第3回（`--mcp` なし）と比べて、回答・ツール名・`requests` の回数がどう違うかを見ます。
-内部では、`app/agent.py` の `build_mcp_agent()` が設定ファイルを読み、サーバーを起動して、ツールをエージェントに渡しています。
+Neither command calls an LLM, so both work without an API key.
+The second starts the server (`app/mcp_server.py`) configured in `app/mcp_servers.json` as a subprocess and displays the names, descriptions, and arguments of its exposed tools.
 
-### 3. ツールを1つ公開する
+- Check that names have a **"server_name_" prefix**, as in `glossary_search_glossary`. This distinguishes tools with the same name on different servers
+- The descriptions come directly from the docstrings in `app/tools.py`. **Function tools and MCP tools look the same to the model**
 
-`app/mcp_server.py` の `TODO(第5回 演習)` の場所で、`get_lecture_summary` も MCP で公開します（`search_glossary` と同じ書き方で 1 行）。
+### 2. Use Them Through MCP from the Agent
+
+```bash
+uv run python -m app.agent --mcp --trace "What are the 3 homework levels in the AIE2026 course?"
+```
+
+Compare the answer, tool names, and number of `requests` with Lecture 03 (without `--mcp`).
+Internally, `build_mcp_agent()` in `app/agent.py` reads the configuration file, starts the servers, and passes their tools to the agent.
+
+### 3. Expose One More Tool
+
+At `TODO(Lecture 05 exercise)` in `app/mcp_server.py`, expose `get_lecture_summary` through MCP too (one line, written the same way as for `search_glossary`).
 
 ```bash
 uv run python -m app.agent --mcp --list-tools
-uv run python -m app.agent --mcp --trace "第2回では何を学びますか？"
+uv run python -m app.agent --mcp --trace "What will we learn in Lecture 02?"
 uv run pytest -q
 ```
 
-`--list-tools` に `glossary_get_lecture_summary` が増え、`--trace` でそれが呼ばれることを確認します。
-第3回で `make_quiz` を作った人は、それも同じ方法で公開できます。
+Check that `glossary_get_lecture_summary` appears in `--list-tools` and is called in `--trace`.
+If you created `make_quiz` in Lecture 03, you can expose it in the same way.
 
-### 4. 既製の外部ツールを、設定だけで足す
+### 4. Add a Ready-Made External Tool Through Configuration Alone
 
-`app/mcp_servers.json` に、公開されている **fetch サーバー**（URL のページを取得して Markdown で返す）を足します。コードは書きません。
+Add the publicly available **fetch server** (retrieves a URL's page and returns it as Markdown) to `app/mcp_servers.json`. No code is needed.
 
 ```json
 {
@@ -84,28 +84,28 @@ uv run pytest -q
 
 ```bash
 uv run python -m app.agent --mcp --list-tools
-uv run python -m app.agent --mcp --trace "https://modelcontextprotocol.io/ の冒頭を日本語で3行に要約して"
+uv run python -m app.agent --mcp --trace "Summarize the opening of https://modelcontextprotocol.io/ in 3 lines of English"
 ```
 
-- 初回は `uvx` がサーバーをダウンロードするので、起動に 10 秒ほどかかります
-- `--trace` に `fetch_fetch({'url': ...})` が出れば、**モデルが選んだ URL に Codespace から実際にアクセス**しています。どこへ何を送るツールかを把握したうえで足すのが、外部ツールを使うときの基本です
-- `INSTRUCTIONS` は用語集を前提に書いてあります。URL の質問で fetch が呼ばれないときは、「URL を渡されたら fetch で内容を読む」のような 1 行を `INSTRUCTIONS` に足してみましょう
+- The first startup takes about 10 seconds because `uvx` downloads the server
+- If `fetch_fetch({'url': ...})` appears in `--trace`, your **Codespace is actually accessing the URL chosen by the model**. Before adding an external tool, understand where it sends data and what it sends
+- `INSTRUCTIONS` assumes glossary use. If fetch is not called for a URL question, try adding a line such as "When given a URL, use fetch to read its contents" to `INSTRUCTIONS`
 
-### 5. 提出
+### 5. Submit
 
-`lectures/05/answer.md` を書き、`lec05` → 自分の fork の `main` へ PR を出します。
+Fill in `lectures/05/answer.md` and open a PR from `lec05` to `main` in your own fork.
 
-## 宿題（どれか1つで完了）
+## Homework (Complete Any One Level)
 
-| レベル | 内容 |
+| Level | Task |
 |---|---|
-| 基礎 | サーバーを `uv run python -m app.mcp_server --http` で起動し、設定ファイルの `glossary` を `{"url": "http://127.0.0.1:8000/mcp"}` に替えて同じ質問をする。stdio と Streamable HTTP で、起動の仕方・プロセス・ポートがどう違うかを記録する。あわせて、ツールの docstring を書き換えると `--list-tools` と呼ばれ方がどう変わるかを比べる |
-| 実装 | 第3回の `make_quiz`（なければ新しいツール）を MCP サーバーに追加し、TestModel を使ったテストを `tests/test_mcp_server.py` に足す。引数の範囲チェック（例：存在しない回なら分かりやすいメッセージを返す）を入れ、MCP 越しのエラーがモデルにどう見えるかを `--trace` で確かめる |
-| 発展 | 同じ用語集サーバーを **Copilot Chat**（VS Code の MCP クライアント）から使う（下の手順）。「サーバーを1つ作れば、クライアントを選ばずに使える」ことを確かめ、エージェント（`app/agent.py`）からの使い方と比べる。ツールが呼ばれるまでの流れ（誰がサーバーを起動するか、呼び出し前に人の承認があるか、結果がどう見えるか）の違いを記録する |
+| Basic | Start the server with `uv run python -m app.mcp_server --http`, replace `glossary` in the configuration file with `{"url": "http://127.0.0.1:8000/mcp"}`, and ask the same question. Record how startup, processes, and ports differ between stdio and Streamable HTTP. Also rewrite a tool docstring and compare changes in `--list-tools` and tool calls |
+| Implementation | Add Lecture 03's `make_quiz` (or a new tool if you did not create it) to the MCP server and add tests using TestModel in `tests/test_mcp_server.py`. Validate argument ranges (for example, return a clear message for a nonexistent session), and use `--trace` to check how errors through MCP appear to the model |
+| Advanced | Use the same glossary server from **Copilot Chat** (VS Code's MCP client; instructions below). Verify that "one server can be used across clients" and compare with use from the agent (`app/agent.py`). Record differences in the steps leading to tool calls (who starts the server, whether a person approves calls beforehand, and how results appear) |
 
-### 発展の進め方
+### How to Approach the Advanced Homework
 
-Copilot Chat は VS Code の MCP クライアントです。リポジトリに `.vscode/mcp.json` を置くと、Chat の **Agent** モードでサーバーのツールが使えます（形式は `app/mcp_servers.json` の `mcpServers` ではなく `servers`。コマンドは作業フォルダ＝リポジトリのルートで実行されます）。
+Copilot Chat is an MCP client in VS Code. Place `.vscode/mcp.json` in the repository to use the server's tools in Chat's **Agent** mode (the format uses `servers`, rather than `mcpServers` as in `app/mcp_servers.json`. Commands run in the working folder, which is the repository root).
 
 ```json
 {
@@ -119,25 +119,25 @@ Copilot Chat は VS Code の MCP クライアントです。リポジトリに `
 }
 ```
 
-1. Codespaces の VS Code で上のファイルを作る。`servers` の上に **Start** が出たら押す（出ないときはコマンドパレットで **MCP: List Servers** → `aie-glossary` → Start）。サーバーは Codespace の中で起動します
-2. Copilot Chat を開き、モードを **Agent** にする。ツール（🔧）の一覧に `aie-glossary` の `search_glossary`（演習 3 を終えていれば `get_lecture_summary` も）が出るか確認する
-3. 「AIE2026 の宿題の 3 レベルとは？」と聞く。ツールの実行前に確認（**Continue**）を求められたら許可し、用語集のツールが呼ばれて回答に使われるかを見る
-4. `answer.md` に、Chat に表示されたツール呼び出しと、`uv run python -m app.agent --mcp --trace` の表示を並べて書く
-5. `.vscode/mcp.json` は PR に含めてよい（API キーのような秘密は書かないこと）
+1. Create the file above in VS Code in Codespaces. Click **Start** if it appears above `servers` (otherwise use the command palette: **MCP: List Servers** → `aie-glossary` → Start). The server starts inside your Codespace
+2. Open Copilot Chat and switch to **Agent** mode. Check that `search_glossary` from `aie-glossary` appears in the tools (🔧) list (also `get_lecture_summary` if you completed exercise 3)
+3. Ask "What are the 3 homework levels in AIE2026?". If asked for confirmation (**Continue**) before tool execution, allow it, and check whether the glossary tool is called and used in the answer
+4. In `answer.md`, record the tool call shown in Chat alongside the output from `uv run python -m app.agent --mcp --trace`
+5. You may include `.vscode/mcp.json` in the PR (do not put secrets such as API keys in it)
 
-- Copilot Free でも Agent モードと MCP は使えます。ただしチャットの回数には月の上限があるので、試す回数は数回にとどめましょう
-- 会社や学校の組織が管理する Copilot（Business / Enterprise）では、組織のポリシーで MCP が無効になっていることがあります。個人アカウントで試してください
+- Copilot Free supports Agent mode and MCP. However, chat has a monthly limit, so keep your trials to a few attempts
+- Copilot managed by a company or school (Business / Enterprise) may have MCP disabled by organization policy. Try with a personal account
 
-## 注意
+## Notes
 
-- MCP サーバーは**コードを実行するプログラム**です。出所の分からないサーバーを設定ファイルに書かないでください
-- fetch サーバーは、モデルが決めた URL にアクセスします。社内の URL や個人情報を含む URL を渡さないでください
-- ツールが増えると、モデルに渡す説明文が増え、1回あたりのトークン数と呼び分けの難しさが増します。`--list-tools` で何個のツールを渡しているかを意識しましょう
+- An MCP server is a **program that executes code**. Do not add servers from unknown sources to your configuration file
+- The fetch server accesses URLs chosen by the model. Do not pass internal company URLs or URLs containing personal information
+- More tools mean more descriptions sent to the model, increasing tokens per call and making tool selection harder. Use `--list-tools` to keep track of how many tools you provide
 
-## 参考
+## References
 
-- MCP の公式サイト: https://modelcontextprotocol.io/
-- Pydantic AI の MCP クライアント: https://pydantic.dev/docs/ai/mcp/client/
-- MCP の Python SDK（サーバーの書き方）: https://github.com/modelcontextprotocol/python-sdk
-- 公開されている MCP サーバー: https://github.com/modelcontextprotocol/servers
-- VS Code で MCP サーバーを使う: https://code.visualstudio.com/docs/copilot/customization/mcp-servers
+- Official MCP site: https://modelcontextprotocol.io/
+- Pydantic AI MCP client: https://pydantic.dev/docs/ai/mcp/client/
+- MCP Python SDK (how to write servers): https://github.com/modelcontextprotocol/python-sdk
+- Public MCP servers: https://github.com/modelcontextprotocol/servers
+- Using MCP servers in VS Code: https://code.visualstudio.com/docs/copilot/customization/mcp-servers

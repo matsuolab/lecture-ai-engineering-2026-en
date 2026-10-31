@@ -1,13 +1,13 @@
-"""第1回: 素のLLMに1回だけ質問するスクリプト。
+"""Lecture 01: a script that asks a bare LLM a single question.
 
-使い方:
-    uv run python -m app.ask "LoRAとは何ですか？"
-    uv run python -m app.ask            # 質問を省略すると、講座に固有の質問をする
+Usage:
+    uv run python -m app.ask "What is LoRA?"
+    uv run python -m app.ask            # Ask a course-specific question if none is supplied
 
-ツールも会話履歴も持たない「素の」呼び出し。
-講座に固有のことを聞くと、「分からない」と答えるか、一般論でもっともらしく答える
-（講座の実際とは違う）ことを確かめよう。
-（第3回で、用語集を検索できるエージェントにして改善する）
+A "bare" call with no tools or conversation history.
+Check that, when asked about course-specific information, it either says "I don't know"
+or gives a plausible general answer (which differs from the actual course).
+(In Lecture 03, improve it by making an agent that can search the glossary.)
 """
 
 import argparse
@@ -17,27 +17,27 @@ from google.genai import errors
 
 from app.config import MODEL, api_error_message, get_api_key
 
-# 講座に固有の質問。正しい答えは data/glossary.json の homework-levels にある
-DEFAULT_QUESTION = "AIE2026の講座の宿題にある「3レベル」とは何ですか？"
+# A course-specific question. The correct answer is in homework-levels in data/glossary.json
+DEFAULT_QUESTION = "What are the 3 homework levels in the AIE2026 course?"
 
 
 def ask(question: str) -> str:
     client = genai.Client(api_key=get_api_key())
     response = client.models.generate_content(model=MODEL, contents=question)
 
-    # TODO(第1回 演習): response.usage_metadata から
-    #   入力トークン数と出力トークン数を表示してみよう（Copilotに頼んでよい）
+    # TODO(Lecture 01 exercise): use response.usage_metadata to
+    #   display input and output token counts (you may ask Copilot)
 
     return response.text
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="素のLLMに質問する")
+    parser = argparse.ArgumentParser(description="Ask a bare LLM a question")
     parser.add_argument("question", nargs="?", default=DEFAULT_QUESTION)
     args = parser.parse_args()
 
     print(f"[model] {MODEL}")
-    print(f"[質問] {args.question}\n")
+    print(f"[question] {args.question}\n")
     try:
         print(ask(args.question))
     except errors.APIError as e:

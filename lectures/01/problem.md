@@ -1,105 +1,106 @@
-# 第1回 演習・宿題：開発環境を整え、LLMに質問する
+# Lecture 01 Exercises and Homework: Set Up Your Development Environment and Ask an LLM
 
-## この回のゴール
+## Goals for This Session
 
-- 自分の fork を Codespaces で開き、Gemini API を呼び出せる
-- GitHub Copilot でコードを少し直せる
-- 作業ブランチから PR を出して提出できる（以降の回もこの流れで提出する）
+- Open your own fork in Codespaces and call the Gemini API
+- Make small code changes with GitHub Copilot
+- Submit a PR from a working branch (use this submission process in later sessions too)
 
-## 準備するもの
+## What to Prepare
 
-- GitHub の個人アカウント（会社が管理するアカウントは、組織の設定で Codespaces や Copilot が使えないことがあります）
-- Google の個人アカウント（会社の Google Workspace アカウントは、管理者の設定で AI Studio が使えないことがあります）
+- A personal GitHub account (accounts managed by a company may have Codespaces or Copilot disabled by organization settings)
+- A personal Google account (company Google Workspace accounts may have AI Studio disabled by administrator settings)
 
-## 演習（45分）
+## Exercises (45 Minutes)
 
-### 1. 講座 repo を fork する
+### 1. Fork the Course Repository
 
-講座 repo の右上の **Fork** から、自分のアカウントに fork を作ります。以降の作業はすべて自分の fork で行います。
+Use **Fork** at the top right of the course repository to create a fork under your account. Do all subsequent work in your own fork.
 
-### 2. Gemini API キーを発行する
+### 2. Create a Gemini API Key
 
-[Google AI Studio](https://aistudio.google.com/apikey) で API キーを作成し、コピーします。
+Create and copy an API key in [Google AI Studio](https://aistudio.google.com/apikey).
 
-> APIキーは秘密情報です。コードやチャット、コミットに貼らないでください。漏れた場合は AI Studio でキーを削除し、作り直してください。
+> API keys are secrets. Do not paste them into code, chat, or commits. If a key leaks, delete it in AI Studio and create a new one.
 
-### 3. Codespaces secret に登録する
+### 3. Register It as a Codespaces Secret
 
-GitHub の **Settings → Codespaces → Secrets → New secret** で次のように登録します。
+Under GitHub **Settings → Codespaces → Secrets → New secret**, register:
 
 - Name: `GEMINI_API_KEY`
-- Value: 手順2のキー
-- Repository access: **自分の fork** を選ぶ
+- Value: the key from step 2
+- Repository access: select **your own fork**
 
-> Codespaces を起動する前に登録してください。起動後に登録した場合は、Codespaces の再起動が必要です。
+> Register the secret before starting Codespaces. If you register it after startup, restart your Codespace.
 
-### 4. Codespaces を起動する
+### 4. Start Codespaces
 
-自分の fork で **Code → Codespaces → Create codespace on main**。初回は環境の準備に数分かかります。ターミナルで次を実行し、テストが通ることを確認します。
+In your fork, select **Code → Codespaces → Create codespace on main**. Preparing the environment takes a few minutes the first time. Run the following in the terminal and check that the tests pass.
 
 ```bash
 uv run pytest -q
 ```
 
-### 5. 素のLLMに質問する
+### 5. Ask a Bare LLM
 
 ```bash
-uv run python -m app.ask "LoRAとは何ですか？"
-uv run python -m app.ask "AIE2026の講座の宿題にある「3レベル」とは何ですか？"
+uv run python -m app.ask "What is LoRA?"
+uv run python -m app.ask "What are the 3 homework levels in the AIE2026 course?"
 ```
 
-1つ目は一般的な用語なので、おおむね正しい答えが返ります。2つ目は講座に固有の「宿題の3レベル」について質問します。素のLLMは講座のことを知らないため、「分からない」と答えるか、一般論でもっともらしく答えます。正しい内容は `data/glossary.json` の `homework-levels` にあります。モデルの答えと比べてみましょう。
+The first question asks about a general term, so the answer should be broadly correct. The second asks about the course-specific "3 homework levels". A bare LLM does not know about this course, so it may say "I don't know" or give a plausible answer based on general knowledge. The correct information is in `homework-levels` in `data/glossary.json`. Compare it with the model's answer.
 
-余裕があれば、ほかの講座に固有の質問も試してください。同じ質問でも実行ごとに答えが変わること、知らないことでも確信を持って答えることがあることに注目しましょう。
+If you have time, try other course-specific questions. Notice that the same question can produce different answers on different runs, and that the model may answer confidently even when it does not know.
 
 ```bash
-uv run python -m app.ask "AIE2026の講座で使う「lecNN-start タグ」とは何ですか？"
-uv run python -m app.ask "AIE2026の第2回では何を学びますか？"
+uv run python -m app.ask "What is a lecNN-start tag in the AIE2026 course?"
+uv run python -m app.ask "What will we learn in Lecture 02 of AIE2026?"
 ```
 
-### 6. Copilot でトークン数を表示させる
+### 6. Use Copilot to Display Token Counts
 
-`app/ask.py` の `TODO(第1回 演習)` の場所で、入力トークン数と出力トークン数を表示するよう改修します。Copilot の補完やチャットを使ってかまいません。提案されたコードは、読んで理解してから採用してください。
+At `TODO(Lecture 01 exercise)` in `app/ask.py`, modify the code to display input and output token counts. You may use Copilot completion or chat. Read and understand suggested code before accepting it.
 
-### 7. ブランチを作って PR を出す
+### 7. Create a Branch and Open a PR
 
 ```bash
 git switch -c lec01
-# lectures/01/answer.md を書く
+# Fill in lectures/01/answer.md
 git add -A
-git commit -m "第1回 演習"
+git commit -m "Lecture 01 exercises"
 git push -u origin lec01
 ```
 
-GitHub の自分の fork で、`lec01` → `main` の PR を作成します。**base repository が自分の fork になっていることを確認してください**（講座 repo に PR を出さないこと）。
+On GitHub, create a PR from `lec01` to `main` in your own fork. **Check that the base repository is your own fork** (do not open a PR against the course repository).
 
-### 8. Codespaces を停止する
+### 8. Stop Codespaces
 
-左下の「Codespaces」→ **Stop Current Codespace**。起動したままだと無料枠を消費し続けます。
+Select "Codespaces" at the bottom left → **Stop Current Codespace**. Leaving it running continues to consume your free allowance.
 
-## 宿題（どれか1つで完了）
+## Homework (Complete Any One Level)
 
-| レベル | 内容 |
+| Level | Task |
 |---|---|
-| 基礎 | 同じ質問を3回ずつ、モデルを変えて（`AIE_MODEL` 環境変数）、または temperature を変えて実行し、回答の違いを answer.md にまとめる |
-| 実装 | `app/ask.py` を改修し、会話履歴を保ったまま続けて質問できるようにする |
-| 発展 | 応答時間とトークン数を計測し、複数のモデルや質問で比較する。無料枠のレート制限との関係も考察する |
+| Basic | Run each question three times, using different models (the `AIE_MODEL` environment variable) or different temperature values, and summarize the differences in answer.md |
+| Implementation | Modify `app/ask.py` to support follow-up questions while retaining conversation history |
+| Advanced | Measure response time and token counts, and compare multiple models or questions. Discuss their relationship to the free-tier rate limits |
 
-モデルの切り替え例：
+Example of switching models:
 
 ```bash
-AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "LoRAとは何ですか？"
+AIE_MODEL=gemini-3.5-flash uv run python -m app.ask "What is LoRA?"
 ```
 
-### 呼び出すモデルについての補足
-モデルの仕様は更新されることがあります。  
-gemini 3.5 flashにおいては、Gemini APIのドキュメントが更新され、非推奨となりgemini 3.6 flashへ転送されるようになりました。
+### Additional Notes on the Model You Call
 
-- 参考：Gemini 3.5 Flashのドキュメント
-https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash?hl=ja
+Model specifications may change.
+The Gemini API documentation has been updated: Gemini 3.5 Flash is now deprecated and redirects to Gemini 3.6 Flash.
 
-このように、サービスとして提供されているLLMは頻繁に仕様が変わるため、サービス仕様のドキュメントを確認するなどの習慣を付けておき仕様変更に対応しましょう。
+- Reference: Gemini 3.5 Flash documentation
+https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash?hl=en
 
-第1回の宿題においては、任意にモデルを変えて実施していただければ問題ありません。
+As this example shows, the specifications of LLMs provided as services change frequently. Make a habit of checking the service documentation so that you can adapt to specification changes.
 
-temperature を変えるには、`generate_content` の `config` 引数を調べてみましょう。
+For the Lecture 01 homework, you may use any model of your choice.
+
+To change temperature, look up the `config` argument of `generate_content`.

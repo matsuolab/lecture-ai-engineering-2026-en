@@ -1,15 +1,15 @@
-# 第5回 解答
+# Lecture 05 Answers
 
-## 演習
+## Exercises
 
-- `--list-tools` で見えたツール名と、第3回（`--mcp` なし）との違い：
-- `--mcp --trace` で見えたツール呼び出し（ツール名と引数）と、`requests` の回数：
-- MCP サーバーに公開したツールと、その説明文：
-- fetch サーバーを足したときのツール呼び出し（ツール名と引数）：
+- Tool names shown by `--list-tools` and differences from Lecture 03 (without `--mcp`):
+- Tool calls shown by `--mcp --trace` (tool names and arguments) and number of `requests`:
+- Tool exposed on the MCP server and its description:
+- Tool calls after adding the fetch server (tool names and arguments):
 
-## 宿題
+## Homework
 
-- 取り組んだレベル：基礎 / 実装 / 発展
-- やったこと：
-- 結果：
-- 気づき・疑問：
+- Level attempted: Basic / Implementation / Advanced
+- What you did:
+- Results:
+- Observations and questions:
