@@ -95,7 +95,24 @@ Saved results: [before-training outputs](../../notebooks/baseline/eval_before.js
 ## Homework
 
 - Level selected: Basic.
-- Settings or data changed: 
-- Results available so far:
+- Settings or data changed: Changed only `num_train_epochs` from 20 to 10. The dataset and other CONFIG settings remained the same.
+- Results:
+
+| Metric | Baseline (20 epochs) | Basic (10 epochs) |
+| --- | --- | --- |
+| Optimizer steps | 40 | 20 |
+| After-training format rate | 100% (21/21) | 100% (21/21) |
+| After-training content rate | 90.48% (19/21) | 90.48% (19/21) |
+| Last logged training loss | 0.014992 | 0.070625 |
+| Training time | 193 seconds | 102 seconds |
+| Regressions | None | None |
+
+The 10-epoch run achieved the same aggregate test scores in 91 fewer seconds. Its last logged training loss was higher, but the lower loss of the 20-epoch run did not translate into better test accuracy. For this small evaluation set, the extra epochs provided no measured accuracy benefit. This does not establish that 10 epochs is optimal for other datasets or runs.
+
+Evidence: [executed Basic notebook](../../notebooks/basic/lora_format_tuning_basic.ipynb), [10-epoch results](../../notebooks/basic/result%281%29.json), [before-training outputs](../../notebooks/basic/eval_before%281%29.json), and [after-training outputs](../../notebooks/basic/eval_after%281%29.json).
 
 Discussion of when fine-tuning is and is not suitable:
+
+Fine-tuning was useful for learning the required JSON structure and more consistent responses: both runs achieved 100% format compliance and improved content accuracy from 38.10% to 90.48%. The comparison also shows why training loss alone is insufficient when choosing training duration, evaluation on held-out questions matters.
+
+Fine-tuning alone did not guarantee reliable judgment about missing evidence. The baseline still requested confirmation for a question covered by the FAQ and asserted an answer to a question without evidence. For facts that change frequently, supplying current source material through retrieval is more direct than retraining for every update, although the model's interpretation of that evidence still needs evaluation. These conclusions are limited by the small, fictional FAQ and the keyword-based content metric.
