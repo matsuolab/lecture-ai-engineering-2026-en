@@ -15,6 +15,8 @@ import argparse
 from google import genai
 from google.genai import errors
 
+from time import perf_counter
+
 from app.config import MODEL, api_error_message, get_api_key
 
 # A course-specific question. The correct answer is in homework-levels in data/glossary.json
@@ -23,10 +25,22 @@ DEFAULT_QUESTION = "What are the 3 homework levels in the AIE2026 course?"
 
 def ask(question: str) -> str:
     client = genai.Client(api_key=get_api_key())
+    start = perf_counter()
+
     response = client.models.generate_content(model=MODEL, contents=question)
 
     # TODO(Lecture 01 exercise): use response.usage_metadata to
     #   display input and output token counts (you may ask Copilot)
+    elapsed = perf_counter() - start
+
+    print(f"[response time] {elapsed:.3f} seconds")
+
+    usage = response.usage_metadata
+
+    if usage is not None:
+        print(f"[tokens input] {usage.prompt_token_count}")
+        print(f"[tokens output] {usage.candidates_token_count}")
+        print(f"[tokens total] {usage.total_token_count}\n")
 
     return response.text
 
