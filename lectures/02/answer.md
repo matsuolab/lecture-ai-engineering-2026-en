@@ -94,7 +94,9 @@ Saved results: [before-training outputs](../../notebooks/baseline/eval_before.js
 
 ## Homework
 
-- Level selected: Basic.
+- Levels completed: Basic and Implementation.
+
+### Basic
 - Settings or data changed: Changed only `num_train_epochs` from 20 to 10. The dataset and other CONFIG settings remained the same.
 - Results:
 
@@ -116,3 +118,27 @@ Discussion of when fine-tuning is and is not suitable:
 Fine-tuning was useful for learning the required JSON structure and more consistent responses: both runs achieved 100% format compliance and improved content accuracy from 38.10% to 90.48%. The comparison also shows why training loss alone is insufficient when choosing training duration, evaluation on held-out questions matters.
 
 Fine-tuning alone did not guarantee reliable judgment about missing evidence. The baseline still requested confirmation for a question covered by the FAQ and asserted an answer to a question without evidence. For facts that change frequently, supplying current source material through retrieval is more direct than retraining for every update, although the model's interpretation of that evidence still needs evaluation. These conclusions are limited by the small, fictional FAQ and the keyword-based content metric.
+
+### Implementation: fictional library FAQ
+
+I ran the adapted library notebook myself, including training and the optional 4-bit comparison. The topic was changed from course assignments to five fictional library rules: a 14-day loan period, a maximum of 3 books, returns at the front desk, weekday opening hours, and one renewal through the library portal. The original model, 20 epochs, and other baseline CONFIG settings were retained. The JSON output structure and `needs_review` design were unchanged.
+
+The dataset contained 14 training, 7 validation, and 21 test examples. Grounded questions paraphrased the five rules, with different question templates across splits. Questions without evidence concerned policies deliberately omitted from the FAQ, including fines, membership, reservations, and exceptions such as after-hours returns or renewing a reserved book. A related rule was not treated as evidence for an unspecified exception. These questions were assigned `needs_review=true` and a confirmation request as the target answer.
+
+| Metric | Before training | After training |
+| --- | --- | --- |
+| Format rate | 100% (21/21) | 100% (21/21) |
+| Content rate | 42.86% (9/21) | 95.24% (20/21) |
+| Both format and content | 42.86% (9/21) | 95.24% (20/21) |
+
+Training completed in 158 seconds over 40 steps and 20 epochs. The logged loss decreased from 1.522592 at step 10 to 0.016341 at step 40. There were no regressions.
+
+The only remaining failure was “When must I return a book after borrowing it?”. The model answered “Return borrowed books at the front desk.” with `needs_review=false`, giving the return location instead of the 14-day duration. This was a content error caused by selecting the wrong FAQ rule, despite valid formatting. All six test questions without evidence passed after training.
+
+In section 6, the three unknown questions about the director's name, home delivery, and damaged books remained classified as `needs_review` before and after training. However, the before-training home-delivery answer was “No” despite its review flag being true. After training, it requested confirmation. This shows why the classification alone does not capture every problem in the answer text. The known loan-duration control remained `asserted` and correctly answered 14 days.
+
+The optional untrained 4-bit model achieved 100% format compliance but only 14.29% content accuracy (3/21), compared with 42.86% for the unquantized base model. This observation concerns quantization in this run.
+
+This experiment demonstrates improved content selection and confirmation wording even when format compliance was already perfect. The remaining error shows that training does not guarantee selection of the correct supporting fact. Its 95.24% post-training score should not be interpreted as proof that the library topic is easier than the course FAQ: the questions and expected keywords differ and both test sets used are small.
+
+Saved Results: [Implementation results](../../notebooks/implementation/result%282%29.json), [before-training outputs](../../notebooks/implementation/eval_before%282%29.json), [after-training outputs](../../notebooks/implementation/eval_after%282%29.json), [4-bit outputs](../../notebooks/implementation/eval_before_4bit%282%29.json), and [executed notebook](../../notebooks/implementation/lora_library_implementation_colab_run.ipynb).
