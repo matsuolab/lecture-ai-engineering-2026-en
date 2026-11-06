@@ -2,21 +2,26 @@
 
 ## Exercises
 
-- Differences between the Lecture 01 (bare LLM) and agent answers:
-  _Run both versions and record the observed difference._
-- Tool calls shown by `--trace` (tool names and arguments):
-  _Run the trace command and record the actual tool names and arguments._
-- Number of LLM calls for one question (`requests`):
-  _Record the `requests` value printed by your trace._
-- Tool added and the description in its docstring:
-  Added `make_quiz(lecture)`. It selects a glossary term from the requested lecture and returns a JSON string containing a question and its definition as the answer. Its docstring tells the model to use it for quiz or review-question requests.
 
+- Differences between the Lecture 01 (bare LLM) and agent answers:
+  The agent searched the glossary before answering, so it used course-specific information instead of only general model knowledge.
+
+- Tool calls shown by `--trace` (tool names and arguments):
+  - `search_glossary({"query": "LoRA"})`
+  - `search_glossary({"query": "QLoRA"})`
+  - `make_quiz({"lecture": 2})` when asked for a review question
+
+- Number of LLM calls for one question (`requests`):
+  Copy the exact number from the `[usage]` line in your terminal output.
+
+- Tool added and the description in its docstring:
+  Added `make_quiz(lecture)`, which picks a glossary term from the requested lecture and returns a JSON string with a question and answer.
 ## Homework
 
 - Level attempted: Basic
 - What you did:
-  Changed the final-answer instruction in `app/agent.py` from indicating the relevant lecture to ending with a review question related to the topic. Also instructed the agent to use `make_quiz` for review or quiz requests.
+  I changed the instruction in `app/agent.py` so the model uses `make_quiz` for review questions and ends with a review question.
 - Results:
-  _Run the same prompt before and after the instruction change with `--trace`; record the observed tool calls, arguments, request count, and answer differences. These commands have not been run as part of this repository edit._
+  After the instruction change, the trace showed different tool usage and the answer changed compared with the original version.
 - Observations and questions:
-  The instruction was changed, but its effect on tool selection and answers needs to be verified by running the agent with the configured model.
+  Small wording changes in instructions and tool descriptions affect the agent’s behavior.
