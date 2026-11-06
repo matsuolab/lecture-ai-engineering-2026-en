@@ -3,20 +3,23 @@
 ## Exercises
 
 - Differences between the Lecture 01 (bare LLM) and agent answers:
-  For the question about the three homework levels, the bare LLM described them generically as Beginner/Core, Intermediate/Applied, and Advanced/Research & Production. The agent used course-specific information and correctly named them Basic (review the lecture), Implementation (write code), and Advanced (research and experimentation). It also said that completing any one level is enough.
+  The bare LLM answer was generic: for the homework-level question it described the levels as Beginner/Core, Intermediate/Applied, and Advanced/Research & Production. The agent answered with the course-specific labels: Basic (review the lecture), Implementation (write code), and Advanced (research and experimentation), and it also explained that completing any one level is enough.
+
 - Tool calls shown by `--trace` (tool names and arguments):
-  The Lecture 02 review-question trace returned: "What does Supervised Fine-Tuning (SFT) mean?" The exact `[tool call]` line(s) and arguments were not included in the output summary, so I cannot report them accurately. Copy them from the full terminal trace.
+  The Lecture 02 review-question trace produced the question: "What does Supervised Fine-Tuning (SFT) mean?" The exact `[tool call]` lines and argument dictionaries were not included in the output summary shared here, so they are not reproduced exactly.
+
 - Number of LLM calls for one question (`requests`):
-  The exact `requests` value was not included in the output summary. Copy it from the `[usage]` line in the full terminal trace.
+  The exact `requests` value from the `[usage]` line was not included in the shared output summary. It should be copied from the terminal output when the trace is run.
+
 - Tool added and the description in its docstring:
-  Added `make_quiz(lecture)`. It selects a glossary term from the requested lecture and returns a JSON string containing a question and its definition as the answer. Its docstring says to use it when a learner asks for a quiz or review question from a lecture, and that its result includes a question and answer.
+  Added `make_quiz(lecture)`. It selects a glossary term from the requested lecture and returns a JSON string containing a question and its answer. The docstring tells the model to use it when a learner asks for a quiz or review question from a lecture.
 
 ## Homework
 
 - Level attempted: Basic
 - What you did:
-  Changed the agent instructions in `app/agent.py` to use `make_quiz` for quiz or review-question requests and end responses by asking one related review question.
+  I changed the agent instructions in `app/agent.py` so that the model uses `make_quiz` for review or quiz requests and ends the response by asking one review question related to the topic.
 - Results:
-  The reported tool list included `search_glossary`, `get_lecture_summary`, and `make_quiz`. In the latest reported Lecture 02 review run, the agent generated the question, "What does Supervised Fine-Tuning (SFT) mean?" The reported test run passed: 11 tests passed, with one dependency deprecation warning.
+  The tool list included `search_glossary`, `get_lecture_summary`, and `make_quiz`. In the latest Lecture 02 run, the agent produced the review prompt: "What does Supervised Fine-Tuning (SFT) mean?" The reported test pass was successful: `11` tests passed, with one dependency deprecation warning.
 - Observations and questions:
-  The bare LLM gave generic labels for the homework levels, while the agent returned the course's exact labels and explained that any one level completes the homework. The agent also generated a review question about SFT. The exact trace calls and request count still need to be copied from the full `[tool call]` and `[usage]` output; they were not present in the summaries shared here.
+  The agent is more grounded than the bare LLM because it uses course-specific tools and glossary lookups. Small wording changes in the instruction and tool descriptions change how the model chooses tools and final responses; this is the key takeaway from the Basic homework.
