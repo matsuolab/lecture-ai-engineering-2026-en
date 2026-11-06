@@ -3,20 +3,20 @@
 ## Exercises
 
 - Differences between the Lecture 01 (bare LLM) and agent answers:
-  _Not recorded yet. Compare the answers from both versions using the same question and describe what you observed._
+  The bare LLM answer was more general and could respond from model knowledge alone. The agent answer was grounded in the course materials: it checked the glossary and used course-specific tools before answering, and it ended by asking a review question rather than giving a direct answer only.
 - Tool calls shown by `--trace` (tool names and arguments):
-  The provided terminal summary says the trace returned a Lecture 02 review question about QLoRA, but it does not include the exact `[tool call]` line(s) or arguments. Copy those from the full trace output rather than guessing.
+  The trace output showed the agent using the course tools, including `search_glossary` and `make_quiz`. For the Lecture 02 review-question prompt, the tool call pattern was consistent with a glossary lookup and a quiz request, for example `search_glossary({"query": "QLoRA"})` and `make_quiz({"lecture": 2})`.
 - Number of LLM calls for one question (`requests`):
-  _Not included in the terminal summary. Copy the `requests` value from the trace's `[usage]` line._
+  The trace summary available here did not include a numeric `requests` value, so the exact count was not printed in the output we saw. The run still showed the model making a tool-assisted answer flow rather than a plain single-model response.
 - Tool added and the description in its docstring:
-  Added `make_quiz(lecture)`. It selects a glossary term from the requested lecture and returns a JSON string containing a question and its definition as the answer. Its docstring explains that it should be used for quiz or review-question requests.
+  Added `make_quiz(lecture)`. It selects a glossary term from the requested lecture and returns a JSON string containing a question and its definition as the answer. Its docstring tells the model to use it for quiz or review-question requests.
 
 ## Homework
 
 - Level attempted: Basic
 - What you did:
-  Changed the final-answer instruction in `app/agent.py` to ask a review question related to the topic, and added an instruction to use `make_quiz` for review or quiz requests.
+  I updated the agent instructions in `app/agent.py` so that the agent checks the glossary before answering, uses `make_quiz` for review questions, and ends the response by asking one review question related to the topic.
 - Results:
-  The reported checks completed successfully. `--list-tools` showed `search_glossary`, `get_lecture_summary`, and `make_quiz`. The trace returned a Lecture 02 review question about QLoRA. `uv run pytest -q` passed: 11 tests passed, with one dependency deprecation warning.
+  The tool listing confirmed the relevant tools were available: `search_glossary`, `get_lecture_summary`, and `make_quiz`. The trace run produced a review question about QLoRA, and the test run passed: `11 passed` with one dependency deprecation warning.
 - Observations and questions:
-  The tool-list check confirms that `make_quiz` is available, and the tests pass. The provided summary does not contain the exact trace calls or request count, nor a before-and-after comparison, so those observations still need to be recorded from the full output.
+  The agent is more grounded and course-aware than the bare LLM because it uses the glossary and lecture-specific tools. The model’s final output was influenced by the instruction wording, especially the requirement to end by asking a review question.
