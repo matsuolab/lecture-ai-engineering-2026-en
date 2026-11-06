@@ -224,7 +224,7 @@
       "aliases": ["SFT", "Supervised Fine-Tuning", "instruction tuning"],
       "lecture": 2,
       "category": "Fine-tuning",
-      "definition": "A method of further training a model using pairs of inputs and desired outputs, such as questions and model answers. A representative method for teaching instruction-following behavior.",
+      "definition": "A method of further training a model using pairs of inputs and desired outputs, such as questions and reference answers. A representative method for teaching instruction-following behavior.",
       "related": ["fine-tuning", "lora"]
     },
     {
@@ -242,7 +242,7 @@
       "aliases": ["Low-Rank Adaptation"],
       "lecture": 2,
       "category": "Fine-tuning",
-      "definition": "A PEFT method that freezes pretrained weights, represents weight updates as the product of two small matrices (low-rank matrices), and trains only those small matrices. It trains few parameters and saves the results (adapters) in small files. The Lecture 02 exercises cover LoRA.",
+      "definition": "A PEFT method that freezes pretrained weights, represents weight updates as a low-rank product of two small matrices, and trains only those small matrices. It trains few parameters and saves the results (adapters) in small files. The Lecture 02 exercises cover LoRA.",
       "related": ["peft", "lora-rank", "qlora"]
     },
     {
@@ -386,7 +386,7 @@
       "aliases": ["ADK", "Agent Development Kit", "google-adk"],
       "lecture": 3,
       "category": "Agents",
-      "definition": "An open-source agent development framework released by Google. It integrates closely with Gemini, and adk web lets you visually follow tool calls. Version 2.0 introduces breaking changes from the 1.x series. This course covers it in the Advanced homework.",
+      "definition": "An open-source agent development framework published by Google, with deep Gemini integration. Version 2.0 introduced major changes from the 1.x series. This course covers it in the Advanced homework for Lecture 03.",
       "related": ["pydantic-ai", "ai-agent"]
     },
     {
