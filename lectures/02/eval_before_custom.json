@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "label": "before_custom",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.8095238095238095,
+    "both_rate": 0.8095238095238095,
+    "seconds": 35.7
+  },
+  "rows": [
+    {
+      "question": "What are the joining requirements?",
+      "raw": "{\"answer\": \"Membership is open to all students, and there are no dues or fees to join.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Is the club free to join?",
+      "raw": "{\"answer\": \"Membership is open to all students, and there are no dues or fees to join.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Tell me about membership costs",
+      "raw": "{\"answer\": \"Membership is free.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Is there a regular meeting schedule?",
+      "raw": "{\"answer\": \"We meet every Thursday from 18:00 to 19:30 in Room 402.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "What day are meetings held?",
+      "raw": "{\"answer\": \"We meet every Thursday from 18:00 to 19:30 in Room 402.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "In which room does the club gather?",
+      "raw": "{\"answer\": \"We meet every Thursday from 18:00 to 19:30 in Room 402.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Are projects collaborative?",
+      "raw": "{\"answer\": \"Members work on collaborative open-source projects using GitHub.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Do you use GitHub for projects?",
+      "raw": "{\"answer\": \"Members work on collaborative open-source projects using GitHub.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Tell me about club software projects",
+      "raw": "{\"answer\": \"Members work on collaborative open-source projects using GitHub.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Is coding experience required?",
+      "raw": "{\"answer\": \"We offer introductory workshops.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Is this club friendly to complete novices?",
+      "raw": "{\"answer\": \"We offer introductory workshops.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Will there be beginner tutorials?",
+      "raw": "{\"answer\": \"We offer introductory workshops.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Who should I reach out to for help?",
+      "raw": "{\"answer\": \"You can reach the organizing committee via Slack or by emailing club@example.com.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "How can I send an email to the club?",
+      "raw": "{\"answer\": \"You can reach the organizing committee via Slack or by emailing club@example.com.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "What contact methods are available?",
+      "raw": "{\"answer\": \"You can reach the organizing committee via Slack or by emailing club@example.com.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Is attendance mandatory for all meetings?",
+      "raw": "{\"answer\": \"This FAQ does not contain that information. Confirmation from the course organizers is needed.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Are there any coding competitions?",
+      "raw": "{\"answer\": \"This FAQ does not contain that information. Confirmation from the organizers is needed.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Can I earn university credits by participating?",
+      "raw": "{\"answer\": \"This FAQ does not contain that information. Confirmation from the course organizers is needed.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Is there a club t-shirt or merchandise?",
+      "raw": "{\"answer\": \"This FAQ does not contain that information. Confirmation from the organizers is needed.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Can I present my own project?",
+      "raw": "{\"answer\": \"This FAQ does not contain that information. Confirmation from the course organizers is needed.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Who is the club sponsor faculty member?",
+      "raw": "{\"answer\": \"This FAQ does not contain that information. Confirmation from the organizing committee is needed.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": true
+    }
+  ]
+}
