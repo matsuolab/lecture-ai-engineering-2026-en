@@ -4,6 +4,11 @@ Read API keys and model names from environment variables rather than hard-coding
 """
 
 import os
+from dotenv import find_dotenv, load_dotenv
+
+# Load local environment files if present (.env.local takes precedence over .env)
+load_dotenv(find_dotenv(".env.local"))
+load_dotenv(find_dotenv(".env"))
 
 # Default model. Set the AIE_MODEL environment variable to switch models.
 #   Example: export AIE_MODEL=gemini-3.5-flash
@@ -28,9 +33,9 @@ def get_api_key() -> str:
     if not key:
         raise SystemExit(
             "The GEMINI_API_KEY environment variable was not found.\n"
-            "1. Register GEMINI_API_KEY under GitHub Settings → Codespaces → Secrets,\n"
-            "   and select your own fork for repository access.\n"
-            "2. If you registered it after starting Codespaces, restart your Codespace.\n"
-            "   (Bottom-left 'Codespaces' → 'Stop Current Codespace' → open it again)"
+            "- For local development: create a .env or .env.local file (see .env.example),\n"
+            "  or export it in your terminal: export GEMINI_API_KEY=\"your_api_key\"\n"
+            "- For GitHub Codespaces: register GEMINI_API_KEY under GitHub Settings → Codespaces → Secrets,\n"
+            "  and select your fork for repository access. Restart your Codespace if newly added."
         )
     return key
