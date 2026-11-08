@@ -18,7 +18,7 @@ def _parts(result, kind):
 
 
 def test_base_tools_are_registered_and_called():
-    model = TestModel()
+    model = TestModel(call_tools=["search_glossary", "get_lecture_summary"])
     with agent.override(model=model):
         result = agent.run_sync("What is LoRA?")
 

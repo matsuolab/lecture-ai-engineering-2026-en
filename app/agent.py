@@ -16,7 +16,7 @@ import inspect
 import json
 from pathlib import Path
 
-from pydantic_ai import Agent
+from pydantic_ai import Agent, DeferredToolRequests, DeferredToolResults
 from pydantic_ai.exceptions import ModelHTTPError
 from fastmcp import Client
 from pydantic_ai.mcp import MCPToolset, StdioTransport
@@ -32,6 +32,7 @@ INSTRUCTIONS = """\
 You are a learning support agent for the AI Engineering Pilot Course (AIE2026).
 - Always check the glossary with search_glossary before answering about terms or course-specific information.
 - Use get_lecture_summary when asked about the content of a session.
+- Use save_log when the learner explicitly asks to save a learning record.
 - If something is absent from the glossary, say "It is not in the glossary" instead of making assertions based on guesses.
 - When a glossary search finds no match, explicitly say that the term was not found and ask the learner to check its spelling or provide more context. Do not assign a lecture number without supporting evidence.
 - Otherwise, end your answer by indicating the relevant session (Lecture NN).
@@ -39,9 +40,10 @@ You are a learning support agent for the AI Engineering Pilot Course (AIE2026).
 """
 
 # Pass the model at runtime (so tests can substitute TestModel without calling an API)
-agent = Agent(instructions=INSTRUCTIONS)
+agent = Agent(instructions=INSTRUCTIONS,output_type=str | DeferredToolRequests,)
 agent.tool_plain(tools.search_glossary)
 agent.tool_plain(tools.get_lecture_summary)
+agent.tool_plain(tools.save_log, requires_approval=True)
 
 # TODO(Lecture 03 exercise): create make_quiz in tools.py and register it here
 
@@ -88,7 +90,7 @@ def print_tools(target: Agent) -> None:
     Pass the tools to TestModel (the fake model used for testing) and read them back.
     MCP server tools and Lecture 03's function tools look the same to the model.
     """
-    model = TestModel(call_tools=[])
+    model = TestModel(call_tools=["search_glossary", "get_lecture_summary"])
     target.run_sync("Tool list", model=model)
     tools_seen = model.last_model_request_parameters.function_tools
     print(f"Tools visible to the model: {len(tools_seen)}")
@@ -130,7 +132,28 @@ def main() -> None:
     if args.mcp:
         print("[tools] MCP servers (app/mcp_servers.json)")
     try:
+        model = build_model()
         result = target.run_sync(args.question, model=build_model())
+        while isinstance(result.output,DeferredToolRequests):
+            decisions = {}
+            
+            for call in result.output.approvals:
+                print(f"\nProposed action: {call.tool_name}")
+                print(json.dumps(
+                    call.args_as_dict(),
+                    ensure_ascii=False,
+                    indent=2,
+                ))
+
+                answer = input("Approve saving this record? [y/N]: ")
+                decisions[call.tool_call_id] = answer.strip().lower() == "y"
+            result = target.run_sync(
+                model=model,
+                message_history=result.all_messages(),
+                deferred_tool_results=DeferredToolResults(
+                    approvals=decisions,
+                ),
+            )
     except ModelHTTPError as e:
         print(api_error_message(e.status_code, str(e.body)[:200]))
         raise SystemExit(1)
