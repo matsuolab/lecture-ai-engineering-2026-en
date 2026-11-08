@@ -7,10 +7,13 @@ Rewriting descriptions changes whether the model uses a tool and which arguments
 import json
 from functools import cache
 from pathlib import Path
+from datetime import datetime, timezone
+from uuid import uuid4
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 MAX_RESULTS = 3
 
+LOG_DIR = Path(__file__).resolve().parent.parent / "learning_log"
 
 @cache
 def load_glossary() -> list[dict]:
@@ -77,3 +80,27 @@ def get_lecture_summary(lecture: int) -> str:
         available = sorted(p.stem for p in (DATA_DIR / "lectures").glob("*.md"))
         return f"Key points for Lecture {lecture:02d} are not available yet. Available sessions: {', '.join(available)}"
     return path.read_text(encoding="utf-8")
+
+def save_log(topic: str, summary: str) -> str:
+    """Saves a learning record when the learner explicitly asks to record it."""
+    topic = topic.strip()
+    summary = summary.strip()
+    if (not topic) or (not summary):
+        return "The topic and summary must both be nonempty."
+    record = {
+        "topic":topic,
+        "summary":summary,
+        "created_at":datetime.now(timezone.utc).isoformat(),
+    }
+    LOG_DIR.mkdir(parents=True,exist_ok=True)
+    path = LOG_DIR / f"{uuid4().hex}.json"
+
+    path.write_text(
+        json.dumps(record,ensure_ascii=False,indent=2),
+        encoding="utf-8"
+    )
+
+    return f"Saved learning record: {path.name}"
+
+
+    

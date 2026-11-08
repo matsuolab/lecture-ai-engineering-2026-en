@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "label": "before",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.42857142857142855,
+    "both_rate": 0.42857142857142855,
+    "seconds": 43.4
+  },
+  "rows": [
+    {
+      "question": "When must I return a book after borrowing it?",
+      "raw": "{\"answer\": \"Return borrowed books at the front desk.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "How many days does a book loan last?",
+      "raw": "{\"answer\": \"14\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "What is the permitted borrowing duration for a book?",
+      "raw": "{\"answer\": \"14 days\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "How many books may a member have on loan simultaneously?",
+      "raw": "{\"answer\": \"3\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "What is the simultaneous book-loan limit?",
+      "raw": "{\"answer\": \"3\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "What is the largest number of books a member can check out at once?",
+      "raw": "{\"answer\": \"3\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Where can I hand back a borrowed book?",
+      "raw": "{\"answer\": \"The front desk\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Which desk accepts book returns?",
+      "raw": "{\"answer\": \"Front desk\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Where should a member bring books at the end of a loan?",
+      "raw": "{\"answer\": \"Return borrowed books at the front desk.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "On which days and at what times can I visit the library?",
+      "raw": "{\"answer\": \"Monday to Friday from 09:00 to 17:00\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "What is the weekday opening schedule?",
+      "raw": "{\"answer\": \"Monday to Friday from 09:00 to 17:00\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Give the opening days and the daily opening and closing times.",
+      "raw": "{\"answer\": \"Monday to Friday, 09:00 to 17:00\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "How many times may I renew a book and through which service?",
+      "raw": "{\"answer\": \"Each book may be renewed once through the library portal.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Which service handles renewals and what is the renewal limit?",
+      "raw": "{\"answer\": \"The library portal handles renewals, and each book may be renewed once.\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "How often can a borrowed book be renewed, and where is this done?",
+      "raw": "{\"answer\": \"Each book may be renewed once through the library portal.\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "Is Wi-Fi available?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Is there a membership fee?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Can I return books after closing time?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Can I renew a book that another member has reserved?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Are children allowed to become members?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "Can I pay overdue fines online?",
+      "raw": "{\"answer\": \"No\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    }
+  ]
+}
