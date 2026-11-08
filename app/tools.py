@@ -32,7 +32,7 @@ def search_glossary(query: str) -> str:
     """Search the course glossary and return definitions and the sessions that cover the terms.
 
     Use before answering about AI engineering terms or words specific to this course (AIE2026).
-    Put only one term to look up in query (for example, "LoRA").
+    Put several terms to look up in query (for example, "LoRA, QLoRA").
     """
     q = _normalize(query)
     if not q:
