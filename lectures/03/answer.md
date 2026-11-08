@@ -62,3 +62,42 @@ The revised instruction improved the response when a term was absent from the gl
 Tool selection remained consistent for the lecture-summary and unknown-term questions. For the LoRA comparison, glossary calls decreased from two to one, while all questions still required two LLM requests. This shows that tool calls and LLM requests are different measures.
 
 Because I ran each question only once per instruction version, I cannot confidently attribute every difference to the instruction change. Repeating the experiment would help distinguish a consistent effect from normal model variation.
+
+
+
+### Implementation:
+#### What was done:
+
+I added a `save_log(topic: str, summary: str)` tool in `app/tools.py` to save learning records as JSON files in `learning_log/`. Each record contains the topic, a summary, and an automatically generated UTC timestamp. The tool rejects empty or whitespace-only topics and summaries.
+
+In `app/agent.py`, I registered the tool with `requires_approval=True` and added an instruction to use it when the learner explicitly asks to save a record. I also added handling for `DeferredToolRequests`: the program displays the proposed content and asks for confirmation before executing the tool. It resumes the agent with the user's decision through `DeferredToolResults`, preserving the message history.
+
+#### Results:
+
+The agent receives manual confirmation from the user if learning results should be saved. After the action is confirmed a record JSON is created containing the following info:
+
+```json
+{
+  "topic": "LoRA",
+  "summary": "I learned that LoRA freezes the base weights and trains small adapter matrices.",
+  "created_at": "2026-11-08T13:50:23.510420+00:00"
+}
+```
+
+Also, automated tests using temporary directories were added  and `TestModel` to check the following behavior:
+
+| Scenario | Expected and verified result |
+|---|---|
+| Direct tool execution with valid content | A JSON file contains the supplied topic and summary and a creation timestamp. |
+| Empty or whitespace-only input | The tool returns a validation message without creating a file. |
+| Approval pending | No file is created before the decision. |
+| Approval granted | A learning record is created. |
+| Approval denied | No learning record is created. |
+
+Also the existing base-tool test was  updated to call only `search_glossary` and `get_lecture_summary`, leaving approval behavior to the new tests.
+
+#### Observations and conclusion:
+
+During the first manual trial, an incorrect validation condition rejected nonempty content. Correcting the condition allowed an approved call to save the record successfully.
+
+Approval is enforced by the program through `requires_approval=True`. The automated tests verify that pending and denied calls do not write files, while an approved call does.
