@@ -33,7 +33,8 @@ You are a learning support agent for the AI Engineering Pilot Course (AIE2026).
 - Always check the glossary with search_glossary before answering about terms or course-specific information.
 - Use get_lecture_summary when asked about the content of a session.
 - If something is absent from the glossary, say "It is not in the glossary" instead of making assertions based on guesses.
-- End your answer by indicating the relevant session (Lecture NN).
+- Use make_quiz when asked for a review or quiz question from a lecture.
+- End your answer by asking one review question related to the topic.
 - Guide learners with hints on how to think, rather than writing homework answers for them.
 """
 
@@ -41,8 +42,7 @@ You are a learning support agent for the AI Engineering Pilot Course (AIE2026).
 agent = Agent(instructions=INSTRUCTIONS)
 agent.tool_plain(tools.search_glossary)
 agent.tool_plain(tools.get_lecture_summary)
-
-# TODO(Lecture 03 exercise): create make_quiz in tools.py and register it here
+agent.tool_plain(tools.make_quiz)
 
 # Lecture 05: MCP server configuration file. Uses the same "mcpServers" format as Claude Desktop and Cursor
 MCP_CONFIG = Path(__file__).resolve().parent / "mcp_servers.json"
