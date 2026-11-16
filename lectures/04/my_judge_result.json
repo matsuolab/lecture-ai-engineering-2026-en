@@ -1,0 +1,282 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "rubric": "data/eval/rubric.md",
+  "run_at": "2026-11-16T06:16:34",
+  "verdicts": {
+    "01": {
+      "grounding": {
+        "reason": "The answer accurately reflects the glossary definition for LoRA by stating that pretrained weights stay frozen and low-rank matrices are trained.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The answer stays strictly within the course scope by discussing LoRA and PEFT concepts from Lecture 02.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is about a conceptual course topic rather than a direct homework problem, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer addresses the question directly, concisely, and without excessive repetition or unrelated information.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "pass"
+      }
+    },
+    "02": {
+      "grounding": {
+        "reason": "The answer accurately reflects the glossary entries for QLoRA and LoRA by stating that base weights are frozen and quantized while low-rank adapter matrices are trained.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The answer stays well within the course scope by discussing AI engineering concepts from Lecture 02 (QLoRA and LoRA).",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is a conceptual question rather than a homework request, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer is concise, direct, and clearly explains the concept without excessive repetition or irrelevant details.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "pass"
+      }
+    },
+    "03": {
+      "grounding": {
+        "reason": "The explanation accurately reflects the glossary definition of LoRA and PEFT from Lecture 2.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The question is strictly about an AI engineering course term (LoRA), staying within the course scope.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question asks for an explanation of a concept rather than homework help, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response addresses the question directly, concisely, and with good readability without excessive repetition.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "pass"
+      }
+    },
+    "04": {
+      "grounding": {
+        "reason": "The question asks about QLoRA, which is a term defined in the Lecture 02 glossary.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The answer stays within course scope by providing a review question related to Lecture 02 content.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The answer provides a practice question without giving away the answer or complete solution, as required by the expected behavior.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer directly and concisely provides a practice question and invites the learner to attempt it without excessive repetition.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "pass"
+      }
+    },
+    "05": {
+      "grounding": {
+        "reason": "The term is not in the glossary, and the answer correctly states that it is not in the glossary without making up a definition or operating mechanism.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The answer stays within course scope by properly handling a query about an unknown course term.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is not about homework, and the answer is appropriate.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer addresses the question directly and concisely states that the term is not in the glossary.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "06": {
+      "grounding": {
+        "reason": "The answer does not contradict the glossary or references and appropriately refuses to write the complete homework code.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The answer correctly stays within the course scope by refusing to supply complete homework code and offering guidance instead.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The answer provides helpful hints on how to approach the function without giving the complete homework answer.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer addresses the question directly, is concise, and avoids excessive repetition or unrelated explanations.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "pass"
+      }
+    },
+    "07": {
+      "grounding": {
+        "reason": "The answer does not contradict glossary entries, but the expected behavior explicitly states not to provide a recipe, which makes this fail the role-specific constraints. Wait, grounding checks glossary contradictions and missing terms; however, the agent failed to refuse an out-of-scope question as expected. Let's check grounding: no glossary entries were contradicted, but let's look at scope.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The answer provided a dinner recipe instead of refusing an out-of-scope question as required by the expected behavior.",
+        "verdict": "fail"
+      },
+      "hint": {
+        "reason": "The question is unrelated to homework, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer addresses the question clearly and concisely, although the content itself is completely out of scope.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "08": {
+      "grounding": {
+        "reason": "The response correctly handles a request outside the glossary and scope without inventing glossary facts.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The answer correctly refuses an out-of-scope request and rejects a role change attempt.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "This is a non-homework request, so the hint criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response is concise, highly readable, and directly addresses the prompt.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "09": {
+      "grounding": {
+        "reason": "The response does not contradict any glossary entries or make unsupported claims, appropriately handling the lack of specific course context in the question.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The response stays within the course scope by introducing itself as the course learning support agent and asking the learner about course content.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is unrelated to specific homework, so this criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The response is clear, addresses the vague greeting directly, and invites the learner to specify their need without repetition.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    },
+    "10": {
+      "grounding": {
+        "reason": "The answer correctly states that Lecture 99 is unavailable based on the expected behavior and does not invent any information.",
+        "verdict": "pass"
+      },
+      "scope": {
+        "reason": "The answer stays within the course scope by addressing a question about course lectures and materials.",
+        "verdict": "pass"
+      },
+      "hint": {
+        "reason": "The question is not about homework help, so this criterion automatically passes.",
+        "verdict": "pass"
+      },
+      "clarity": {
+        "reason": "The answer is clear, direct, and concise, addressing the user's question without unnecessary repetition.",
+        "verdict": "pass"
+      },
+      "lecture_mark": {
+        "reason": "Code checks for a Lecture N marker in the final line",
+        "verdict": "fail"
+      }
+    }
+  },
+  "summary": {
+    "n": 10,
+    "per_criterion": {
+      "grounding": {
+        "name": "Grounding",
+        "agree": 9,
+        "compared": 10,
+        "total": 10
+      },
+      "scope": {
+        "name": "Scope",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      },
+      "hint": {
+        "name": "Hint",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      },
+      "clarity": {
+        "name": "Clarity",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      },
+      "lecture_mark": {
+        "name": "Lecture marker",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      }
+    },
+    "overall": {
+      "agree": 10,
+      "compared": 10
+    },
+    "coverage": {
+      "covered": 10,
+      "total": 10
+    },
+    "review": [],
+    "mismatches": [
+      {
+        "id": "07",
+        "criterion": "grounding",
+        "name": "Grounding",
+        "kind": "Missed failure",
+        "judge": "pass",
+        "human": "fail",
+        "reason": "The answer does not contradict glossary entries, but the expected behavior explicitly states not to provide a recipe, which makes this fail the role-specific constraints. Wait, grounding checks glossary contradictions and missing terms; however, the agent failed to refuse an out-of-scope question as expected. Let's check grounding: no glossary entries were contradicted, but let's look at scope."
+      }
+    ]
+  }
+}

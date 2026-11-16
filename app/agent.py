@@ -16,7 +16,7 @@ import inspect
 import json
 from pathlib import Path
 
-from pydantic_ai import Agent
+from pydantic_ai import Agent, DeferredToolRequests, DeferredToolResults
 from pydantic_ai.exceptions import ModelHTTPError
 from fastmcp import Client
 from pydantic_ai.mcp import MCPToolset, StdioTransport
@@ -34,15 +34,22 @@ You are a learning support agent for the AI Engineering Pilot Course (AIE2026).
 - Use get_lecture_summary when asked about the content of a session.
 - If something is absent from the glossary, say "It is not in the glossary" instead of making assertions based on guesses.
 - End your answer by indicating the relevant session (Lecture NN).
+- Use make_quiz when asked for a quiz or review question from a lecture.
+- When explicitly asked to save learning notes, call save_learning_log with the topic and notes. The program will request approval before saving.
+- If saving is denied, respect the decision and do not retry saving.
 - Guide learners with hints on how to think, rather than writing homework answers for them.
 """
 
 # Pass the model at runtime (so tests can substitute TestModel without calling an API)
-agent = Agent(instructions=INSTRUCTIONS)
+agent = Agent(
+    instructions=INSTRUCTIONS,
+    output_type=[str, DeferredToolRequests],
+)
 agent.tool_plain(tools.search_glossary)
 agent.tool_plain(tools.get_lecture_summary)
 
-# TODO(Lecture 03 exercise): create make_quiz in tools.py and register it here
+agent.tool_plain(tools.make_quiz)
+agent.tool_plain(tools.save_learning_log, requires_approval=True)
 
 # Lecture 05: MCP server configuration file. Uses the same "mcpServers" format as Claude Desktop and Cursor
 MCP_CONFIG = Path(__file__).resolve().parent / "mcp_servers.json"
@@ -111,28 +118,56 @@ def print_trace(result) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Ask the learning support agent a question")
+    parser = argparse.ArgumentParser(
+        description="Ask the learning support agent a question"
+    )
     parser.add_argument("question", nargs="?")
-    parser.add_argument("--trace", action="store_true", help="Show tool calls")
-    parser.add_argument("--mcp", action="store_true", help="Lecture 05: receive tools from MCP servers (app/mcp_servers.json)")
-    parser.add_argument("--list-tools", action="store_true", help="List tools visible to the model and exit (no API key needed)")
+    parser.add_argument("--trace", action="store_true")
+    parser.add_argument("--mcp", action="store_true")
+    parser.add_argument("--list-tools", action="store_true")
     args = parser.parse_args()
 
     target = build_mcp_agent() if args.mcp else agent
+
     if args.list_tools:
         print_tools(target)
         return
+
     if not args.question:
         parser.error("Please provide a question")
 
     print(f"[model] {MODEL}")
-    if args.mcp:
-        print("[tools] MCP servers (app/mcp_servers.json)")
+
     try:
-        result = target.run_sync(args.question, model=build_model())
+        model = build_model()
+        result = target.run_sync(args.question, model=model)
+
+        while isinstance(result.output, DeferredToolRequests):
+            decisions = DeferredToolResults()
+
+            for call in result.output.approvals:
+                print(f"\nApproval required: {call.tool_name}")
+                print(f"Proposed content: {call.args}")
+
+                try:
+                    reply = input("Save this learning record? [y/N]: ")
+                except (EOFError, KeyboardInterrupt):
+                    reply = ""
+
+                approved = reply.strip().lower() in {"y", "yes"}
+                decisions.approvals[call.tool_call_id] = approved
+                print("Approved." if approved else "Denied.")
+
+            result = target.run_sync(
+                model=model,
+                message_history=result.all_messages(),
+                deferred_tool_results=decisions,
+            )
+
     except ModelHTTPError as e:
         print(api_error_message(e.status_code, str(e.body)[:200]))
         raise SystemExit(1)
+
     print(result.output)
     if args.trace:
         print_trace(result)

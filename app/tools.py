@@ -5,6 +5,7 @@ Rewriting descriptions changes whether the model uses a tool and which arguments
 """
 
 import json
+import random
 from functools import cache
 from pathlib import Path
 
@@ -77,3 +78,66 @@ def get_lecture_summary(lecture: int) -> str:
         available = sorted(p.stem for p in (DATA_DIR / "lectures").glob("*.md"))
         return f"Key points for Lecture {lecture:02d} are not available yet. Available sessions: {', '.join(available)}"
     return path.read_text(encoding="utf-8")
+def make_quiz(lecture: int) -> str:
+    """Create one review question and its answer for a lecture.
+
+    Use when the learner asks for a quiz or review question.
+    Supply the lecture number as an integer, for example 2 for Lecture 02.
+    """
+    entries = [
+        entry for entry in load_glossary()
+        if entry["lecture"] == lecture
+    ]
+
+    if not entries:
+        return json.dumps({
+            "error": f"No glossary terms are available for Lecture {lecture:02d}."
+        })
+
+    entry = random.choice(entries)
+    return json.dumps(
+        {
+            "question": f"What does {entry['term']} mean?",
+            "answer": entry["definition"],
+            "lecture": entry["lecture"],
+        },
+        ensure_ascii=False,
+    )
+def save_learning_log(topic: str, notes: str) -> str:
+    """Save a learning record after user approval.
+
+    Use only when the learner explicitly asks to save learning notes.
+    Provide a short topic and the notes to save.
+    """
+    from datetime import datetime, timezone
+    from uuid import uuid4
+
+    if not topic.strip() or not notes.strip():
+        return json.dumps({
+            "error": "Both topic and notes must contain text."
+        })
+
+    log_dir = Path(__file__).resolve().parent.parent / "learning_log"
+    log_dir.mkdir(parents=True, exist_ok=True)
+
+    timestamp = datetime.now(timezone.utc)
+    filename = (
+        f"{timestamp:%Y%m%dT%H%M%S}_"
+        f"{uuid4().hex}.json"
+    )
+    path = log_dir / filename
+
+    record = {
+        "topic": topic.strip(),
+        "notes": notes.strip(),
+        "created_at": timestamp.isoformat(),
+    }
+
+    with path.open("x", encoding="utf-8") as file:
+        json.dump(record, file, ensure_ascii=False, indent=2)
+
+    return json.dumps({
+        "status": "saved",
+        "path": f"learning_log/{filename}",
+        "topic": record["topic"],
+    })
