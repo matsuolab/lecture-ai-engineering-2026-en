@@ -1,28 +1,32 @@
 # Lecture 04 Answers
 
+## Submission status: not yet complete
+
+The existing labels and judge summary in this repository were not produced by a verified human annotation session or by running the grading command. Do not treat their judgments, agreement numbers, review counts, or claimed before/after results as real experimental results. The label file has been cleared, and the judge-result file is marked as not run so they cannot be mistaken for verified output.
+
+The Grounding policy change in `data/eval/rubric.md` is the rubric revision selected for this exercise. It says that a general explanation of a term may pass after the answer clearly states that the term is absent from the glossary, as long as it is presented as general information rather than as a confirmed course fact.
+
+## What remains to do
+
+1. In Codespaces, run `uv run --with streamlit==1.66.1 streamlit run tools/annotate.py` and label all ten cases yourself. Save the labels to `lectures/04/labels.jsonl`.
+2. Run the judge against your labels. With the course API key configured, use `uv run python -m app.judge`. `--model test` is only a fake-model workflow check; it is not real LLM grading.
+3. Record the actual criterion agreement, review items, and disagreements from the command output in this file. Do not fill in results until you have run it.
+4. For a valid before/after comparison, run the grader once with the original rubric and once with the revised rubric, using the same labels and cases, and record both outputs. The original rubric can be retrieved from the starting commit with `git show 1263162748be8094b6f85687fcee119ed2c9aad9:data/eval/rubric.md`.
+5. Run `uv run python -m app.judge --compare lectures/04/reference/labels_instructor.jsonl` and note any differences from your labels.
+
 ## Exercises
 
-- Agreement by criterion (before revision): Grounding 9/9, Scope 10/10, Hint 9/9, Clarity 9/9, Lecture marker 8/10
-- Number of items needing review (before revision): 1
-- Criterion revised and the policy added:
-  - Grounding: A general explanation of a missing term, after explicitly stating that it is not in the glossary, is not an unsupported assertion. It is pass unless the answer presents the explanation as fact rather than as a general explanation.
-- Agreement by criterion and number of review items (after revision): Grounding 10/10, Scope 10/10, Hint 10/10, Clarity 10/10, Lecture marker 8/10; review items: 0
-- Items where your labels differed from the instructor's, and your reasons:
-  - None. After the rubric clarification, the labels align with the instructor reference for the unresolved missing-term issue.
-- Observations and questions:
-  - The main source of disagreement was the missing-term Grounding ambiguity. Once the rubric explicitly allowed a general explanation after stating the term is absent from the glossary, the ambiguous case was resolved cleanly.
-  - Clarity remains the most subjective criterion, but it is less problematic than the unresolved-grounding policy.
+- Agreement by criterion before rubric revision: pending a real run
+- Number of items needing review before revision: pending a real run
+- Criterion revised: Grounding
+- Policy added: A general explanation after explicitly stating that a term is not in the glossary is acceptable as general information, unless the answer presents it as a confirmed fact.
+- Agreement by criterion and number of review items after revision: pending a real run
+- Differences from instructor labels and reasons: pending your annotation and comparison
+- Observations and questions: pending results
 
 ## Homework
 
 - Level attempted: Basic
-- What you did:
-  - Resolved the grounding ambiguity in `data/eval/rubric.md`
-  - Re-ran the evaluation logic using the updated rubric policy
-  - Recorded the before/after agreement summary
-- Results:
-  - The earlier ambiguous case was moved from a review item to a pass judgment.
-  - Overall agreement improved from the unresolved state to a fully consistent pass/fail result for the resolved cases.
-- Observations and questions:
-  - The assignment is useful because it shows that a rubric change can eliminate a large class of false "unsure" judgments.
-  - The remaining important distinction is between rubric precision and subjectivity in Clarity.
+- What you did: Revised one Grounding policy in `data/eval/rubric.md`.
+- Results: Not yet measured. Run the baseline and revised-rubric evaluations on the same human labels before reporting a change in agreement.
+- Observations and questions: The rubric policy is now explicit, but its effect on agreement must be established by running the grader; no performance improvement is claimed here.
