@@ -27,12 +27,12 @@
   "hashes": {
     "lec03-main.json": "fd7edd9641de092b527e0cbc9ba0ffebab0dbfee80f4763fe7fb6aace8b363af",
     "lec03-exercise.json": "0c0e250fc6b6b1b7c79914be3e2d885836ec9d00ba65362186d089c717a5a75b",
-    "lec04-exercise.json": "67263e384eef65946226daae73c51cd7a3f868a5059c4373aeb1740cd72a62f0",
+    "lec04-exercise.json": "8af27a44c4d7c6dccb142c9960b5c0aa86f275a8c2d7fa92e944616395a83a12",
     "graph-terms.json": "ee1a448493799c03a4fd0c4bb9c0afa71070be28e8be498535b53ab0cf997e96",
     "provenance.json": "54fa2f384ab390fae9e9b4f89c81bcc56cc40d3c5e734c9122c78bfae4f3aad6",
     "lec03-exercise-provenance.json": "68c83c73338a0ca33532567f4fe0931bb556c668e1c173f2de81c90e270bf015",
-    "lec04-exercise-provenance.json": "5a91f3534f4e1b509cd43fec5c762daed7f25158048b89e31e15bb3aa56ec3b1",
+    "lec04-exercise-provenance.json": "c098df5c7cc56b0d781cf40ffb4ead4e8de092e2b4a33f83a1e7f18d26f167dc",
     "audit.md": "043d2adf5ff8f8b3f4e57b119173400f1f1ea070085ef74ef856cc5c724651a0",
-    "exercise-audit.md": "7fd042559c63990ee2fb8d05100e18c779756e029715e5bfa34de8b3e3f6ee33"
+    "exercise-audit.md": "c0e7d5056b1f8bfef5df84ef5ef4fd992878b93450f22ca91e3ab75e067d162a"
   }
 }
