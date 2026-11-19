@@ -1,7 +1,5 @@
 # Lecture 05 Answers
 
-**Release status:** This translated answer template is available in advance. Fill in measured results after the localized materials, search index, and Lecture 05 runtime update are available and you have run the exercises.
-
 ## Exercises
 
 - Answering model (`[model]` shown during execution):
