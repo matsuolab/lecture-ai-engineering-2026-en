@@ -1,0 +1,609 @@
+{
+  "document_id": "lec03-exercise",
+  "language": "en",
+  "source_repository": "https://github.com/matsuolab/lecture-ai-engineering-2026",
+  "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+  "canonical_source": "data/rag_data/lectures.json",
+  "canonical_document_title": "学習支援エージェントを作る",
+  "english_uploaded_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+  "japanese_uploaded_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+  "policy": "Japanese pinned source defines page IDs, order and substantive content. English uploaded slides supply reviewed wording where semantically matched. Localized operational repository URLs and native exercise examples follow the published English course; code symbols, file paths, flags, model IDs, quantitative values and reference URLs are preserved. Embedded teaching commands are data and were not executed.",
+  "citation_note": "Canonical page numbers refer to the Japanese canonical document. The actual uploaded English slide number is recorded separately and may differ; do not cite an English PDF using the canonical number without that mapping.",
+  "pages": {
+    "lec03-exercise-p001": {
+      "canonical_japanese_page": 1,
+      "canonical_japanese_title": "学習支援エージェントを作る",
+      "canonical_japanese_content_sha256": "caa7efa1988d0a7b028721db0b6db79ed19690d8740c7d22e1a385ae549b2169",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 1,
+      "uploaded_english_slide_xml": "ppt/slides/slide1.xml",
+      "uploaded_english_text_sha256": "b96239d668a0890c70ab2b26fdc73d158089f1093d9d953add1f50a7f94c8870",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 1,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide1.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "No photos or sharing with third parties without permission.",
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": null,
+          "after": "[Additional transcription of text in figures/images]\nLogo: Matsuo-Iwasawa Lab / MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO",
+          "reason": "Translate the explicit logo transcription in the canonical Japanese source; the uploaded English extraction does not include the image text."
+        }
+      ],
+      "body_sha256": "12defe7c913b27762f57dcfc7aa3f7f59e668ef380db6d71755496f21ff8d68e"
+    },
+    "lec03-exercise-p002": {
+      "canonical_japanese_page": 2,
+      "canonical_japanese_title": "第2回 宿題の解説",
+      "canonical_japanese_content_sha256": "1bbf57c7c7f6e2831051358bf4f328bc3617bc213a10022944618e8ed28d2564",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 2,
+      "uploaded_english_slide_xml": "ppt/slides/slide2.xml",
+      "uploaded_english_text_sha256": "d0c4f2fe5807eb2ffdc15459bbc2623f2e13a14d3fea0ac68e0f2fe338d6b30e",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 2,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide2.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": null,
+          "after": "On your fork on GitHub: Sync fork → Update branch\nIf Sync fork shows “Discard commits”, do not click it.\nClicking it deletes your commits. Start using the method in Step 1 under “If main is broken or the previous lecture is unfinished”.",
+          "reason": "Restore the latest Japanese source additions: exact Sync fork workflow and the Discard commits warning with its alternative path. Both uploaded English versions omit these lines."
+        }
+      ],
+      "body_sha256": "634a5d5ed77755872c97b71037e0ad650944cf9626cfd1b23d1f2e4823bb1dea"
+    },
+    "lec03-exercise-p003": {
+      "canonical_japanese_page": 3,
+      "canonical_japanese_title": "演習のふりかえり：講師が T4 で実行した結果",
+      "canonical_japanese_content_sha256": "bc2440f28ca7485a43e6c744f5136d7a8cbf4dc8d27ad5b719020850395b9ce7",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 3,
+      "uploaded_english_slide_xml": "ppt/slides/slide3.xml",
+      "uploaded_english_text_sha256": "053de8ba76a9360d17a8a52959e093360535c976c3eae1ad6b6af97899cfbbd9",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 3,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide3.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "c70259a738893e17f9491c4ebcfff54542e465f7cb164ec92b4c741e53b46f11"
+    },
+    "lec03-exercise-p004": {
+      "canonical_japanese_page": 4,
+      "canonical_japanese_title": "演習のふりかえり：残った失敗を分類して原因を整理する",
+      "canonical_japanese_content_sha256": "f168179f64049d3f0cdba0bbf2c925c694dc8d9fb71ae4f8fab3fe5716c633b8",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 4,
+      "uploaded_english_slide_xml": "ppt/slides/slide4.xml",
+      "uploaded_english_text_sha256": "3463645f8ead14d2eb5a333fc9a9217e4e35a0ffe33e61a455fbd899fcd3c399",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 4,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide4.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "d9d547aff57d8bc42bb76e61be15dad6262ae84959f13b8fdd6bd2e4188c37ea"
+    },
+    "lec03-exercise-p005": {
+      "canonical_japanese_page": 5,
+      "canonical_japanese_title": "基礎の解説：設定を 1 つ変えて比べる",
+      "canonical_japanese_content_sha256": "76e1f51caba28aed4061f137f62d6ba2e9bc2cca5d94c249698a68a4f9c82370",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 5,
+      "uploaded_english_slide_xml": "ppt/slides/slide5.xml",
+      "uploaded_english_text_sha256": "ab694f3eacd5944445ebf4cf1535126eebd2dc45f34f86a7c3a8653bdd8ec554",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 5,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide5.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "66c5a2c3a6b026653905e75575828a2721c8af23ea50c0d3ee06c26e1a502d74"
+    },
+    "lec03-exercise-p006": {
+      "canonical_japanese_page": 6,
+      "canonical_japanese_title": "実装の解説：「根拠なし」の質問をどう作るか",
+      "canonical_japanese_content_sha256": "3d1da4dd87c342b1c727f1a3a98d58d93dd7cb4f948d0f5da71034a58b83bdab",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 6,
+      "uploaded_english_slide_xml": "ppt/slides/slide6.xml",
+      "uploaded_english_text_sha256": "0e60c7c346c23111db9830f9e2afa1bedac56697c62c656f1ad1675f9f1ea7f5",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 6,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide6.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "Questions unrelated to the FAQ cannot test whether the model asks for confirmation or asserts.",
+          "after": "Using only questions unrelated to the FAQ cannot test whether the model asks for confirmation or makes an assertion.",
+          "reason": "Restore the Japanese qualifier “only”; it is the sufficiency of the question set, not the impossibility of any such question, that is being discussed."
+        }
+      ],
+      "body_sha256": "8a8ef92c9b7aa758741a0791f2fd94312f761b9c17e01426bbad0403c45ad02b"
+    },
+    "lec03-exercise-p007": {
+      "canonical_japanese_page": 7,
+      "canonical_japanese_title": "発展の解説：学習させるか、検索させるか",
+      "canonical_japanese_content_sha256": "dbf49fa1dc929eb5c48d4f90b140c7b4e974283632f024c3db86bb74024c39d8",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 7,
+      "uploaded_english_slide_xml": "ppt/slides/slide7.xml",
+      "uploaded_english_text_sha256": "150cf30d20d31be3e71787921646fe31786ff137ce8d1b44c898002b0df02402",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 7,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide7.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "1f49d8d668bb1fa11734773969d1482927bdbcc1b4ac2d5d4e7baffed167b0cd"
+    },
+    "lec03-exercise-p008": {
+      "canonical_japanese_page": 8,
+      "canonical_japanese_title": "つまずきやすい点と注意",
+      "canonical_japanese_content_sha256": "dd7e360d349b2132da1e4bb39c995574282ee2f24a59013058641de31b2f73de",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 8,
+      "uploaded_english_slide_xml": "ppt/slides/slide8.xml",
+      "uploaded_english_text_sha256": "43e12ffdc133968abc713497f38be52263165ea9b89fec40facb66f022c914a3",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 8,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide8.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "2da9afe7646f9bd3c8b52d1173c32f2c9fa27bf959b9d39c1729d3b8f1bfc805"
+    },
+    "lec03-exercise-p009": {
+      "canonical_japanese_page": 9,
+      "canonical_japanese_title": "今日の演習へのつながり",
+      "canonical_japanese_content_sha256": "48c70448986fb496f21ea9ae9bea5df7040e0f66c64166ee41bfff35a88c28e1",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 9,
+      "uploaded_english_slide_xml": "ppt/slides/slide9.xml",
+      "uploaded_english_text_sha256": "4c1897d0759a02d396c0d4e42eb456389f9e6b852ace6cee970432ad87bf82b4",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 9,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide9.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "8d0ea6e195c94d588d3a12a45c4d7cd953da2387570e539d3da0ab7e07e63412"
+    },
+    "lec03-exercise-p010": {
+      "canonical_japanese_page": 10,
+      "canonical_japanese_title": "この回のゴール",
+      "canonical_japanese_content_sha256": "5462d16868a30512f91978bf922388a1cdb579677965d801b079b51f5afee8a2",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 10,
+      "uploaded_english_slide_xml": "ppt/slides/slide10.xml",
+      "uploaded_english_text_sha256": "ba5e040f4971f461682ee36d2f9171788920d5abebed01ce589c721342199c23",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 10,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide10.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "92764d30389290562057fb2f2726698862a0a5b719a84ebd2797832d96fce079"
+    },
+    "lec03-exercise-p011": {
+      "canonical_japanese_page": 11,
+      "canonical_japanese_title": "エージェント＝モデル＋ループ＋ツール",
+      "canonical_japanese_content_sha256": "f9f7ee4a31b7a91fc06d42c6b2355bfbf115e048b509250f87fd1e6be4507ed0",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 11,
+      "uploaded_english_slide_xml": "ppt/slides/slide11.xml",
+      "uploaded_english_text_sha256": "a4c5c719044fa48d9ee8a9a30779c30db0a985e70867e6f48916efab4d6e58ef",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 11,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide11.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "620f3a3c4557e79fe97f198a11f23c759dd36490e851d474bcd29b1402d86a79"
+    },
+    "lec03-exercise-p012": {
+      "canonical_japanese_page": 12,
+      "canonical_japanese_title": "演習 30 分の流れ（最初に第2回の宿題の解説）",
+      "canonical_japanese_content_sha256": "9cbf94a85fec5b05e1c4b7df4ed573057944cf242ab327278b8cf6b8c8e5cac0",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 12,
+      "uploaded_english_slide_xml": "ppt/slides/slide12.xml",
+      "uploaded_english_text_sha256": "eef0a8b71ff5e27a14acd1434f0511486fab0b117f1a288264044bd3f84515a6",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 12,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide12.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "b0e015e3a9b652f5c3ea1a750b05d3ab0c0d841ec1f776a293afefa9b2f3efb1"
+    },
+    "lec03-exercise-p013": {
+      "canonical_japanese_page": 13,
+      "canonical_japanese_title": "手順 1　講座 repo の更新を取り込み、lec03 ブランチを作る",
+      "canonical_japanese_content_sha256": "d2d08845eb56f40e94e93e7d0f39a123892aaab6152382b5c1e3fb77fccdda53",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 13,
+      "uploaded_english_slide_xml": "ppt/slides/slide13.xml",
+      "uploaded_english_text_sha256": "98b4590f0c1d542b06e4031490a99aad35a354cce598076e25cd290146b8d3ce",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 13,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide13.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "https://github.com/matsuolab/lecture-ai-engineering-2026.git",
+          "after": "https://github.com/matsuolab/lecture-ai-engineering-2026-en.git",
+          "reason": "Intentional operational localization already present in the uploaded English slide and consistent with the published English course. Keep the English course repository for learners; canonical provenance remains Japanese."
+        }
+      ],
+      "body_sha256": "ea2566252f42b2af0ea618cf07ae96710f892ce6b3e95e00d21fef7720838179"
+    },
+    "lec03-exercise-p014": {
+      "canonical_japanese_page": 14,
+      "canonical_japanese_title": "手順 2　第1回と同じ質問をエージェントに投げる",
+      "canonical_japanese_content_sha256": "ce5b4b39f8669b5d8993b544880dce55169020d4ceb6da4c810b33f5c9e7de69",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 14,
+      "uploaded_english_slide_xml": "ppt/slides/slide14.xml",
+      "uploaded_english_text_sha256": "90e4523dff91a39dc66cbc5696f26a9a547a132fd77221e48d25a379c47efb74",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 14,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide14.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": null,
+          "after": null,
+          "reason": "The exercise question is localized to English, as in the uploaded English slide; app.agent and the homework-levels identifier are unchanged."
+        }
+      ],
+      "body_sha256": "7ed9972c11b590bff6e8ca27ba4c1549c26e6c24be987468f94129fb2d9af02c"
+    },
+    "lec03-exercise-p015": {
+      "canonical_japanese_page": 15,
+      "canonical_japanese_title": "手順 3　--trace でツール呼び出しを読む",
+      "canonical_japanese_content_sha256": "795aefca951bb8b6696aaac9744bed4e8842ac7af2368cc9e7f0ca4ceeafeb01",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 15,
+      "uploaded_english_slide_xml": "ppt/slides/slide15.xml",
+      "uploaded_english_text_sha256": "226a21e9f1d43a4d55320e39a3f1788fe7a4cee29904b62802f464f1f12cb833",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 15,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide15.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": null,
+          "after": null,
+          "reason": "The LoRA/QLoRA question is localized to English; command options, trace fields, arguments and counts are unchanged."
+        }
+      ],
+      "body_sha256": "c37700d21423baeb44eb8f4eb8fd2c16fc248be245d9526771c04c03338d701a"
+    },
+    "lec03-exercise-p016": {
+      "canonical_japanese_page": 16,
+      "canonical_japanese_title": "手順 3 の補足　ふるまいを決める INSTRUCTIONS と docstring",
+      "canonical_japanese_content_sha256": "41fb5435961996a24bed08a4326252f503e0cafa212163c5f6e15f7e0f0dccfe",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 16,
+      "uploaded_english_slide_xml": "ppt/slides/slide16.xml",
+      "uploaded_english_text_sha256": "2729a75c7cc19659c1081f3d3b1c6df201a024211fb99e368c40e038a6747a11",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 16,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide16.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "Step 3 supplement: INSTRUCTIONS and docstrings that shape behavior\nThe model’s guidance lives in two places. The behavior you saw with --trace is set by the sentences written there.\napp/agent.py (around line 31): instructions for the whole agent\nINSTRUCTIONS = \"\"\"\\\nYou are a learning support agent for the AI Engineering Pilot Course …\n- Always check the glossary with search_glossary before answering about …\n- Use get_lecture_summary when asked about the content of a session.\n- If something is absent from the glossary, say \"It is not in the …\n- End your answer by indicating the relevant session (Lecture NN).\n- Guide learners with hints on how to think, rather than writing …\napp/tools.py: tool description (docstring)\ndef search_glossary(query: str) -> str:\n\"\"\"Search the course glossary and return definitions and the sessions …\n…Put only one term to look up in query (for example, \"LoRA\").\n“Always check the glossary with search_glossary”\n→ In Steps 2 and 3, search_glossary was called before answering\n“End your answer by indicating the relevant session (Lecture NN)”\n→ In Step 2, the answer ended with Lecture N\ndocstring: “Put only one term to look up in query”\n→ In Step 3, LoRA and QLoRA were searched separately\nIn the homework (Basic), rewrite this text and compare --trace for the same question",
+          "after": "Step 3 supplement: INSTRUCTIONS and docstrings that shape behavior\nThe model’s guidance lives in two places. The behavior you saw with --trace is set by the sentences written there.\napp/agent.py (around line 31): instructions for the whole agent\nINSTRUCTIONS = \"\"\"\\\nYou are a learning support agent for the AI Engineering Pilot Course (AIE2026).\n- Always check the glossary with search_glossary before answering about terms or course-specific information.\n- Use get_lecture_summary when asked about the content of a session.\n- If something is absent from the glossary, say \"It is not in the glossary\" instead of making assertions based on guesses.\n- End your answer by indicating the relevant session (Lecture NN).\n- Guide learners with hints on how to think, rather than writing homework answers for them.\n\"\"\"\napp/tools.py: tool description (docstring)\ndef search_glossary(query: str) -> str:\n    \"\"\"Search the course glossary and return definitions and the sessions that cover the terms.\n\n    Use before answering about AI engineering terms or words specific to this course (AIE2026).\n    Put only one term to look up in query (for example, \"LoRA\").\n    \"\"\"\n“Always check the glossary with search_glossary”\n→ In Steps 2 and 3, search_glossary was called before answering.\n“End your answer by indicating the relevant session (Lecture NN)”\n→ In Step 2, the answer ended with the relevant lecture number.\ndocstring: “Put only one term to look up in query”\n→ In Step 3, LoRA and QLoRA were searched separately.\nIn the homework (Basic), rewrite this text and compare --trace for the same question.",
+          "reason": "The uploaded English slide truncates crucial INSTRUCTIONS and docstring lines with ellipses. Restore their complete meaning from the Japanese source using verbatim reviewed English counterparts in en/app/agent.py and en/app/tools.py; retain the historical slide line-number reference, whose current repository line may differ. The docstring ellipsis is expanded from the corresponding published English code, with closing quotation marks restored for readability."
+        }
+      ],
+      "body_sha256": "e787d0eba27d01e3b56ec2a3c0780c05ba58e34ecd56cf2d56a9bc762904414d"
+    },
+    "lec03-exercise-p017": {
+      "canonical_japanese_page": 17,
+      "canonical_japanese_title": "手順 4　make_quiz ツールを書いて登録する",
+      "canonical_japanese_content_sha256": "5023836aaf0a328733fd540f23f2807d50e324b1b5965fa58c118aa14b3e9281",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 17,
+      "uploaded_english_slide_xml": "ppt/slides/slide17.xml",
+      "uploaded_english_text_sha256": "b2652f23490b76b361919e45753346c6d5f9fb97ae5a0e4dab4d15484aeed851",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 17,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide17.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "def make_quiz(lecture: int) -> str:\n\"\"\"Pick one term from the given lecture and\nreturn a review question and its answer.\nUse when asked for review questions, such as\n“Give me a review question for Lecture 2”.\n    \"\"\"\n# 1. Collect terms from load_glossary() matching lecture\n# 2. Pick one (random.choice)\n# 3. Return Q and answer as a string (e.g. json.dumps)",
+          "after": "def make_quiz(lecture: int) -> str:\n    \"\"\"Pick one term from the given lecture and\n    return a review question and its answer.\n\n    Use when asked for review questions, such as\n    “Give me a review question for Lecture 2”.\n    \"\"\"\n    # 1. Collect terms from load_glossary() matching lecture\n    # 2. Pick one (random.choice)\n    # 3. Return Q and answer as a string (e.g. json.dumps)",
+          "reason": "Restore Python function/docstring/comment indentation lost in the English slide extraction; retain all source code symbols and the partial starter-code scope. Natural-language question/answer and comments remain localized."
+        }
+      ],
+      "body_sha256": "f0bfd155fae294098975466338f0eb7632f4d0440648a224f534d79731a095e2"
+    },
+    "lec03-exercise-p018": {
+      "canonical_japanese_page": 18,
+      "canonical_japanese_title": "手順 5　make_quiz が呼ばれるか確かめる",
+      "canonical_japanese_content_sha256": "19c4841d1687baa8284ed5cdb732248c2736de5cef8ee51907ed726b734a7d64",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 18,
+      "uploaded_english_slide_xml": "ppt/slides/slide18.xml",
+      "uploaded_english_text_sha256": "0c7751b131089ef33aebad681247f5a812a62651cc258f366cf1f83c3d7811cb",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 18,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide18.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": null,
+          "after": null,
+          "reason": "The request for one Lecture 2 review question is localized to English; lecture=2 and all command flags are unchanged."
+        }
+      ],
+      "body_sha256": "22d1cb3564cef69bfb1e4cbb0570b1456fe75388225efb2e49adb91d8cec848f"
+    },
+    "lec03-exercise-p019": {
+      "canonical_japanese_page": 19,
+      "canonical_japanese_title": "手順 6　answer.md を書いて PR を出し、Codespaces を停止する",
+      "canonical_japanese_content_sha256": "2143b23983a8d95b2af2974532c0314c28b214f0e6021492252e23f116f968e0",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 19,
+      "uploaded_english_slide_xml": "ppt/slides/slide19.xml",
+      "uploaded_english_text_sha256": "1b74a2f26901a0e50a9e3260df0482bdc0ddd452d7057e35f3b1283e4abe5b69",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 19,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide19.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": null,
+          "after": null,
+          "reason": "The commit message and code comment are localized to English; git commands, flags, branch and paths are unchanged."
+        }
+      ],
+      "body_sha256": "f12bb8556ed51785a369d0efd0b65454b56a53be4fbe8e1223fed10756bc5a39"
+    },
+    "lec03-exercise-p020": {
+      "canonical_japanese_page": 20,
+      "canonical_japanese_title": "うまくいかないとき",
+      "canonical_japanese_content_sha256": "63ec1fd1f3cb911f033ca2990bb9d8aa7e89da3a8bfd31d26e9da44adde0285f",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 20,
+      "uploaded_english_slide_xml": "ppt/slides/slide20.xml",
+      "uploaded_english_text_sha256": "171cf3dd7310c3ad0bd1289f149d5e178e7504dcbf5bc8f30e233d307ba3ce84",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 20,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide20.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "a7f6caa189e836543fe21661a99c411f3cb517206f40b8cde5c5234b3fb63b90"
+    },
+    "lec03-exercise-p021": {
+      "canonical_japanese_page": 21,
+      "canonical_japanese_title": "宿題：どれか 1 つで完了",
+      "canonical_japanese_content_sha256": "68e3056afa9af64e3a2ca09c6712bb26402ff133ccfddb03b266a88d3bc8092b",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 21,
+      "uploaded_english_slide_xml": "ppt/slides/slide21.xml",
+      "uploaded_english_text_sha256": "84dad4f4f33a22264d15f73d21f610b00cb7d4aa1be11a2433b5dd4431cbdf30",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 21,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide21.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "Rewrite INSTRUCTIONS in app/agent.py and the tool docstrings in app/tools.py from the exercise.",
+          "after": "Rewrite INSTRUCTIONS in app/agent.py or the tool docstrings in app/tools.py from the exercise.",
+          "reason": "Japanese allows either location; the uploaded English “and” could incorrectly require changing both, contrary to the one-change-at-a-time exercise."
+        }
+      ],
+      "body_sha256": "3734fa6deb08682dd9b421d0e3f352dd48eabdec035606e105f1df48fc1fe375"
+    },
+    "lec03-exercise-p022": {
+      "canonical_japanese_page": 22,
+      "canonical_japanese_title": "宿題の進め方（基礎・実装）",
+      "canonical_japanese_content_sha256": "5db37c7e12c940afa5af71005539f96595bee4c98c4164bcfdc8923a83558106",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 22,
+      "uploaded_english_slide_xml": "ppt/slides/slide22.xml",
+      "uploaded_english_text_sha256": "6abd71ec71f4914b8d37dc35925a7ebb6d10f3013b46c51b5dd6c401bf3d5ff7",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 22,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide22.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "62021f08757d890069403f5581644eb39e68d377b04d1c663f751ee1d6693884"
+    },
+    "lec03-exercise-p023": {
+      "canonical_japanese_page": 23,
+      "canonical_japanese_title": "宿題の進め方（発展 a）ADK で作り直す",
+      "canonical_japanese_content_sha256": "386ac08f0691d256847c0f63526dddaa2594e6ddb09fbe7206c016ddd837bead",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 23,
+      "uploaded_english_slide_xml": "ppt/slides/slide23.xml",
+      "uploaded_english_text_sha256": "e1efa7571900aea167ba570a3652de29a16bafddf2ddc3fa7ecd82fb60a0d1f6",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 23,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide23.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "tools=[...],  # tools used in the exercise",
+          "after": "    tools=[...],  # tools used in the exercise",
+          "reason": "Restore indentation to the tools argument in the source Agent constructor. Function names, placeholder, model ID and command remain unchanged."
+        }
+      ],
+      "body_sha256": "54756973b68d856523341049393004024901651ee07a582373ee53943e192826"
+    },
+    "lec03-exercise-p024": {
+      "canonical_japanese_page": 24,
+      "canonical_japanese_title": "宿題の進め方（発展 b）Pi を Codespaces で動かす",
+      "canonical_japanese_content_sha256": "e8b669ba95b36d82e2db73c73907f772eb8068705feda3a0a9c608a41aa63657",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 24,
+      "uploaded_english_slide_xml": "ppt/slides/slide24.xml",
+      "uploaded_english_text_sha256": "11624443dba5baae32d3d86ad23df1959d8741844952c731c0df53ad5b948ded",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 24,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide24.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "b7fdb4f1084cc04c01e5243fb0cc950eebc29c2270631ec8c630b8dd16a17aef"
+    },
+    "lec03-exercise-p025": {
+      "canonical_japanese_page": 25,
+      "canonical_japanese_title": "宿題の提出",
+      "canonical_japanese_content_sha256": "73e16c7962ec56a606b056947cd8807d7ca23ce0d4257972095cb65cf9562583",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 25,
+      "uploaded_english_slide_xml": "ppt/slides/slide25.xml",
+      "uploaded_english_text_sha256": "54a5a108a60dc757c701a66dbf1cbee8c549cf96bb12744c659d1ff5a244d0bc",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 25,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide25.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "e9659368f73181c73bdfa9eec1d9a05d5df06b96adea1b0ea7c6619e5c6144dc"
+    },
+    "lec03-exercise-p026": {
+      "canonical_japanese_page": 26,
+      "canonical_japanese_title": "まとめ：今日の到達点と次回",
+      "canonical_japanese_content_sha256": "561873bde6a3f86a7738d726227e8fd8838d9d3fafe7b40068e4a9fcdaa2c97c",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day3/Lecture 3 - AI Agents/Exercises and Homework/pptx/Lecture 3 Exercises and Homework - AI Agents_en.pptx",
+      "uploaded_english_slide_number": 26,
+      "uploaded_english_slide_xml": "ppt/slides/slide26.xml",
+      "uploaded_english_text_sha256": "217f9617fe9e3068b6c2baf6d33310fc96103875aaeff618d02806b30fc27d1e",
+      "uploaded_japanese_file": "day3/第3回 演習・宿題：学習支援エージェントを作る.pptx",
+      "uploaded_japanese_slide_number": 26,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide26.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "13c73cffbaa265b30b9a0ade8c8effecf152aee95a15b5d45638837e0ada3103"
+    }
+  },
+  "unused_english_slides": [],
+  "unused_english_reason": null
+}

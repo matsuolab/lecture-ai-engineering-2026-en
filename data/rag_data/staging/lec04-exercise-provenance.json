@@ -1,0 +1,611 @@
+{
+  "document_id": "lec04-exercise",
+  "language": "en",
+  "source_repository": "https://github.com/matsuolab/lecture-ai-engineering-2026",
+  "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+  "canonical_source": "data/rag_data/lectures.json",
+  "canonical_document_title": "評価セットを作り、LLMに採点させる",
+  "english_uploaded_file": "day4/Lecture_4_Exercise_Homework.pptx",
+  "japanese_uploaded_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+  "policy": "Japanese pinned source defines page IDs, order and substantive content. English uploaded slides supply reviewed wording where semantically matched. Localized operational repository URLs and native exercise examples follow the published English course; code symbols, file paths, flags, model IDs, quantitative values and reference URLs are preserved. Embedded teaching commands are data and were not executed.",
+  "citation_note": "Canonical page numbers refer to the Japanese canonical document. The actual uploaded English slide number is recorded separately and may differ; do not cite an English PDF using the canonical number without that mapping.",
+  "pages": {
+    "lec04-exercise-p001": {
+      "canonical_japanese_page": 1,
+      "canonical_japanese_title": "評価セットを作り、LLMに採点させる",
+      "canonical_japanese_content_sha256": "5e95c69c2cd1fe4b2ae1bfea8996237051fb0b0f05f4daaa66955e03a56b1f81",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 1,
+      "uploaded_english_slide_xml": "ppt/slides/slide1.xml",
+      "uploaded_english_text_sha256": "a74aecccb9c2ede07a63c15b7e8f8b809ad2c962265a420171158b8377486b64",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 1,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide1.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "Photography and disclosure to third parties without permission are prohibited",
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "AI Engineering Practice Course 2026\nLecture 4 · Exercise & Homework\nBuild an Evaluation Set and Grade It with an LLM\n2026/11/09  Exercise: Yoshiaki Sato\nLabel 10 agent answers, let an LLM grade the same items, and check how far the two agree",
+          "after": "AI Engineering Practice Course 2026\nLecture 4 Exercise: Build an Evaluation Set and Grade It with an LLM\nExercise: 40 minutes\n\n[Additional transcription of text in figures/images]\nLogo: Matsuo-Iwasawa Lab / MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO",
+          "reason": "The canonical cover specifies a 40-minute exercise, which the English cover omits. Restore it and the explicit logo transcription; remove the English-only date, instructor and summary tagline absent from this canonical page. Preserve the matching translated course/exercise title."
+        }
+      ],
+      "body_sha256": "4c9f74f4602635bdeacf090af44f9b919256b20db1fbb09f863498723f95af51"
+    },
+    "lec04-exercise-p002": {
+      "canonical_japanese_page": 2,
+      "canonical_japanese_title": "今日の流れ",
+      "canonical_japanese_content_sha256": "382c36f2972c0c8e041cf178f0c7f7850c2c4c1fa3a8a36ab640088555078666",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 2,
+      "uploaded_english_slide_xml": "ppt/slides/slide27.xml",
+      "uploaded_english_text_sha256": "c47bb7076d47044ef0d0892b8a79e2cf78e46efd9c00d6cc6f1ce88bd1c40970",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 2,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide2.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "fc53008deaa20fc7389187176b2ac8ca2e14d279cd02d92a7316caa300190b81"
+    },
+    "lec04-exercise-p003": {
+      "canonical_japanese_page": 3,
+      "canonical_japanese_title": "1. 第3回 宿題の解説",
+      "canonical_japanese_content_sha256": "4ecd6cdc04de3960f5a1bc621d9dd5b3784e3da5c671fe8164298f4c064fcd30",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": null,
+      "uploaded_english_slide_number": null,
+      "uploaded_english_slide_xml": null,
+      "uploaded_english_text_sha256": null,
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 3,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide3.xml",
+      "status": "newly_translated_from_canonical_japanese",
+      "removed_english_boilerplate": [],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": null,
+          "after": "1. Lecture 3 Homework Review",
+          "reason": "Translate the canonical section-divider slide; no matching uploaded English slide exists."
+        }
+      ],
+      "body_sha256": "3553d7d34524b79687c68d2e01095ba38e02a1aa98ad93f338525870c59f97f3"
+    },
+    "lec04-exercise-p004": {
+      "canonical_japanese_page": 4,
+      "canonical_japanese_title": "ふりかえり：エージェントへの指示は 2 か所にある",
+      "canonical_japanese_content_sha256": "3068557fe0e9b2bf4c6dced3284dddc5701917d41846dccd88882f0c9476d80d",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 3,
+      "uploaded_english_slide_xml": "ppt/slides/slide28.xml",
+      "uploaded_english_text_sha256": "ac45b48787b81bc3429f766bf9480d06d4d22fa5b056e8920016c05d81df01ec",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 4,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide4.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "Check the glossary; don't assert things that aren't in it",
+          "after": "Check the glossary; do not make assertions based on guesses about information that is absent from it",
+          "reason": "Restore the source qualifier “based on guesses”, avoiding an overbroad ban on all information absent from the glossary."
+        }
+      ],
+      "body_sha256": "956c21f6f8176332435b2e99d1ccf6fbf6407ccc63c2e1cdc388d680a4cc33b6"
+    },
+    "lec04-exercise-p005": {
+      "canonical_japanese_page": 5,
+      "canonical_japanese_title": "基礎レベル：1 か所変えると何が変わるか",
+      "canonical_japanese_content_sha256": "dc43d91ca13280657d7b97dcd1db69a6d8ecedf5f9067210ec43a40479576469",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 4,
+      "uploaded_english_slide_xml": "ppt/slides/slide29.xml",
+      "uploaded_english_text_sha256": "a36274ec93f3757d1c021fd453781a71912aef449a34c85079ffa4d4fc97fc4c",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 5,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide5.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "d2680253b3b44f70cba733f434d2625d24c00e00d8ec94902c2782740da5b8e8"
+    },
+    "lec04-exercise-p006": {
+      "canonical_japanese_page": 6,
+      "canonical_japanese_title": "実装レベル：保存の前に、人の確認を挟む",
+      "canonical_japanese_content_sha256": "e0eb13f6434a342fd045e7fd9962c0acbeb7f80b127e6254bdc84f97256ed54e",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 5,
+      "uploaded_english_slide_xml": "ppt/slides/slide30.xml",
+      "uploaded_english_text_sha256": "ec4df7180186f920d4626b0c01e34201a162aef11bbab514a02b98b2acd1217f",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 6,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide6.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "Personal records never reach your fork",
+          "after": "Personal records are not uploaded to your fork",
+          "reason": "Use the source description of the existing .gitignore behavior without the unsupported absolute “never”."
+        }
+      ],
+      "body_sha256": "e3881f672aaabd97cf0849a7e625dc36a1afe3c2b8624a90de07b351d857bd27"
+    },
+    "lec04-exercise-p007": {
+      "canonical_japanese_page": 7,
+      "canonical_japanese_title": "発展レベル：ADK と Pi で見えたこと",
+      "canonical_japanese_content_sha256": "3c28c2eeb4526cda7093339a4261ed91efb85df230fe6898c0b9d3dc0b39b20a",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 6,
+      "uploaded_english_slide_xml": "ppt/slides/slide31.xml",
+      "uploaded_english_text_sha256": "1ab0e83781c88f87f11aa839091250dbbd19da8f41aa7497f1cb46a6c942509e",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 7,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide7.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "a4a755a8a1b6fa19b45057b3bbdb86dc034e45fafa25c821339c31692d138f18"
+    },
+    "lec04-exercise-p008": {
+      "canonical_japanese_page": 8,
+      "canonical_japanese_title": "評価基準は第3回の指示から作り、人・LLM・コードで判定する",
+      "canonical_japanese_content_sha256": "5e8dd273c9a15220d73a34db5f52766bcda8157859f9acbc5128a7cb36bdc495",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 7,
+      "uploaded_english_slide_xml": "ppt/slides/slide32.xml",
+      "uploaded_english_text_sha256": "eb1a6005605f8b700b516a8ba61b7008b38a45ae911162a54bff382c2289f9cb",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 8,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide8.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "Whether the last line contains “第N回” is a string check",
+          "after": "Whether the answer ends with a “Lecture N” marker is a string check",
+          "reason": "The uploaded English slide retains the Japanese marker. Localize to the published English app/judge.py and data/eval/rubric.md; retain the code-versus-LLM division of responsibility."
+        }
+      ],
+      "body_sha256": "cd9823fd6e53b0b317cdd0bef4fcc328187d00a33ee1b96ab8a173289c1e9749"
+    },
+    "lec04-exercise-p009": {
+      "canonical_japanese_page": 9,
+      "canonical_japanese_title": "2. 第4回 演習",
+      "canonical_japanese_content_sha256": "f488f7a00204a6bf00f7c9d590659856b1d3cf46ef3cf1853a0e84dd58145f9a",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": null,
+      "uploaded_english_slide_number": null,
+      "uploaded_english_slide_xml": null,
+      "uploaded_english_text_sha256": null,
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 9,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide9.xml",
+      "status": "newly_translated_from_canonical_japanese",
+      "removed_english_boilerplate": [],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": null,
+          "after": "2. Lecture 4 Exercise",
+          "reason": "Translate the canonical section-divider slide; no matching uploaded English slide exists."
+        }
+      ],
+      "body_sha256": "a8b848d4de17fb8ec40a0c2652dc3a89fcf52b8d19066e947086d0e5c01590b7"
+    },
+    "lec04-exercise-p010": {
+      "canonical_japanese_page": 10,
+      "canonical_japanese_title": "この回のゴール",
+      "canonical_japanese_content_sha256": "9459738547f31935df1be53291d79c58cf1015e4357d97ce6a176acd5e9ddf6a",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 8,
+      "uploaded_english_slide_xml": "ppt/slides/slide33.xml",
+      "uploaded_english_text_sha256": "5f0a8cdcf2420c35e1ece6dce4061c531b0041972ee9bbc18f63ee7c2c3a18e4",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 10,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide10.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "d492547e1cd36d9b74218d69464879ab280f83d36abea7b7af8ef36db103a9a2"
+    },
+    "lec04-exercise-p011": {
+      "canonical_japanese_page": 11,
+      "canonical_japanese_title": "今日の評価の形：基準ごとに T / F / unsure",
+      "canonical_japanese_content_sha256": "5405024a5568bae436d4b00f2834ce65080d526debecccb083d14091f66ee82c",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 9,
+      "uploaded_english_slide_xml": "ppt/slides/slide34.xml",
+      "uploaded_english_text_sha256": "81026ef760531f014de0cef0672cdcd801c214462190b0a093d5d4b85152af60",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 11,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide11.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "The last line contains “第N回” (Lecture N)",
+          "after": "The answer ends with a “Lecture N” marker",
+          "reason": "Use the localized lecture marker checked by the English course code, rather than the inherited Japanese marker."
+        }
+      ],
+      "body_sha256": "4b5d7d581cb7c45ef266b8c1daaf92aa15d7fd9189d641d74f7393e003554221"
+    },
+    "lec04-exercise-p012": {
+      "canonical_japanese_page": 12,
+      "canonical_japanese_title": "評価セット：10 件の中身",
+      "canonical_japanese_content_sha256": "1913b460f5b3b7d5f095cc07a5ee859aeeef5f06374ced64d126714cae78812d",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 10,
+      "uploaded_english_slide_xml": "ppt/slides/slide35.xml",
+      "uploaded_english_text_sha256": "1dae6e4dff7aa99717b1d3bb201526c3721a987293b1936c0ccd3f2fba9c87f6",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 12,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide12.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "“What's ローラ?” (LoRA in katakana)",
+          "after": "“What's low-ra?”",
+          "reason": "Use the English spelling-variation question from published en/data/eval/lec04_cases.jsonl (#03), preserving the source teaching purpose."
+        },
+        {
+          "before": "No API calls while labeling (the answers were generated in advance). Questions and answers are in Japanese",
+          "after": "No API calls while labeling (the answers were generated in advance)",
+          "reason": "Remove the obsolete English-only assertion that the dataset is Japanese; it is absent from the canonical source and the published English case data are localized."
+        }
+      ],
+      "body_sha256": "4fe8d7f7dc74634c84f62abf575c3bc25d3426a3fcc126e328d973168844bf52"
+    },
+    "lec04-exercise-p013": {
+      "canonical_japanese_page": 13,
+      "canonical_japanese_title": "準備：lec04 ブランチを作る",
+      "canonical_japanese_content_sha256": "251986b44c2a1c37ebf647a8a7659c97322a4239e86f7903e4180950d0c06c55",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 11,
+      "uploaded_english_slide_xml": "ppt/slides/slide36.xml",
+      "uploaded_english_text_sha256": "d8188babc11796d8e876129eeb0062915f873995b29f2fde3f30e0adae77cdff",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 13,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide13.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "https://github.com/matsuolab/lecture-ai-engineering-2026.git",
+          "after": "https://github.com/matsuolab/lecture-ai-engineering-2026-en.git",
+          "reason": "Intentional operational localization to the published English course repository, consistent with the English Lecture 3 exercise. Preserve git flags, lec04-start and branch names."
+        }
+      ],
+      "body_sha256": "d1221f284669aa1753b33ced2367f0b21d174f9a28a0a34563ff29302ee1782a"
+    },
+    "lec04-exercise-p014": {
+      "canonical_japanese_page": 14,
+      "canonical_japanese_title": "STEP 1：10 件にラベルを付ける",
+      "canonical_japanese_content_sha256": "f9704389fff727352fec121ddbdf0811918d913468d3668f84c011531077f6cf",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 12,
+      "uploaded_english_slide_xml": "ppt/slides/slide37.xml",
+      "uploaded_english_text_sha256": "f1e7ae9644852f778e1c6ba02d1bd4a2694011284e5c411230987dfb479118b4",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 14,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide14.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "tick “unsure” (迷った)",
+          "after": "tick “Unsure”",
+          "reason": "Use the localized checkbox label in the published English annotation UI; the Japanese parenthetical is not needed in the translated corpus."
+        },
+        {
+          "before": "The tools/annotate.py screen (UI in Japanese).",
+          "after": "The tools/annotate.py screen.",
+          "reason": "Remove the obsolete English-only Japanese-UI assertion; the English course UI is already localized."
+        },
+        {
+          "before": null,
+          "after": "[Additional transcription of text in figures/images]\nEvaluation screen: Lecture 4 — Label the evaluation set / #01 Normal case / What is LoRA? / Pass (1), Fail (0). The answer and references (LoRA and PEFT, Lecture 2) are displayed.",
+          "reason": "Translate the complete explicit screenshot transcription in the canonical source. Do not infer any additional screenshot content."
+        }
+      ],
+      "body_sha256": "5e56c74044694d8df293fe08235c7bd898db95b66fa375fee7dcf1b8aa70e560"
+    },
+    "lec04-exercise-p015": {
+      "canonical_japanese_page": 15,
+      "canonical_japanese_title": "STEP 2：LLM に採点させ、一致率を見る",
+      "canonical_japanese_content_sha256": "a1442010d492fcd36ebdacff0ed3808d5f0630782af1919cd46da2835caa049a",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 13,
+      "uploaded_english_slide_xml": "ppt/slides/slide38.xml",
+      "uploaded_english_text_sha256": "fa1b81c1413acf6e5db6b9fe878871767d1736221056329b919a506fe9bf2a5c",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 15,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide15.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "Step 2  Let the LLM Grade and Read the Agreement\n~5 min｜Goal: read how far your labels and the LLM's verdicts agree\nuv run python -m app.judge\nCalls the LLM once per item, 10 times (about a minute). On “rate limit reached”, wait a minute and run again\nWithout an API key, add --model test to try the flow with a rule-based fake model (not real grading)\nHow to read the output (printed in Japanese)\nAgreement per criterion (基準別の一致率): where the disagreements are\nOverall agreement (総合の一致率) and coverage: the share decided automatically\nNeeds review (要確認): items the LLM marked unsure, with reasons\nDisagreements (不一致): misses (LLM pass, you fail) and false alarms (LLM fail, you pass)\nExample output (--model test; the numbers will differ)\n基準別の一致率（自分のラベルと LLM の判定、10 件）\n  根拠                8/9    要確認 1\n  範囲               10/10\n  ヒント             10/10\n  分かりやすさ        9/10\n  回の表示（コード） 10/10\n総合の一致率   8/9   （自動判定できた 9/10 件 = coverage 90%）\n要確認 1 件（LLM が unsure にした項目。人が見る）\n  #05 根拠: 用語集にないと伝えたうえで一般的な説明をしており、\n            「まだ決めていないこと」に当てはまる\n不一致 2 件\n  #09 分かりやすさ 見逃し（LLM=pass 自分=fail）  理由: …\n  #10 根拠         過検出（LLM=fail 自分=pass）  理由: …\n→ lectures/04/judge_result.json に保存しました\nReading order: first confirm that Clarity agrees least. A subjective criterion splits people too\nThen look at the needs-review items. Step 3 fixes those",
+          "after": "Step 2: Let the LLM Grade and Read the Agreement\n~5 min | Goal: read how far your labels and the LLM’s judgments agree.\nuv run python -m app.judge\n• Calls the LLM once per item, 10 calls in total (about a minute). If “Rate limit reached” appears, wait one minute and run again.\n• If you cannot use an API key, add --model test to try only the workflow without calling the API (this is not real grading).\nHow to read the output\n• Agreement by criterion: which criteria disagree.\n• Overall agreement and coverage: the proportion that could be judged automatically.\n• Needs review: items the LLM marked unsure, with reasons.\n• Breakdown of disagreements: misses (LLM=pass, you=fail) / false alarms (the reverse).\nExample output (run with --model test; the numbers differ from actual model grading)\nAgreement by criterion (your labels versus LLM judgments, 10 cases)\n  Grounding              8/9    Needs review: 1\n  Scope                 10/10\n  Hint                  10/10\n  Clarity                9/10\n  Lecture marker (code) 10/10\nOverall agreement   8/9   (Automatically judged 9/10 cases = coverage 90%)\nNeeds review: 1 item (the LLM marked unsure; a person reviews it)\n  #05 Grounding: The answer gives a general explanation after stating that the term is not in the glossary,\n                 so it falls under “Unresolved Questions”.\nDisagreements: 2 items\n  #09 Clarity    Miss (LLM=pass, you=fail)         Reason: …\n  #10 Grounding  False alarm (LLM=fail, you=pass)  Reason: …\n→ Saved to lectures/04/judge_result.json\nReading order: first check the low agreement for Clarity. Subjective criteria divide people too.\nNext, look at the items needing review. Step 3 addresses these.",
+          "reason": "Translate the complete previously Japanese-only sample output and remove obsolete claims that output is printed in Japanese. Preserve all fractions, coverage, case IDs, verdicts, two disagreement directions, test-model limitation and output path. Correct the inherited English “Clarity agrees least” to the source “Clarity agreement is low”; the displayed Grounding 8/9 is numerically below Clarity 9/10."
+        }
+      ],
+      "body_sha256": "067372a9b82464ac76b16a75ccfcd422576c544912fbb4bc62482ae021c2a882"
+    },
+    "lec04-exercise-p016": {
+      "canonical_japanese_page": 16,
+      "canonical_japanese_title": "STEP 3：基準を 1 か所直して、もう一度採点する",
+      "canonical_japanese_content_sha256": "cdec3c609a5629fe04571109a954f6c885cb4919fafd89065c6086265b7003a3",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 14,
+      "uploaded_english_slide_xml": "ppt/slides/slide39.xml",
+      "uploaded_english_text_sha256": "b022e0e43357473bd9713e697c0790f092b096fe4fcaa0ce460abf85ecbd81b6",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 16,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide16.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "Step 3  Fix One Thing in the Criteria and Grade Again\n~8 min｜Goal: decide a policy for a needs-review item, fix rubric.md, grade again, and record the change\n1\nNeeds review\nThe Step 2 output lists the items the LLM marked unsure, with reasons (if none, pick an item you ticked “unsure” on)\n2\nFix rubric.md\nDecide pass or fail yourself, add one or two lines under the relevant criterion, and delete the line from “not decided yet” (example below)\n3\nGrade again\nRun uv run python -m app.judge again and write the change in needs-review count and verdict into lectures/04/answer.md\nExample: item #05 “What is RAG?” (a general explanation after saying the term isn't in the glossary) came back as needs review\nBefore: data/eval/rubric.md (excerpt, in Japanese)\n## 根拠（grounding）\n- 用語集にある事柄は、参照の用語集エントリと矛盾していない\n- 用語集にない事柄は、推測で断定せず「用語集にはない」と伝えている\n## まだ決めていないこと（当てはまる回答は unsure にする）   ← not decided yet\n- 用語集にない語について、「用語集にはない」と伝えたうえで\n  一般的な説明をすることが、「推測で断定する」にあたるかどうか\nAfter (policy: not an assertion → pass)\n## 根拠（grounding）\n- 用語集にある事柄は、参照の用語集エントリと矛盾していない\n- 用語集にない事柄は、推測で断定せず「用語集にはない」と伝えている\n- 用語集にない語を、「用語集にはない」と伝えたうえで\n  一般的に説明するのは、断定ではない（pass）        ← add this\n## まだ決めていないこと（当てはまる回答は unsure にする）\n                                      ← delete the line about it\n(added line: explaining a term generally after saying it isn't in\n the glossary is not an assertion → pass)\nGrading again: needs review 1 → 0, and #05 Grounding becomes pass (if you chose fail, add “…は断定にあたる（fail）” and it becomes fail)",
+          "after": "Step 3: Fix One Thing in the Criteria and Grade Again\n~8 min | Goal: decide a policy for an item needing review, revise rubric.md, run again, and record the change.\n1. Look at items needing review: the “Needs review” section in Step 2 lists the items the LLM marked unsure and their reasons. If there are none, choose an item you marked “Unsure”.\n2. Revise rubric.md: decide for yourself whether the item should pass or fail. Add one or two lines under the relevant criterion and remove the issue from “Unresolved Questions” (example below).\n3. Run again and record: run uv run python -m app.judge again, then write the change in the number of items needing review and the item’s judgment in lectures/04/answer.md.\nExample revision: #05 “What is RAG?” needed review because the answer gave a general explanation of a term after stating that it is absent from the glossary.\nBefore: data/eval/rubric.md (excerpt)\n## Grounding (grounding)\n- Statements about information in the glossary do not contradict the referenced glossary entries.\n- For information absent from the glossary, the answer states that it is not in the glossary instead of asserting guesses.\n## Unresolved Questions (choose unsure for answers covered here)\n- Whether giving a general explanation of a term after stating that it is absent from the glossary counts as “asserting guesses”.\nAfter (policy: not an unsupported assertion → pass)\n## Grounding (grounding)\n- Statements about information in the glossary do not contradict the referenced glossary entries.\n- For information absent from the glossary, the answer states that it is not in the glossary instead of asserting guesses.\n- Giving a general explanation of a term after stating that it is absent from the glossary is not an unsupported assertion (pass).  ← Add this.\n## Unresolved Questions (choose unsure for answers covered here)\n  ← Remove the line about this issue.\nRunning again changes the number of items needing review from 1 → 0, and #05 Grounding becomes pass. If you chose a fail policy, add “…counts as an unsupported assertion (fail)” instead, and it becomes fail.",
+          "reason": "Translate both complete previously Japanese-only rubric excerpts, keeping the grounding key, pass/fail/unsure values and the exact source before/after workflow. Use reviewed terminology from the published English rubric; retain the alternative fail policy and the zero-review fallback, not only the successful pass example."
+        }
+      ],
+      "body_sha256": "d07912001f560469cce9f60e40e87359e01d6fcff6b8195ba56bfe30b2da2191"
+    },
+    "lec04-exercise-p017": {
+      "canonical_japanese_page": 17,
+      "canonical_japanese_title": "STEP 4：提出して、Codespaces を停止する",
+      "canonical_japanese_content_sha256": "3cb593ee53d7f3d64cc398bb0c9a7f383ac622e296bb5533c98718e99f30ea30",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 15,
+      "uploaded_english_slide_xml": "ppt/slides/slide40.xml",
+      "uploaded_english_text_sha256": "cc80264e3d5a9345b3821f31c6b5b775859cf6616fbc98a31e56678cd60229e4",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 17,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide17.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "git commit -m \"第4回 演習\"",
+          "after": "git commit -m \"Lecture 4 exercise\"",
+          "reason": "Localize the human-readable commit message while preserving git command, options and lec04 branch."
+        }
+      ],
+      "body_sha256": "e5f10582072652934d771650033e8fc9354450aa871a57da66d67ed5868083d8"
+    },
+    "lec04-exercise-p018": {
+      "canonical_japanese_page": 18,
+      "canonical_japanese_title": "うまくいかないとき",
+      "canonical_japanese_content_sha256": "9a3e8b82b8e3ac4f701ad5994448ee39acc1a7af85712b49cc306b0345be6c64",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 16,
+      "uploaded_english_slide_xml": "ppt/slides/slide41.xml",
+      "uploaded_english_text_sha256": "c2a775574553116b6767674eebd4f879970726914bd59b08365711e652186545",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 18,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide18.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "“判定の形式が正しくありませんでした” (verdict format error)",
+          "after": "“Invalid judgment format”",
+          "reason": "Use the localized error label printed by the published English app/judge.py."
+        }
+      ],
+      "body_sha256": "8363288a1fc1f4c438238b3bfc8622382e7ce029b0e9a999a7f21915bf6a73b3"
+    },
+    "lec04-exercise-p019": {
+      "canonical_japanese_page": 19,
+      "canonical_japanese_title": "宿題：どれか 1 つで完了",
+      "canonical_japanese_content_sha256": "36e23ee4a4bde88ed582072a65f1e62d8a69bc52f4c91f80b6ceca5b05939d7e",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 17,
+      "uploaded_english_slide_xml": "ppt/slides/slide42.xml",
+      "uploaded_english_text_sha256": "fb749115d6e04c1e04af2007d53a5600e97a07a6936ab3b0eb462c60379936dd",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 19,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide19.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "Find out how many people built it and how it was built and validated,",
+          "after": "Use the paper or official page to find out how many people built it and how it was built and validated,",
+          "reason": "Restore the canonical requirement to use the paper or official page when investigating dataset construction and verification."
+        }
+      ],
+      "body_sha256": "ccf16e0ba65fd3be5b29cc9a6982aa80cd1492641056bdc0c5133b3118d15cc7"
+    },
+    "lec04-exercise-p020": {
+      "canonical_japanese_page": 20,
+      "canonical_japanese_title": "宿題の進め方（基礎・実装）",
+      "canonical_japanese_content_sha256": "f8d4c97e7232e01ff02c01bef544b707d18103b0078a0d8dd853a97800199458",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 18,
+      "uploaded_english_slide_xml": "ppt/slides/slide43.xml",
+      "uploaded_english_text_sha256": "58141b10069e311469c8f0102eaf35b2e900f5c2c5640ca987c6f73caff4d87e",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 20,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide20.xml",
+      "status": "reviewed_uploaded_english",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [],
+      "body_sha256": "068e8272e362e065b80f947be85191ac34fdfb14bf637f1d7b74c92046d4c1be"
+    },
+    "lec04-exercise-p021": {
+      "canonical_japanese_page": 21,
+      "canonical_japanese_title": "宿題の進め方（発展）ベンチマークのデータセットを 1 つ調べる",
+      "canonical_japanese_content_sha256": "7d46c471fb01ef7f0b0bb3942d8440467f97d1ab58e30e3a6be3e9869d01b259",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 19,
+      "uploaded_english_slide_xml": "ppt/slides/slide44.xml",
+      "uploaded_english_text_sha256": "83d18f093b9d9c6b50761465410b6d0d7a88e840984c418d193a62fe15ee2b43",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 21,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide21.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "198 PhD-level science multiple-choice questions",
+          "after": "198 PhD-level science questions with four answer choices",
+          "reason": "Restore the explicit four-choice format stated in the Japanese source for GPQA Diamond."
+        },
+        {
+          "before": "93 developers, 3 per item (OpenAI blog)",
+          "after": "93 developers validated the items, 3 developers per item (OpenAI blog)",
+          "reason": "Make clear that the source count refers to validation, not the number of task authors."
+        },
+        {
+          "before": "Expert writers, 2 expert validators (arXiv 2311.12022)",
+          "after": "Expert authors, validated by 2 other experts (arXiv 2311.12022)",
+          "reason": "Restore the source distinction that the two validating experts differ from the question authors."
+        },
+        {
+          "before": "Scenarios judged by final state (GitHub sierra-research/tau2-bench)",
+          "after": "Judged using scenarios and the final state (GitHub sierra-research/tau2-bench)",
+          "reason": "Retain both canonical grading elements, scenarios and final state, rather than implying only final-state grading."
+        }
+      ],
+      "body_sha256": "abce61b2f6a271b0cbd46b1c94fbc328bb8ca93eebc327f8a7ff87d39782a707"
+    },
+    "lec04-exercise-p022": {
+      "canonical_japanese_page": 22,
+      "canonical_japanese_title": "宿題の提出",
+      "canonical_japanese_content_sha256": "c3f7e7739695c527db69619bad681eab6c5171037ce237d027ae92c472da92fc",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": "day4/Lecture_4_Exercise_Homework.pptx",
+      "uploaded_english_slide_number": 20,
+      "uploaded_english_slide_xml": "ppt/slides/slide45.xml",
+      "uploaded_english_text_sha256": "18d31037e5f1c52e2568e2e6bdcec35d0edbfe77c41bef57d290d1441d32eb5e",
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 22,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide22.xml",
+      "status": "uploaded_english_with_documented_corrections",
+      "removed_english_boilerplate": [
+        "©MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+      ],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": "the same file as the exercise, and submit it in the same PR.",
+          "after": "the same file as the exercise, and submit it.",
+          "reason": "Remove the English-only requirement to use the same PR; the canonical slide specifies the same answer.md file but does not impose a PR choice."
+        }
+      ],
+      "body_sha256": "ff763abcbd0dc533c1b32ba692e5a499d9892bfed9abd83735256c8baffe9ab6"
+    },
+    "lec04-exercise-p023": {
+      "canonical_japanese_page": 23,
+      "canonical_japanese_title": "松尾・岩澤研究室（ロゴ）",
+      "canonical_japanese_content_sha256": "f41a5e3da70cfdc3543bcb4df2ea98fcf99d6214d9dccaf839a4fa943e01e941",
+      "source_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+      "uploaded_english_file": null,
+      "uploaded_english_slide_number": null,
+      "uploaded_english_slide_xml": null,
+      "uploaded_english_text_sha256": null,
+      "uploaded_japanese_file": "day4/第4回 演習・宿題：評価セットを作り、LLM に採点させる.pptx",
+      "uploaded_japanese_slide_number": 23,
+      "uploaded_japanese_slide_xml": "ppt/slides/slide23.xml",
+      "status": "newly_translated_from_canonical_japanese",
+      "removed_english_boilerplate": [],
+      "format_normalization": "Nonbreaking spaces converted to ordinary spaces; trailing line spaces removed; code indentation preserved or explicitly corrected below.",
+      "corrections": [
+        {
+          "before": null,
+          "after": "Matsuo-Iwasawa Lab\n[Additional transcription of text in figures/images]\nMATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO",
+          "reason": "Translate the explicit canonical logo transcription. No corresponding uploaded English slide exists; its slide 21 is an unrelated extra summary, which is excluded."
+        }
+      ],
+      "body_sha256": "efe90b926636708c61dfe9fdc3891e383d33e2f3fb8aca0a948b4c224326a022"
+    }
+  },
+  "unused_english_slides": [
+    21
+  ],
+  "unused_english_reason": "Uploaded English slide 21 is an additional summary absent from the canonical Japanese source; it does not map to the Japanese logo closing slide."
+}

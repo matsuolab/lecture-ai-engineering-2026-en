@@ -1,0 +1,686 @@
+[
+  {
+    "id": "term:ai-engineering",
+    "kind": "term",
+    "title": "AI Engineering",
+    "aliases": [
+      "AI Engineering"
+    ]
+  },
+  {
+    "id": "term:evaluation-loop",
+    "kind": "term",
+    "title": "Evaluation and improvement cycle",
+    "aliases": [
+      "improvement cycle",
+      "evaluation and improvement cycle"
+    ]
+  },
+  {
+    "id": "term:llm",
+    "kind": "term",
+    "title": "LLM (Large Language Model)",
+    "aliases": [
+      "LLM",
+      "Large Language Model",
+      "LLM (Large Language Model)",
+      "large language model"
+    ]
+  },
+  {
+    "id": "term:token",
+    "kind": "term",
+    "title": "Token",
+    "aliases": [
+      "token"
+    ]
+  },
+  {
+    "id": "term:context-window",
+    "kind": "term",
+    "title": "Context window",
+    "aliases": [
+      "context window",
+      "context length"
+    ]
+  },
+  {
+    "id": "term:prompt",
+    "kind": "term",
+    "title": "Prompt",
+    "aliases": [
+      "prompt"
+    ]
+  },
+  {
+    "id": "term:system-prompt",
+    "kind": "term",
+    "title": "System prompt",
+    "aliases": [
+      "instructions",
+      "system instruction",
+      "system prompt",
+      "instruction text"
+    ]
+  },
+  {
+    "id": "term:temperature",
+    "kind": "term",
+    "title": "temperature",
+    "aliases": [
+      "temperature",
+      "temperature parameter"
+    ]
+  },
+  {
+    "id": "term:hallucination",
+    "kind": "term",
+    "title": "Hallucination",
+    "aliases": [
+      "hallucination"
+    ]
+  },
+  {
+    "id": "term:api",
+    "kind": "term",
+    "title": "API",
+    "aliases": [
+      "API",
+      "Application Programming Interface",
+      "Web API"
+    ]
+  },
+  {
+    "id": "term:api-key",
+    "kind": "term",
+    "title": "API key",
+    "aliases": [
+      "API key"
+    ]
+  },
+  {
+    "id": "term:environment-variable",
+    "kind": "term",
+    "title": "Environment variable",
+    "aliases": [
+      "env",
+      "environment variable"
+    ]
+  },
+  {
+    "id": "term:rate-limit",
+    "kind": "term",
+    "title": "Rate limit",
+    "aliases": [
+      "rate limit",
+      "429 error"
+    ]
+  },
+  {
+    "id": "term:codespaces",
+    "kind": "term",
+    "title": "GitHub Codespaces",
+    "aliases": [
+      "Codespaces",
+      "GitHub Codespaces"
+    ]
+  },
+  {
+    "id": "term:devcontainer",
+    "kind": "term",
+    "title": "devcontainer",
+    "aliases": [
+      "Dev Container",
+      "devcontainer",
+      "devcontainer.json"
+    ]
+  },
+  {
+    "id": "term:codespaces-secret",
+    "kind": "term",
+    "title": "Codespaces secret",
+    "aliases": [
+      "Codespaces secret"
+    ]
+  },
+  {
+    "id": "term:fork",
+    "kind": "term",
+    "title": "fork",
+    "aliases": [
+      "fork"
+    ]
+  },
+  {
+    "id": "term:branch",
+    "kind": "term",
+    "title": "Branch",
+    "aliases": [
+      "branch"
+    ]
+  },
+  {
+    "id": "term:pull-request",
+    "kind": "term",
+    "title": "Pull request (PR)",
+    "aliases": [
+      "PR",
+      "Pull Request",
+      "pull request (PR)"
+    ]
+  },
+  {
+    "id": "term:github-copilot",
+    "kind": "term",
+    "title": "GitHub Copilot",
+    "aliases": [
+      "Copilot",
+      "GitHub Copilot"
+    ]
+  },
+  {
+    "id": "term:code-completion",
+    "kind": "term",
+    "title": "Code completion",
+    "aliases": [
+      "inline suggestion",
+      "inline completion",
+      "code completion"
+    ]
+  },
+  {
+    "id": "term:coding-agent",
+    "kind": "term",
+    "title": "Coding agent",
+    "aliases": [
+      "Coding Agent",
+      "AI coding agent",
+      "coding agent"
+    ]
+  },
+  {
+    "id": "term:pretraining",
+    "kind": "term",
+    "title": "Pretraining",
+    "aliases": [
+      "pre-training",
+      "pretraining"
+    ]
+  },
+  {
+    "id": "term:fine-tuning",
+    "kind": "term",
+    "title": "Fine-tuning",
+    "aliases": [
+      "FT",
+      "fine-tuning",
+      "additional training"
+    ]
+  },
+  {
+    "id": "term:sft",
+    "kind": "term",
+    "title": "Supervised fine-tuning (SFT)",
+    "aliases": [
+      "SFT",
+      "Supervised Fine-Tuning",
+      "instruction tuning",
+      "supervised fine-tuning (SFT)"
+    ]
+  },
+  {
+    "id": "term:peft",
+    "kind": "term",
+    "title": "PEFT",
+    "aliases": [
+      "PEFT",
+      "Parameter-Efficient Fine-Tuning",
+      "parameter-efficient fine-tuning"
+    ]
+  },
+  {
+    "id": "term:lora",
+    "kind": "term",
+    "title": "LoRA",
+    "aliases": [
+      "LoRA",
+      "Low-Rank Adaptation"
+    ]
+  },
+  {
+    "id": "term:lora-rank",
+    "kind": "term",
+    "title": "Rank (LoRA r)",
+    "aliases": [
+      "rank",
+      "rank (LoRA r)"
+    ]
+  },
+  {
+    "id": "term:qlora",
+    "kind": "term",
+    "title": "QLoRA",
+    "aliases": [
+      "QLoRA",
+      "Quantized LoRA"
+    ]
+  },
+  {
+    "id": "term:quantization",
+    "kind": "term",
+    "title": "Quantization",
+    "aliases": [
+      "quantization"
+    ]
+  },
+  {
+    "id": "term:learning-rate",
+    "kind": "term",
+    "title": "Learning rate",
+    "aliases": [
+      "learning rate",
+      "lr"
+    ]
+  },
+  {
+    "id": "term:epoch",
+    "kind": "term",
+    "title": "Epoch",
+    "aliases": [
+      "epoch"
+    ]
+  },
+  {
+    "id": "term:overfitting",
+    "kind": "term",
+    "title": "Overfitting",
+    "aliases": [
+      "overfitting"
+    ]
+  },
+  {
+    "id": "term:huggingface-hub",
+    "kind": "term",
+    "title": "Hugging Face Hub",
+    "aliases": [
+      "HF Hub",
+      "Hugging Face",
+      "Hugging Face Hub"
+    ]
+  },
+  {
+    "id": "term:ai-agent",
+    "kind": "term",
+    "title": "AI agent",
+    "aliases": [
+      "agent",
+      "AI agent"
+    ]
+  },
+  {
+    "id": "term:agent-loop",
+    "kind": "term",
+    "title": "Agent loop",
+    "aliases": [
+      "agent loop",
+      "tool-calling loop"
+    ]
+  },
+  {
+    "id": "term:tool",
+    "kind": "term",
+    "title": "Tool (Tool use / Function calling)",
+    "aliases": [
+      "Function calling",
+      "Tool use",
+      "tool",
+      "tool calling",
+      "Tool (Tool use / Function calling)"
+    ]
+  },
+  {
+    "id": "term:tool-description",
+    "kind": "term",
+    "title": "Tool description",
+    "aliases": [
+      "docstring",
+      "tool schema",
+      "tool description"
+    ]
+  },
+  {
+    "id": "term:structured-output",
+    "kind": "term",
+    "title": "Structured output",
+    "aliases": [
+      "structured output",
+      "JSON output"
+    ]
+  },
+  {
+    "id": "term:harness",
+    "kind": "term",
+    "title": "Harness",
+    "aliases": [
+      "agent harness",
+      "harness"
+    ]
+  },
+  {
+    "id": "term:pi",
+    "kind": "term",
+    "title": "Pi",
+    "aliases": [
+      "Pi",
+      "Pi coding agent",
+      "pi agent"
+    ]
+  },
+  {
+    "id": "term:pydantic-ai",
+    "kind": "term",
+    "title": "Pydantic AI",
+    "aliases": [
+      "Pydantic AI",
+      "PydanticAI",
+      "pydantic-ai"
+    ]
+  },
+  {
+    "id": "term:adk",
+    "kind": "term",
+    "title": "ADK (Agent Development Kit)",
+    "aliases": [
+      "ADK",
+      "ADK（Agent Development Kit）",
+      "Agent Development Kit",
+      "google-adk",
+      "ADK (Agent Development Kit)"
+    ]
+  },
+  {
+    "id": "term:mcp",
+    "kind": "term",
+    "title": "MCP (Model Context Protocol)",
+    "aliases": [
+      "MCP",
+      "MCP（Model Context Protocol）",
+      "Model Context Protocol",
+      "MCP (Model Context Protocol)"
+    ]
+  },
+  {
+    "id": "term:guardrail",
+    "kind": "term",
+    "title": "Guardrail",
+    "aliases": [
+      "guardrail"
+    ]
+  },
+  {
+    "id": "term:human-in-the-loop",
+    "kind": "term",
+    "title": "Human-in-the-loop",
+    "aliases": [
+      "HITL",
+      "Human-in-the-loop",
+      "human approval",
+      "confirmation step"
+    ]
+  },
+  {
+    "id": "term:test-model",
+    "kind": "term",
+    "title": "TestModel",
+    "aliases": [
+      "TestModel",
+      "test model"
+    ]
+  },
+  {
+    "id": "term:homework-levels",
+    "kind": "term",
+    "title": "Three homework levels",
+    "aliases": [
+      "three levels",
+      "three homework levels",
+      "homework levels"
+    ]
+  },
+  {
+    "id": "term:answer-md",
+    "kind": "term",
+    "title": "answer.md",
+    "aliases": [
+      "answer.md",
+      "answer file"
+    ]
+  },
+  {
+    "id": "term:lec-start-tag",
+    "kind": "term",
+    "title": "lecNN-start tag",
+    "aliases": [
+      "lec03-start",
+      "lecNN-start tag",
+      "starting tag"
+    ]
+  },
+  {
+    "id": "term:default-model",
+    "kind": "term",
+    "title": "Default model",
+    "aliases": [
+      "gemini-3.5-flash-lite",
+      "default model"
+    ]
+  },
+  {
+    "id": "term:external-tool",
+    "kind": "term",
+    "title": "External tool",
+    "aliases": [
+      "external tool",
+      "external service"
+    ]
+  },
+  {
+    "id": "term:mcp-server",
+    "kind": "term",
+    "title": "MCP server",
+    "aliases": [
+      "MCP server"
+    ]
+  },
+  {
+    "id": "term:mcp-client",
+    "kind": "term",
+    "title": "MCP client",
+    "aliases": [
+      "MCP client",
+      "MCP host"
+    ]
+  },
+  {
+    "id": "term:mcp-transport",
+    "kind": "term",
+    "title": "Transport (stdio / Streamable HTTP)",
+    "aliases": [
+      "Streamable HTTP",
+      "stdio",
+      "transport",
+      "MCP transport",
+      "Transport (stdio / Streamable HTTP)"
+    ]
+  },
+  {
+    "id": "term:mcp-config",
+    "kind": "term",
+    "title": "mcpServers configuration",
+    "aliases": [
+      "mcp.json",
+      "mcpServers",
+      "mcp_servers.json",
+      "MCP configuration file",
+      "mcpServers configuration"
+    ]
+  },
+  {
+    "id": "term:tool-namespace",
+    "kind": "term",
+    "title": "Tool namespace",
+    "aliases": [
+      "prefix",
+      "tool namespace",
+      "tool-name prefix",
+      "name collision"
+    ]
+  },
+  {
+    "id": "term:fetch-server",
+    "kind": "term",
+    "title": "fetch server",
+    "aliases": [
+      "fetch",
+      "mcp-server-fetch",
+      "web-fetching tool",
+      "fetch server"
+    ]
+  },
+  {
+    "id": "term:evaluation-dataset",
+    "kind": "term",
+    "title": "Evaluation set",
+    "aliases": [
+      "eval set",
+      "test set",
+      "evaluation set",
+      "evaluation dataset"
+    ]
+  },
+  {
+    "id": "term:edge-case",
+    "kind": "term",
+    "title": "Edge case",
+    "aliases": [
+      "edge case",
+      "boundary case"
+    ]
+  },
+  {
+    "id": "term:rubric",
+    "kind": "term",
+    "title": "Rubric",
+    "aliases": [
+      "rubric",
+      "grading criteria",
+      "evaluation criteria"
+    ]
+  },
+  {
+    "id": "term:llm-as-a-judge",
+    "kind": "term",
+    "title": "LLM-as-a-Judge",
+    "aliases": [
+      "LLM judge",
+      "LLM-as-a-Judge",
+      "LLM grading",
+      "automatic grading"
+    ]
+  },
+  {
+    "id": "term:agreement-rate",
+    "kind": "term",
+    "title": "Agreement rate",
+    "aliases": [
+      "agreement rate",
+      "inter-rater agreement",
+      "agreement with human ratings"
+    ]
+  },
+  {
+    "id": "term:needs-review",
+    "kind": "term",
+    "title": "Needs review",
+    "aliases": [
+      "unsure",
+      "human review",
+      "review required",
+      "needs review"
+    ]
+  },
+  {
+    "id": "term:position-bias",
+    "kind": "term",
+    "title": "Position bias",
+    "aliases": [
+      "position bias",
+      "order bias"
+    ]
+  },
+  {
+    "id": "term:rag",
+    "kind": "term",
+    "title": "RAG",
+    "aliases": [
+      "RAG",
+      "Retrieval Augmented Generation",
+      "Retrieval-Augmented Generation",
+      "retrieval-augmented generation"
+    ]
+  },
+  {
+    "id": "term:in-context-learning",
+    "kind": "term",
+    "title": "In-Context Learning",
+    "aliases": [
+      "ICL",
+      "In-Context Learning",
+      "in-context learning"
+    ]
+  },
+  {
+    "id": "term:chunking",
+    "kind": "term",
+    "title": "Chunking",
+    "aliases": [
+      "chunk",
+      "chunking"
+    ]
+  },
+  {
+    "id": "term:embedding",
+    "kind": "term",
+    "title": "Embedding",
+    "aliases": [
+      "embedding",
+      "embeddings",
+      "embedding vector"
+    ]
+  },
+  {
+    "id": "term:memory",
+    "kind": "term",
+    "title": "Memory",
+    "aliases": [
+      "MEMORY.md",
+      "memory"
+    ]
+  },
+  {
+    "id": "term:tree-structure",
+    "kind": "term",
+    "title": "Tree structure",
+    "aliases": [
+      "tree structure"
+    ]
+  },
+  {
+    "id": "term:knowledge-graph",
+    "kind": "term",
+    "title": "Knowledge graph",
+    "aliases": [
+      "knowledge graph"
+    ]
+  }
+]

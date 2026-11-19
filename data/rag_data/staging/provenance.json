@@ -1,0 +1,1895 @@
+{
+  "lec03-main-p001": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 1,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 1,
+    "slide_xml": "ppt/slides/slide1.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "No photos or sharing with third parties without permission.",
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "067bce9ddc0a28e96f78f22a8d3e76a3bd9af6c5fed84d388e444efe248a06b7",
+    "corpus_text_sha256": "4c33fc3c2d398023fc3ee419bea3c7261c8bb529f5c65f6e1b02fbe1b38d6935",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p002": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 2,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 2,
+    "slide_xml": "ppt/slides/slide2.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "c9a18b1351a17c36ba2f085f365b10d6a7ed5085ffb40e4ecff33e3d4db74f35",
+    "corpus_text_sha256": "5c0855960a3dae298771c8f1d57531d84e9fa693397d5adcfc1e107bff09932f",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p003": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 3,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 3,
+    "slide_xml": "ppt/slides/slide3.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "52627dc689bec817f6046e33e57a80f3ae9f1d11dfc15a10d558c33a8d4ef621",
+    "corpus_text_sha256": "76627c47a6f63ccf5a32281e3445aee5ab0b10936ccd9bb1b0c66b0d4e87647a",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p004": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 4,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 4,
+    "slide_xml": "ppt/slides/slide4.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "98625cf4d71573702a06293c1d6f49df5ea7a40fe308d9dd5616ea465ecda1b0",
+    "corpus_text_sha256": "684c59926b9a930e1014fddaccdcb03f2d60f745908eff7bedf1c51d822f29e0",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p005": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 5,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 5,
+    "slide_xml": "ppt/slides/slide5.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "fd4965971bc703496b15fac7dce901a09e7d0e769b9daed932fd132e84faff42",
+    "corpus_text_sha256": "7ed7f6b5aea33f0cc1e09f73c868fadec5cf2d2eb89927b7e8b70f8b400534c6",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p006": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 6,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 6,
+    "slide_xml": "ppt/slides/slide6.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "LLMs (large language models) are stateless (it keeps no state).",
+        "to": "LLMs (large language models) are stateless (they keep no state).",
+        "reason": "Corrected pronoun agreement; the stateless-model explanation is unchanged."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Never run the test (no tool call)",
+        "to": "Has not actually checked whether the test fails (no tool call)",
+        "reason": "Restored the source's precise distinction between suggesting a fix and checking test failure."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "603ef7ac6947ab12b27a280cf22153a6c85688f17aa260f95fb09f707599fbd3",
+    "corpus_text_sha256": "4946ad62a7c7e6d7d48bd15bc54638262ed7cf7ca6bcf347bccea61265f3b2c0",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p007": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 7,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 7,
+    "slide_xml": "ppt/slides/slide7.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "e601aa43c0538448c17d9d3ca9262510815d55c874e575906453676ce94db75b",
+    "corpus_text_sha256": "a146a9640f8d3416234774d91c0c808be7afc79286da37818eef893b0cfa4e76",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p008": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 8,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 8,
+    "slide_xml": "ppt/slides/slide8.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "all input input given",
+        "to": "all input given",
+        "reason": "Removed a duplicated word."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "a8e8fe2d447246358ba77dadd4c995ea3be90b21dba78d55527dc02145f66ce4",
+    "corpus_text_sha256": "20f1a2118f9a4bb939c7b6f633db53e18c02e553799da18c3eb886608045042f",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p009": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 9,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 9,
+    "slide_xml": "ppt/slides/slide9.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "0f266eb9b2c85cd74a51cf7a421de0a1e3c83b3e656142ff84efa7ea0b44fb08",
+    "corpus_text_sha256": "7d0044d0e4445bbdebb53d6d4a78c412661c067f739c1227247284b63751f45b",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p010": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 10,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 10,
+    "slide_xml": "ppt/slides/slide10.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Put a list of available tools in the context, the model outputs which one to call, with which arguments, when needed.",
+        "to": "Put a list of available tools in the context, and the model outputs which one to call, with which arguments, when needed.",
+        "reason": "Corrected a comma splice without changing tool-call meaning."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "③ The harness program exuecute the called tool.",
+        "to": "③ The harness program executes the called tool.",
+        "reason": "Corrected spelling and subject–verb agreement."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "10362f9da8d3cb7eb55b9438b4d8d3af2bcc8dd856fae324de318804e6ade726",
+    "corpus_text_sha256": "544fc2cf941cf3795cf129b931ef307f9ea5dacf13ccf9301ddf054a3592b5b9",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p011": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 11,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 11,
+    "slide_xml": "ppt/slides/slide11.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "c366d5b2f32be057b179c1f606a48cfcc1c39368a74ce2d28d31ee246ebcb403",
+    "corpus_text_sha256": "8aab9b7c8e859bedfc353c725fefffa2aef323c38d72a9cceace941c04dc1f17",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p012": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 12,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 12,
+    "slide_xml": "ppt/slides/slide12.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "6f6522a1c5964a2929ded29b17e614d3e7a873095c6efb3363c43e4a9293ff46",
+    "corpus_text_sha256": "d0ff51a99d01e8e4a7c625ee1f5230209c8358b70aa4f429654c97e67032bb1a",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p013": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 13,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 13,
+    "slide_xml": "ppt/slides/slide13.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "cca516d1557b5c691cba5de87c436ced382b66d4ff7c87a9e99acf4a64428729",
+    "corpus_text_sha256": "13a1e721368d878cc41eaa3e3d203c705240bbed4420b979cf8a59cc9841c0c7",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p014": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 14,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 14,
+    "slide_xml": "ppt/slides/slide14.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "d1601529533a538523cc71f53038c23767d90e76316ab2eba74e5d27ef250937",
+    "corpus_text_sha256": "cd2b0b7aebcc4628b9653c1009caf0b025de59997ea907d16471042c354335bd",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p015": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 15,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 15,
+    "slide_xml": "ppt/slides/slide15.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Always-on (claw-type) agents operate without instructions, and touch the entire runtime environment",
+        "to": "Always-on (claw-type) agents act without waiting for a new request and can access the entire runtime environment",
+        "reason": "Corrected 'without instructions': the source says agents act without being asked, not without instructions."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "155356830d9ddbaa403112063e69a5bd44e2bd85d174d87cd825413a1b665613",
+    "corpus_text_sha256": "49caa28c87e5cef58cb4d3084b411c156384bc9f773afe4772591d88f87b9217",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p016": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 16,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 16,
+    "slide_xml": "ppt/slides/slide16.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "ee0d7cbeae4a03ecae9c455b40810444e455297b00037b605ebdd79df418101e",
+    "corpus_text_sha256": "4e6b4d980dc3f7437c804bbede7370d02ad9fd1cbf4858b092067783408c4b19",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p017": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 17,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 17,
+    "slide_xml": "ppt/slides/slide17.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "80fe72cd131f9419a8c6c67ddff245c15592c8b28a6657c385caa5b84f9dc3b6",
+    "corpus_text_sha256": "32eb58893f4e24acf36dfc51a2e75957f871cd3f7b40f49aeda0b5f349583d32",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p018": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 18,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 18,
+    "slide_xml": "ppt/slides/slide18.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "1f4e92829eb8c5a2dbf6664f6a9bdcdfbefa5ad5ecb23cce5d9439733ed32bc2",
+    "corpus_text_sha256": "2227ff159601813e28b550bad7503a2252ed67a51024b82ed7fb58cb6e1e14ca",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p019": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 19,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 19,
+    "slide_xml": "ppt/slides/slide19.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Tasks length AI can handle (METR)",
+        "to": "Task length AI can handle (METR)",
+        "reason": "Corrected number agreement."
+      },
+      {
+        "type": "source_transcription_restored",
+        "reason": "PPTX drawing/chart labels are absent from its text boxes. Restored only labels explicitly present in the corresponding Japanese corpus page.",
+        "added_text": "[Chart text transcribed from the matching Japanese source page]\nError-accumulation chart:\n- Vertical axis: probability of succeeding to the end (%); ticks 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100.\n- Horizontal axis: number of steps, 1 through 30.\n- Legend: 99% success per step; 95% success per step.\n- Annotation: 36% at 20 steps.\nMETR task-length chart:\n- Time scale: 1 minute, 4 minutes, 15 minutes, 1 hour, 4 hours, 16 hours.\n- Year labels: 2023, 2024, 2025, 2026.\n- Model labels: GPT-4, GPT-5, Claude Opus 4.6.\n- Claude Opus 4.6 annotation: about 12 hours."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "4ba852804ba2d8ef84db692bd2e12d6134f2cc4d5e27b38c9bd24e8521de8709",
+    "corpus_text_sha256": "c2c904b3d79edb6a3eb5ab892f1926e3911e56fd4bd2d24ffb7981e1eb3e20c7",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p020": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 20,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 20,
+    "slide_xml": "ppt/slides/slide20.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "3b79991e81ee78191a869da7f8971ea53e99aaa9f082545d10e72f5560042199",
+    "corpus_text_sha256": "076d7d8adda666d1d6eccde55d609a2918fea3c8bebfe3c0bbb127bced3c2959",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p021": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 21,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 21,
+    "slide_xml": "ppt/slides/slide21.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Karpathy's open-source setup that enables AI to run experiments. It keeps only those that are improved and tries the next one from there.",
+        "to": "Karpathy's open-source setup that enables AI to run experiments. It keeps only experiments that improve the result and tries the next one from there.",
+        "reason": "Clarified that improving experiments are retained, consistent with the source."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "1bbf691edfcfb4f88b07a2b35e2205ab2240f5a19ef6651c23fd8878456691cd",
+    "corpus_text_sha256": "94691de7e2949e4a33324332e4282499f93ad7ace9f8edbc8d4a67cfb08753e8",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p022": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 22,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 22,
+    "slide_xml": "ppt/slides/slide22.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "a2c10178aeb22d7e7b83bc2c17951f9760b420999890742bb376091d8c0ec397",
+    "corpus_text_sha256": "814a22fa1dc14609fc1130309c118049d3305a3b8b8c231752fdd4ebe04b0e62",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p023": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 23,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 23,
+    "slide_xml": "ppt/slides/slide23.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "c17f69938a5e1dd4125d87acb97959289413900a76b4e47ed10828441cdc16be",
+    "corpus_text_sha256": "0d2dc3f6ce6440684f5bf3e87d1163bfa70164f88e297bce6fd47ee5700937b6",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p024": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 24,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 24,
+    "slide_xml": "ppt/slides/slide24.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "credentials(API keys etc.)",
+        "to": "credentials (API keys, etc.)",
+        "reason": "Corrected spacing and punctuation."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "For doing your work in your local environment, the CLI is often enough.",
+        "to": "For work that can be completed locally, the CLI is often enough.",
+        "reason": "Restored the source's local-only task condition."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "d0e3fecde849429e48937af11b216cfbd585f72d6f1fb37bae2bebbf4b287a7f",
+    "corpus_text_sha256": "78701037fdea59120e678b58b31e8770d983517095fb8805c1c2d196a8779220",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p025": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 25,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 25,
+    "slide_xml": "ppt/slides/slide25.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Ask every time(default mode)",
+        "to": "Ask every time (default mode)",
+        "reason": "Corrected spacing."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "ff836fbb4a17644baa64870445e341de598e019f680cef54b7888aa72664d38b",
+    "corpus_text_sha256": "6c2831fff7af963740fd95f8a113485b7a546c087c7e64579f02be98f78d207d",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p026": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 26,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 26,
+    "slide_xml": "ppt/slides/slide26.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Choosing human-in, on or out-of-the-loop changes how you build approval.",
+        "to": "Choosing human-in, on or out-of-the-loop changes how you build approval and stopping mechanisms.",
+        "reason": "Restored the omitted stopping-mechanism requirement from the Japanese source."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Approves all",
+        "to": "Approval for every action",
+        "reason": "Clarified the source's per-action approval label."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "d4276997d339ac42c8e17c198ae3d0518dadb7b419ef918de11487ade486739d",
+    "corpus_text_sha256": "469d2f9feadcc336cd081545d3c24aa3051d02e2bf9cb8ec30582af71f628382",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p027": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 27,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 27,
+    "slide_xml": "ppt/slides/slide27.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "37ae2c0345caa9b248551a377b2581678b099377e5dcbe9129afd78cfde20298",
+    "corpus_text_sha256": "c6e6b792fe7b356b7dbdbcf4ecdf20f45d1208e6b1e9b706bbcc2d24bd35337f",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p028": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 28,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 28,
+    "slide_xml": "ppt/slides/slide28.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "bc9d4bbf3d376c8add5b65a6cbb9fe82470db6df734511631403132fa92053bc",
+    "corpus_text_sha256": "44f1cacdaa4c82f4e8e8b5e086d8359a97359581784b06168c4696b0f8a1e623",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p029": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 29,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 29,
+    "slide_xml": "ppt/slides/slide29.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Jobs that take days belong to the always-on  type(Part 2).",
+        "to": "Jobs that take days belong to always-on agents (Part 2).",
+        "reason": "Corrected spacing and grammar."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "e5de1de003a0b2d9af6d954c2e598c067fb3a917bfd8742507e46f851a29f72c",
+    "corpus_text_sha256": "b1a4f24de453e1f430c5b4069e70c4b3314716dee7a9289092e2780c47281cd5",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p030": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 30,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 30,
+    "slide_xml": "ppt/slides/slide30.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "When using results → call together",
+        "to": "When earlier results are not needed → call together",
+        "reason": "Corrected a reversed condition in the supplied English slide: independent calls are batched."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "When not using results → call in order",
+        "to": "When earlier results are needed → call in order",
+        "reason": "Corrected the complementary reversed condition: dependent calls run sequentially."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "30bc1046d5dd12c3a8cbbd9314dbd67b98547ac7f0accd650b0c2d164f3108ab",
+    "corpus_text_sha256": "78f9f12bbd7ca45181251a3eb6e641ec6c2d37a2860c372f8d1757f5ec66aa7f",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p031": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 31,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 31,
+    "slide_xml": "ppt/slides/slide31.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "0ba028cd6146f6ece367960816ae56ca5d6b42096cea6d8adb7a8298dd8aa2b0",
+    "corpus_text_sha256": "917373902d90ccd0de1907c6308fe396cfd81f5f482030a0dfe43c31a56ab47a",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p032": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 32,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 32,
+    "slide_xml": "ppt/slides/slide32.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Only definitions that match are loaded : slack_search",
+        "to": "Only definitions that match are loaded: slack_search",
+        "reason": "Corrected punctuation spacing."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "1169ee07ff33ad8c04ec7a3ec12d5c1d0a5b37e758b10f470ac2671d18acbeab",
+    "corpus_text_sha256": "ff9021ec371ca78319c0849b171211849a68030eb986e40aab3463e347d3a691",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p033": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 33,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 33,
+    "slide_xml": "ppt/slides/slide33.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "dc1bff2dbc6c177b44ef2b1d8ba15a222021fc6bf81d612c7f01efe5c0d87506",
+    "corpus_text_sha256": "5f28a7e71a17433c6939dd0a98840ff3bbc1744e2992eacc47165de307e15944",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p034": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 34,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 34,
+    "slide_xml": "ppt/slides/slide34.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "08981fcd1a95aa130fdb0a1eeb9a4859cb31971fb3d4bfcaceddee666b791344",
+    "corpus_text_sha256": "6ecaede90e2a383a501cc68849e2efb9ebdd610a025349eec099c7d51913ddb9",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p035": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 35,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 35,
+    "slide_xml": "ppt/slides/slide35.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "48c920b42342df9119195a0accc71a79645936f67e75a0b9733a3223bf0fb66b",
+    "corpus_text_sha256": "091661df0d6c8c7cbfb24717c01b1fe8d0669c056bd2453e6731b77c198b3207",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p036": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 36,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 36,
+    "slide_xml": "ppt/slides/slide36.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "{\"\nConfidence\n\":\"\nHigh\n\"}",
+        "to": "{\"Confidence\":\"High\"}",
+        "reason": "Reassembled the JSON example from separate diagram text boxes without changing its values."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "0008397874700e440fa1aeb0a7df0395546ef24f1f5127d050c9f90d6e44199e",
+    "corpus_text_sha256": "6326df517fb1b0e91c3eeb2f629c6b400af3e4353b17f92b882f9760ccbc795b",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p037": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 37,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 37,
+    "slide_xml": "ppt/slides/slide37.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "004ef807c79aa89c07810ca43add04d13f3923d6413e6f836a96ac6bf503f66e",
+    "corpus_text_sha256": "c58c5c392aea97bd6425fa43074eef761d3308dff4d6d3ada9aa3765afedac79",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p038": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 38,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 38,
+    "slide_xml": "ppt/slides/slide38.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "3a7b0aefa0937393e37a72e1242d6c5d8d340d5d09762cc3b55b746dc7f727cb",
+    "corpus_text_sha256": "5291987507d6955bfac21adea180151992070cf9ab4a68e1dcd12066a0f26b34",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p039": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 39,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 39,
+    "slide_xml": "ppt/slides/slide39.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "The model requests files in /memories;\nthe app executes it on its own storage",
+        "to": "The model requests operations on files in /memories;\nthe application executes them in its own storage",
+        "reason": "Clarified file-operation roles, consistent with the source and the explanation on page 65."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Outsiders may overwrite the content.",
+        "to": "There is also a risk of writes from outside.",
+        "reason": "Matched the source's risk statement without narrowing it to overwriting."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "001001f06803958563f2808fb4a51a6822ef42394384cb45277ad610511bf828",
+    "corpus_text_sha256": "d00f990e9298c7d2a24d2f47429fb435cb2e9a3a534c1240bcc0c46e52299f44",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p040": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 40,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 40,
+    "slide_xml": "ppt/slides/slide40.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "9ba5d8b953a3d6b650193dede3e6f70f9e349925cd8be519f6905235497bfe32",
+    "corpus_text_sha256": "7f728a56694895b09854f0677182e6919295bc724874e52e4e4897fccd617573",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p041": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 41,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 41,
+    "slide_xml": "ppt/slides/slide41.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "641f7e406fe34bf0db9ae87fd49524c280180965e8ddae2b44dfb2715d1834cb",
+    "corpus_text_sha256": "ad3287d046377cfe1f2f39bed3452fa746f02e2931623d08657108ccd3b7e084",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p042": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 42,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 42,
+    "slide_xml": "ppt/slides/slide42.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "c80579ec35b27452bdf2d4d346dc5fe3cb7870e6aba8faa339f22041c6088749",
+    "corpus_text_sha256": "3044856467f713318432d1c1d577cbaf241fef0f75a967d236021c78b67eae73",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p043": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 43,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 43,
+    "slide_xml": "ppt/slides/slide43.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "8b1bc2eb49022e9e4f8913407411ab44de15b4191d28d37b83d8b054aafee0bc",
+    "corpus_text_sha256": "2edc994103a7a9c18b1cf3d49ebc0654310000dbd291b01665fcbd934cd8e797",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p044": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 44,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 44,
+    "slide_xml": "ppt/slides/slide44.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Karpathy's setup enabled AI to run experiments",
+        "to": "Karpathy's setup enables AI to run experiments",
+        "reason": "Matched the source's present-tense description."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "012bc787d7afeea6ba022dabc129b843a5d45053dcbc08ec97c9c2f53521952c",
+    "corpus_text_sha256": "c2ce59c8d62ae96e75ca13dd703dd4bbbb33fb658fbec160ed18ba54e456864f",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p045": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 45,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 45,
+    "slide_xml": "ppt/slides/slide45.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Rewrites the test and\nclaiming “Fixed!”",
+        "to": "Rewrites the test and\nclaims “Fixed!”",
+        "reason": "Corrected verb agreement."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "f477e57602ea0e08ad2c48852178737213218d7ddcf1b30472e71f81fc6eea21",
+    "corpus_text_sha256": "7097f4003c96c98e668949d827ea1382a961d5055bde281f87035eaf23301bb6",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p046": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 46,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 46,
+    "slide_xml": "ppt/slides/slide46.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "48f592a95d80d4ad99f3b066e890f39960989bb8caf9a7c764e31b362dce3740",
+    "corpus_text_sha256": "5af9dbd48bd0e15484d0a182847bb91f0615e801adcf524f437f5c6ee7852950",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p047": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 47,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 47,
+    "slide_xml": "ppt/slides/slide47.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "aca5c44a8926506f631db013b6e2f426c8d62c6f90636099e90ebbdbb84fcd87",
+    "corpus_text_sha256": "1704275198df86c406bad2838e6cc524ab5f872c2726e449002beaa3cd3a1a81",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p048": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 48,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 48,
+    "slide_xml": "ppt/slides/slide48.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "14c713e08252fa388f0131f25c4396fda55c784c78db29f7dd9cb7054d87ca16",
+    "corpus_text_sha256": "00f0d8f387c090b02d17a0bad337838378c1ff36bf2ae7e6f9eae90aa9b5f8ca",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p049": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 49,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 49,
+    "slide_xml": "ppt/slides/slide49.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "6693225b2378e22b3e8f10a605efa5767599c6f6ac6aba181a5577f7b57e30ea",
+    "corpus_text_sha256": "85002a059a4419d9fd0df1c7b00666c42c5f0651f8c234bef82d63a0b53fe045",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p050": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 50,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 50,
+    "slide_xml": "ppt/slides/slide50.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "can also run scripts\nwho can write to the repo",
+        "to": "can also run scripts\nAnyone who can write to the repo",
+        "reason": "Restored the missing subject in the Skill author-permissions cell."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "1e7a02fe5414fb847f443f431752fed6b51f5207f1198abbd72b3cb93593364e",
+    "corpus_text_sha256": "25f69b0d402f9c2105233a7c9f99f78266d45cb7c9dea1f7c5098dd165913b0c",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p051": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 51,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 51,
+    "slide_xml": "ppt/slides/slide51.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "d009ec52f13ca3856d631121d8d8aef6346b285448a938b1c390790b75f5bff4",
+    "corpus_text_sha256": "e7cac6b5ffd01561128792c8f7a1a13985aa0f55670dfa32d8b8f454107c078c",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p052": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 52,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 52,
+    "slide_xml": "ppt/slides/slide52.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": ".env files and mode",
+        "to": ".env files and other data",
+        "reason": "Corrected 'mode' to the source's 'and so on'."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "771f7396978c09e17fde5de120e5c9d9501a344091ae63bdd0d4aa6145e4f88c",
+    "corpus_text_sha256": "17e6e73bda3c8f5c8963472d738e22feb7d07344f936dd5871dab2ad9dc7337e",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p053": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 53,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 53,
+    "slide_xml": "ppt/slides/slide53.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Unreacheable",
+        "to": "Unreachable",
+        "reason": "Corrected spelling."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Sending to unallowed destinations",
+        "to": "Sending to destinations that are not allowed",
+        "reason": "Corrected wording."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "510264845663a609c7a2fbb2b2c045b7b03489e13515de6d5409225623c21cdd",
+    "corpus_text_sha256": "119d2d07e366144e810c914ebe9424da96b468d9bee17e9aa44692f01bef2c1e",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p054": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 54,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 54,
+    "slide_xml": "ppt/slides/slide54.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "5cdf3bd09b0459327108d928b4faa3b6130b0dcea9524573d0500bd17d48a2f4",
+    "corpus_text_sha256": "61dd294991f8dd7dc706dd486e1ce3f3b53c98ae63409ffe433176afb6811c55",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p055": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 55,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 55,
+    "slide_xml": "ppt/slides/slide55.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "87d65f7e8de839ffff8887912944bf532ec1dc261aada5a7a8416c52222771c2",
+    "corpus_text_sha256": "5e79e303ba3379f00872447cf59b6aeb1dbc060b09649b938fc08dd851b84215",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p056": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 56,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 56,
+    "slide_xml": "ppt/slides/slide56.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "1cfd9614ec5666dfb02b3c8c387e9bb19f647ee6b1f50e5bf2fe3237afd0377b",
+    "corpus_text_sha256": "de77fe9eb127b9cc3eacb826af7b9f74f77fc9cfc32ff4d01e31186e93b4c3e8",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p057": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 57,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 57,
+    "slide_xml": "ppt/slides/slide57.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Highly autonomous AI speeds up AI development but makes its scope of action harder to control what AI can do.",
+        "to": "Highly autonomous AI speeds up AI development and also creates the challenge of managing its scope of action.",
+        "reason": "Repaired a malformed sentence to match the Japanese source's scope-management statement."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "41187777cfa66caaf14e9fed5d84a6f82504f3093905bd97952604740ee05b35",
+    "corpus_text_sha256": "f744c0642550dd806bd1d5631f30d4f67df30b8092f673f6ae46f848463f62c0",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p058": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 58,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 58,
+    "slide_xml": "ppt/slides/slide58.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "733735c04dc62110677aa04e0c2c8342c538cb3a0858528e96d37667615dac21",
+    "corpus_text_sha256": "2d5bb648a431f55d9ab861ed93cc0f3af0ef973fccbba83fd573b89406a3a277",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p059": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 59,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 59,
+    "slide_xml": "ppt/slides/slide59.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "b68de19eaeba34562aaca8d6e77073875cb278590e258a1bf7be549e1ab0694a",
+    "corpus_text_sha256": "e25761f76faac1bb30c3c8e576bbed81c1014c51bd9111c2a3020debbe38f882",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p060": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 60,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 60,
+    "slide_xml": "ppt/slides/slide60.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in each technical topic",
+        "to": "Latest developments in each technical topic",
+        "reason": "Corrected plural usage."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "d98a7e6612391040bf6c90a321c884215fda1270a865a7bcc75e09231db80510",
+    "corpus_text_sha256": "fd827021776226a650a562d9214e870c63033511169763b9d7885c0b43925cd1",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p061": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 61,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 61,
+    "slide_xml": "ppt/slides/slide61.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in agent SDKs and structured frameworks",
+        "to": "Latest developments in agent SDKs and frameworks",
+        "reason": "Removed unsupported 'structured' from the heading and corrected plural usage."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "cf2e69fd01662bc6189b7143fc57db0298035b9acee43b1cdf126d8e6a13af2f",
+    "corpus_text_sha256": "a10b7581ddbf70372feb87df88d5c32a05e2d53d82ea2d0c9f5847dbbffe54d0",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p062": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 62,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 62,
+    "slide_xml": "ppt/slides/slide62.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in structured output",
+        "to": "Latest developments in structured output",
+        "reason": "Corrected plural usage."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Link to the lecture: A concrete form of “features that enforce format.” covered in the lecture.",
+        "to": "Link to the lecture: A concrete form of the “features that enforce format” covered in the lecture.",
+        "reason": "Repaired punctuation and sentence structure."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "d85ab755d5f316d236606e2081b75ef48b79723dba9221d56eb154f6158a03db",
+    "corpus_text_sha256": "84e420da4009d31a9071a27ff4ad495fa847a5aebd4b9bf10aa341df778762fb",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p063": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 63,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 63,
+    "slide_xml": "ppt/slides/slide63.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in tool calling",
+        "to": "Latest developments in tool calling",
+        "reason": "Corrected plural usage."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "the list of available tool went",
+        "to": "the list of available tools went",
+        "reason": "Corrected plural usage."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "8f439c3bd4c99e4c293cf4d4301969f5d508362fb0018d847e90e69ba47223a4",
+    "corpus_text_sha256": "4ef87af10772a4cff3f10483099e6f76d70bfd393b299a997c6e497ec60f659e",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p064": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 64,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 64,
+    "slide_xml": "ppt/slides/slide64.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in long-task capability",
+        "to": "Latest developments in long-task capability",
+        "reason": "Corrected plural usage."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Request to have higher success, and the task length shrinks a lot",
+        "to": "Requiring a higher success rate greatly reduces the task length",
+        "reason": "Repaired wording to preserve the requested-success-rate comparison."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Running long and finishing reliably are different thins",
+        "to": "Running for a long time and finishing reliably are different things.",
+        "reason": "Corrected spelling and grammar."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "74c96244614a8c974351a93d6a8b3a8c12cfc43b6446768593b362945ed10da7",
+    "corpus_text_sha256": "a27e968eac4f7e8dd73df1820b4c7fdc83a98582daee4fcefbdf3c95c2cfd76c",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p065": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 65,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 65,
+    "slide_xml": "ppt/slides/slide65.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in memory and Context Engineering",
+        "to": "Latest developments in memory and Context Engineering",
+        "reason": "Corrected plural usage."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "1839e8a78340c26c06aa966c78cbe3d7bed25549669057c3ff5e06d889acd4d0",
+    "corpus_text_sha256": "b73f736444515b22bce3311e57c1e22e7035f016c979b1cd4bf952001454e6ec",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p066": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 66,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 66,
+    "slide_xml": "ppt/slides/slide66.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in config file standards",
+        "to": "Latest developments in config file standards",
+        "reason": "Corrected plural usage."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "f46f4f6a4ab43f03278e64a575026e667a1105caee4cad2e9f532fd3d1343577",
+    "corpus_text_sha256": "ac6defed80d4e15eaa2bb3fbebcc7cbafa68f0d2659c2c7d65468455503a0f63",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p067": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 67,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 67,
+    "slide_xml": "ppt/slides/slide67.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in sandboxes",
+        "to": "Latest developments in sandboxes",
+        "reason": "Corrected plural usage."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "layers miss.”",
+        "to": "layers miss.",
+        "reason": "Removed an unmatched quotation mark."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "1ab1e2feb1e98a37fee4c10eaaeb11a380a588240b56bb2a6cb772a0855ad671",
+    "corpus_text_sha256": "78f2486fca072af95fc4cf4c37c37cb3ee69c4a540b3432f7cbeaf9875e65c9d",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p068": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 68,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 68,
+    "slide_xml": "ppt/slides/slide68.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in published harness design insights",
+        "to": "Latest developments in published harness design insights",
+        "reason": "Corrected plural usage."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Link to the lecture: Regarding the parts “don't trust self-reported completion” and “revisit the harness before switching models,” newer models were reported as removed parts once they became unnecessary.",
+        "to": "Link to the lecture: These are examples of “do not rely on self-reported completion” and “revisit the harness before switching models.” Reports also describe removing components that became unnecessary with newer models.",
+        "reason": "Corrected actor/meaning: harness components were removed with newer models; models did not themselves remove components."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "fa0f3ab77621c3b897cc04028809a08b1d164c9cc321364adf3b430a56afa711",
+    "corpus_text_sha256": "a71419bbeca1b17570d146729285e348389984b7e4eb6ce0b63b5dc647809a19",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p069": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 69,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 69,
+    "slide_xml": "ppt/slides/slide69.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in RSI / AI-accelerated AI development",
+        "to": "Latest developments in RSI / AI-accelerated AI development",
+        "reason": "Corrected plural usage."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "an undate of 2026/9/18",
+        "to": "an addendum dated 2026/9/18",
+        "reason": "Corrected a typo to the source's addendum meaning."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "These are the developers’ own report and an evaluation the developer reviewed.",
+        "to": "These are the developer's self-report and an evaluation whose wording the developer reviewed.",
+        "reason": "Preserved the source caveat that the developer reviewed the evaluation text."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "84417beff14db28c393baa12015af4fab17afe69ec76dbc084240f4c2ededc8d",
+    "corpus_text_sha256": "a0c22688dfa5c3400c567f72a890db34d50bbbdd15a49225cae9c6054b54373e",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p070": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 70,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 70,
+    "slide_xml": "ppt/slides/slide70.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation_with_documented_corrections",
+    "corrections": [
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Latest development in agent accidents and incidents",
+        "to": "Latest developments in agent accidents and incidents",
+        "reason": "Corrected plural usage."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "the tendency to attack infrastructure reportedly falls below 1/100",
+        "to": "the tendency to breach infrastructure reportedly falls to 1/100 or less",
+        "reason": "Preserved the source's inclusive numerical bound and its wording about breaching infrastructure."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "Link to the lecture: Three points covered in lecture shown in practice: a limited connections become paths (trust boundaries), least privilege, and “stop by mechanism, not by the model.”",
+        "to": "Link to the lecture: Three lecture points are illustrated in practice: limited connections become access paths (trust boundaries), least privilege, and “enforce limits and stopping through mechanisms rather than relying on the model.”",
+        "reason": "Repaired grammar and restored the source's explicit limits-and-stopping requirement."
+      },
+      {
+        "type": "source_faithfulness_or_language_correction",
+        "from": "After September, OpenAI halted tool use for its top model.",
+        "to": "After the September incident, OpenAI halted tool use for its top model.",
+        "reason": "Preserved the source's causal timing: after the incident, not after the month."
+      }
+    ],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "d51070680f81b71bb6f81e7a64987aa98ca669bc5c2eeb1c0f4755ea79ef66f2",
+    "corpus_text_sha256": "ab80d0525f847119f17a979ffcc3d62599b7e4d7f76c60c843a3f2b111562908",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  },
+  "lec03-main-p071": {
+    "canonical_document_id": "lec03-main",
+    "canonical_japanese_page": 71,
+    "source_japanese_commit": "1ce722c2816b70ef62891a6378b2478af555e3fd",
+    "uploaded_filename": "day3/Lecture 3 - AI Agents/Lecture/pptx/Lecture 3 - AI Agents_en_v2.pptx",
+    "uploaded_slide_number": 71,
+    "slide_xml": "ppt/slides/slide71.xml",
+    "uploaded_pdf_page": null,
+    "citation_note": "This 71-page English v2 PPTX is the matching source. The uploaded English PDF has only 69 pages and must not be cited using these page numbers.",
+    "content_origin": "existing_English_translation",
+    "corrections": [],
+    "removed_boilerplate": [
+      "© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO"
+    ],
+    "original_extracted_text_sha256": "532c733a2f7a20ebcf310535d82717df50b2b69a12d25f44ef5767aa84dd53be",
+    "corpus_text_sha256": "f4ef3e5ccc4b54a48e533b5a025030e879e5ee419eb3d96540a4341ea366151f",
+    "review": {
+      "compared_to_japanese_source": true,
+      "semantic_page_alignment": "one_to_one",
+      "no_invented_content": true
+    }
+  }
+}

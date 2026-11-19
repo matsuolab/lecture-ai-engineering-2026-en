@@ -1,0 +1,167 @@
+{
+  "id": "lec03-exercise",
+  "title": "Lecture 3 Exercises and Homework: Build a Learning Support Agent",
+  "content": [
+    {
+      "section": "Whole document",
+      "content": [
+        {
+          "id": "lec03-exercise-p001",
+          "title": "Build a Learning Support Agent",
+          "page": 1,
+          "content": "AI Engineering Practical Course 2026\nLecture 3 | Exercises & Homework\nBuild a Learning Support Agent\n2026/11/02  Exercise: Yoshiaki Sato\nGive the model a glossary search tool, read which tool was called with which arguments, and add one more tool\n\n[Additional transcription of text in figures/images]\nLogo: Matsuo-Iwasawa Lab / MATSUO-IWASAWA LAB, THE UNIVERSITY OF TOKYO"
+        },
+        {
+          "id": "lec03-exercise-p002",
+          "title": "Lecture 2 Homework Review",
+          "page": 2,
+          "content": "Lecture 2 Homework Review\nSort out what changed and what did not in LoRA training, and connect it to today's exercise (first ~5 min).\nBasic\nChange one of lora_r, lr, or num_train_epochs in CONFIG, retrain, and compare the two rates, final loss, and training time with the original\nImplementation\nReplace the FAQ and questions with your own topic (about 5 items), train, and compare before and after. Also describe how you made the \"no basis\" questions\nAdvanced\nBuild Q&A data from the course glossary, train on it, prepare your own evaluation questions, and compare before and after. Also compare with a search-based approach\nDo now: while listening, click Sync fork on your fork and start Codespaces (takes a few minutes; preparation for Step 1)\nFocus on \"what changed\" and \"why\". This is not about guessing the correct numbers\n\nOn your fork on GitHub: Sync fork → Update branch\nIf Sync fork shows “Discard commits”, do not click it.\nClicking it deletes your commits. Start using the method in Step 1 under “If main is broken or the previous lecture is unfinished”."
+        },
+        {
+          "id": "lec03-exercise-p003",
+          "title": "Exercise review: results from the instructor's T4 run",
+          "page": 3,
+          "content": "Exercise review: results from the instructor's T4 run\nCompared on the same 21 questions with the same generation settings. Only the adapter (on/off) differed.\n0.095 → 1.0\nFormat compliance rate (format_rate)\n0 → 0.905\nContent accuracy rate (content_rate)  19 / 21 questions\nNone\nRegressions (correct before training, incorrect after)\n2 questions\nFailures remaining after training (both assertions)\nHow to read: the format is now mostly followed. The content errors were wrong judgments about whether the FAQ has a basis\nIf your results differ: even with a fixed seed, GPU training is not fully reproducible. Different numbers or remaining questions are not abnormal\nSource: results of the instructor running the notebook (notebooks/lora_format_tuning.ipynb) on a Colab T4"
+        },
+        {
+          "id": "lec03-exercise-p004",
+          "title": "Exercise review: classify the remaining failures and organize the causes",
+          "page": 4,
+          "content": "Exercise review: classify the remaining failures and organize the causes\nClassify the failures remaining after training into 3 types and sort out why they remained.\nAsserting without basis\nApplies a sentence from another item to a question not in the FAQ\nDeclares needs_review: false\nEvading despite a basis\nSays \"not stated\" for a question that is in the FAQ\nSets needs_review: true\nBroken format\nMissing keys, extra sentences added\nneeds_review becomes the string \"false\"\nThe 2 questions remaining in the instructor's run (both assertions)\n\"When are grades released?\" → asserts from the deadline FAQ / \"Do office hours require a reservation?\" → asserts from the office hours FAQ\nThe training data is 14 items (4 without basis). The format is learned, but telling whether a basis exists is harder to learn"
+        },
+        {
+          "id": "lec03-exercise-p005",
+          "title": "Basic walkthrough: change one setting and compare",
+          "page": 5,
+          "content": "Basic walkthrough: change one setting and compare\nA falling loss is not the same as rising evaluation accuracy. Compare under the same conditions.\nSetting to change\nMeaning\nWhat to look at\nlora_r\nRank of the adapter matrices (expressiveness)\ntrainable% and training time. A higher r does not always raise accuracy\nlr\nSize of the weight update per step\nToo large makes loss unstable. Too small and the format is not learned\nnum_train_epochs\nHow many passes over the training data\nEven if loss keeps falling, accuracy may plateau or drop (overfitting)\nHow to compare: change only one. Line up the two rates, final loss, and training time, and check the conditions in result.json's config\nBefore retraining: Runtime → Restart session and run from the top (the trained adapter is still loaded)"
+        },
+        {
+          "id": "lec03-exercise-p006",
+          "title": "Implementation walkthrough: how to make \"no basis\" questions",
+          "page": 6,
+          "content": "Implementation walkthrough: how to make \"no basis\" questions\nUsing only questions unrelated to the FAQ cannot test whether the model asks for confirmation or makes an assertion.\nToo-easy example\nA topic unrelated to the FAQ\nExample: \"What do you recommend at the cafeteria?\"\nAny model easily answers \"not stated\"\nExample that tests judgment\nA topic near the FAQ, but not written in it\nExample: \"When are grades released?\" (a deadline FAQ exists)\nHow to split the data\nDo not use the same sentences for training and evaluation\nSplit paraphrases into train / valid / test by template\nThe 2 questions remaining in the instructor's run: both asked about something near the FAQ but not written in it\nMixing in near-topic questions that are not written lets you test whether the model asserts"
+        },
+        {
+          "id": "lec03-exercise-p007",
+          "title": "Advanced walkthrough: train it or let it search?",
+          "page": 7,
+          "content": "Advanced walkthrough: train it or let it search?\nTraining on the glossary and searching it each have strengths and weaknesses.\nAspect\nTrain (Lecture 2)\nSearch (Lecture 3)\nAdding / fixing terms\nRetrain\nJust fix the data\nWording differences\nDepends on training data paraphrases\nDepends on how you search\nShowing the basis\nDifficult\nCan show search results\nAnswer format and tone\nEasy to instill\nInstruct via prompt\nOften combined. Today we make \"search\" a tool for the agent"
+        },
+        {
+          "id": "lec03-exercise-p008",
+          "title": "Common pitfalls and notes",
+          "page": 8,
+          "content": "Common pitfalls and notes\nReview the points where people often stumble in the Lecture 2 exercise and homework.\n1\nRetraining\nAfter changing settings, Runtime → Restart session and run from the top\n2\nexecuted_training_myself\nIf you could not train yourself, set it to False and write what you were able to run in answer.md\n3\nPR direction\nCheck the base repository is not the course repo. Point it to main of your own fork\n4\nRuntime\nWhen done, \"Disconnect and delete runtime\", so you do not keep using the free GPU quota"
+        },
+        {
+          "id": "lec03-exercise-p009",
+          "title": "Connection to today's exercise",
+          "page": 9,
+          "content": "Connection to today's exercise\nIn Lecture 2 we \"trained\" the model. Today we give the model \"tools\".\nLecture 2\nTrained a small model with LoRA\nThe format is learned, but judgment on unknowns is not guaranteed\n→\nToday (Lecture 3)\nGive the model a glossary search tool\nLook it up before answering. Check which tool was called"
+        },
+        {
+          "id": "lec03-exercise-p010",
+          "title": "Goals of this session",
+          "page": 10,
+          "content": "Goals of this session\nVerify how an agent works with your own code and run results.\n1\nConfirm with your own code that an agent = model + loop + tools\n2\nRead from the run output which tool was called with which arguments\n3\nAdd one tool and get the model to use it\nYou will use: GitHub Codespaces (your fork), Gemini API (GEMINI_API_KEY, the Codespaces secret you registered in Lecture 1)"
+        },
+        {
+          "id": "lec03-exercise-p011",
+          "title": "Agent = model + loop + tools",
+          "page": 11,
+          "content": "Agent = model + loop + tools\nThe LLM chooses a tool and requests the call; the program runs it. The LLM sees the result and decides what is next.\nLecture 1: app.ask\nAsk\n→\nLLM\n→\nAnswer\nOne LLM call\nLecture 3: app.agent\nAsk\n→\nLLM\n→\nRun the tool (program)\n→\nLLM\n→\nAnswer\nRepeat “LLM → tool → LLM” until the needed information is gathered (agent loop)\n1\nDecides whether to call a tool from its name, description (docstring), and argument types\nModel\n2\nThe program runs the tool and returns the result to the model\nTool\n3\nMultiple LLM calls per question\nLoop\nTools in app/agent.py\nsearch_glossary: search the glossary\nget_lecture_summary: key points of a session\nmake_quiz: added today\nMultiple LLM calls per question. Hits the rate limit sooner than in Lecture 1"
+        },
+        {
+          "id": "lec03-exercise-p012",
+          "title": "30-minute exercise flow (Lecture 2 homework review first)",
+          "page": 12,
+          "content": "30-minute exercise flow (Lecture 2 homework review first)\nReview the Lecture 2 homework for the first ~5 minutes, then work through Steps 1–6 in the remaining ~25.\nStep\nWhat to do\nTools used / time\n—\nLecture 2 Homework Review\nFirst ~5 min\n1\nPull in course repo updates and create the lec03 branch\nSync fork, git pull, ~2 min\n2\nAsk the agent the same question as in Lecture 1\napp.agent, ~4 min\n3\nRead the tool calls with --trace\napp.agent --trace, ~5 min\n4\nWrite and register the make_quiz tool\napp/tools.py, app/agent.py, ~7 min\n5\nCheck that make_quiz gets called\n--list-tools, --trace, pytest, ~4 min\n6\nWrite answer.md, open a PR, stop Codespaces\n~3 min"
+        },
+        {
+          "id": "lec03-exercise-p013",
+          "title": "Step 1: Pull in course repo updates and create the lec03 branch",
+          "page": 13,
+          "content": "Step 1: Pull in course repo updates and create the lec03 branch\nBring your fork up to date with the course repo, then create the working branch lec03.\n1\nYour fork on GitHub\nSync fork\n→\nUpdate branch\n2\nIn the Codespaces terminal\nUsual steps\ngit switch main\ngit pull --no-rebase\ngit switch -c lec03\nIf main is broken or the previous lecture is unfinished\ngit fetch https://github.com/matsuolab/\\\nlecture-ai-engineering-2026-en.git tag lec03-start\ngit switch -c lec03 lec03-start\nStart from the course repo’s starting code (lec03-start tag). The \\ at the end of line 1 means “continues on the next line”; paste as is\nIf Sync fork shows “Discard commits”, do not click it\nClicking it deletes your commits. Start with the method at right, “If main is broken or the previous lecture is unfinished”\nIf git pull shows CONFLICT, run git merge --abort to undo it and use the method at right (your changes are kept)"
+        },
+        {
+          "id": "lec03-exercise-p014",
+          "title": "Step 2: Ask the agent the same question as in Lecture 1",
+          "page": 14,
+          "content": "Step 2: Ask the agent the same question as in Lecture 1\nAsk the agent, which can search the glossary, the same question as Lecture 1’s app.ask, and compare the answers.\nCommand\nuv run python -m app.agent \"What are the “3 levels” in the AIE2026 course homework?\"\nLecture 1: app.ask (plain LLM)\nDoes not know the course\nSays “I don’t know” or gives a plausible general answer\nLecture 3: app.agent\nSearches the glossary, then answers\nComplete any one of Basic, Implementation, Advanced\nWhat to check\nDoes it match the definition in data/glossary.json?\nIs the relevant lecture shown at the end?\nThe correct content is in homework-levels in data/glossary.json. Compare with the Lecture 1 answer"
+        },
+        {
+          "id": "lec03-exercise-p015",
+          "title": "Step 3: Read the tool calls with --trace",
+          "page": 15,
+          "content": "Step 3: Read the tool calls with --trace\nRead which tool was called with which arguments, and how many times the LLM was called for one question.\nCommand\nuv run python -m app.agent --trace \"What is the difference between LoRA and QLoRA?\"\nExample output (calls and counts vary per run)\n(answer text)\n--- trace ---\n[tool call]   search_glossary({'query': 'LoRA'})\n[tool call]   search_glossary({'query': 'QLoRA'})\n[tool return] search_glossary -> [{\"term\": \"LoRA\", …\n[usage] RunUsage(… requests=2, tool_calls=2)\n[tool call]\nThe model requested “this tool, with these arguments”\n[tool return]\nThe program ran the tool and returned the result to the model\nrequests\nNumber of LLM calls for one question\nWhy two separate searches: the instructions say to always search before answering and to look up one term at a time. See the next slide\nMore requests means more response time, cost, and rate-limit pressure"
+        },
+        {
+          "id": "lec03-exercise-p016",
+          "title": "Step 3 supplement: INSTRUCTIONS and docstrings that shape behavior",
+          "page": 16,
+          "content": "Step 3 supplement: INSTRUCTIONS and docstrings that shape behavior\nThe model’s guidance lives in two places. The behavior you saw with --trace is set by the sentences written there.\napp/agent.py (around line 31): instructions for the whole agent\nINSTRUCTIONS = \"\"\"\\\nYou are a learning support agent for the AI Engineering Pilot Course (AIE2026).\n- Always check the glossary with search_glossary before answering about terms or course-specific information.\n- Use get_lecture_summary when asked about the content of a session.\n- If something is absent from the glossary, say \"It is not in the glossary\" instead of making assertions based on guesses.\n- End your answer by indicating the relevant session (Lecture NN).\n- Guide learners with hints on how to think, rather than writing homework answers for them.\n\"\"\"\napp/tools.py: tool description (docstring)\ndef search_glossary(query: str) -> str:\n    \"\"\"Search the course glossary and return definitions and the sessions that cover the terms.\n\n    Use before answering about AI engineering terms or words specific to this course (AIE2026).\n    Put only one term to look up in query (for example, \"LoRA\").\n    \"\"\"\n“Always check the glossary with search_glossary”\n→ In Steps 2 and 3, search_glossary was called before answering.\n“End your answer by indicating the relevant session (Lecture NN)”\n→ In Step 2, the answer ended with the relevant lecture number.\ndocstring: “Put only one term to look up in query”\n→ In Step 3, LoRA and QLoRA were searched separately.\nIn the homework (Basic), rewrite this text and compare --trace for the same question."
+        },
+        {
+          "id": "lec03-exercise-p017",
+          "title": "Step 4: Write and register the make_quiz tool",
+          "page": 17,
+          "content": "Step 4: Write and register the make_quiz tool\nLet the agent build a question from the glossary when asked for a review question.\n1\nAdd the function make_quiz(lecture: int) -> str to app/tools.py\n2\nWrite “when and why to use it” in the docstring (the model reads it)\n3\nFrom the glossary (load_glossary()), collect the terms of the given lecture and pick one\n4\nReturn a question like “What does X mean?” and the answer (that term’s definition)\n5\nRegister it at the TODO in app/agent.py (agent.tool_plain)\nExample return value of make_quiz(2)\n{\"question\": \"What does “PEFT” mean?\",\n\"answer\": \"Not all of the model's parameters, …\"}\nStarter code (the docstring becomes the description)\ndef make_quiz(lecture: int) -> str:\n    \"\"\"Pick one term from the given lecture and\n    return a review question and its answer.\n\n    Use when asked for review questions, such as\n    “Give me a review question for Lecture 2”.\n    \"\"\"\n    # 1. Collect terms from load_glossary() matching lecture\n    # 2. Pick one (random.choice)\n    # 3. Return Q and answer as a string (e.g. json.dumps)\nYou may use Copilot. Read and understand suggested code before accepting it"
+        },
+        {
+          "id": "lec03-exercise-p018",
+          "title": "Step 5: Check that make_quiz gets called",
+          "page": 18,
+          "content": "Step 5: Check that make_quiz gets called\nCheck first that the model can see it, then that it is actually called, and finally that the tests pass.\n1\nuv run python -m app.agent --list-tools\nmake_quiz and its docstring are displayed\n2\nuv run python -m app.agent --trace \"Give me one review question from Lecture 02\"\n[tool call] make_quiz({'lecture': 2})\n3\nuv run pytest -q\nAll passed (the added tool does not fail either)\nWhat the pytest in 3 checks: without using an API key, it calls every tool, including the new make_quiz, with dummy arguments (such as lecture=0) and checks that none fail with an error. If it fails on a nonexistent lecture, add handling for when there are no terms\nIf make_quiz is not called\nNot in the list from 1 → not registered in app/agent.py\nIn the list but not called → describe concretely when to use it in the docstring. Add “Use make_quiz when asked for a review question” to INSTRUCTIONS"
+        },
+        {
+          "id": "lec03-exercise-p019",
+          "title": "Step 6: Write answer.md, open a PR, stop Codespaces",
+          "page": 19,
+          "content": "Step 6: Write answer.md, open a PR, stop Codespaces\nWrite lectures/03/answer.md, then open a PR from working branch lec03 to the main of your fork.\nWhat to write in the “Exercises” section of answer.md\nHow the Lecture 1 (plain LLM) answer differs from the agent’s\nTool calls seen with --trace (tool names and arguments)\nNumber of LLM calls for one question (requests)\nThe tool you added and the description in its docstring\nSubmit\n# After writing lectures/03/answer.md\ngit add -A\ngit commit -m \"Lecture 3 exercise\"\ngit push -u origin lec03\nPR\nlec03 → main of your fork (check the base repository)\nIf you don’t finish Step 4: submit with the results up to Step 3. Push the rest to the same branch and the PR updates\nStop Codespaces: bottom left “Codespaces” → Stop Current Codespace. Leaving it running uses up your free quota"
+        },
+        {
+          "id": "lec03-exercise-p020",
+          "title": "Troubleshooting",
+          "page": 20,
+          "content": "Troubleshooting\nAn agent calls the LLM several times per question, so it hits the rate limit sooner than in Lecture 1.\nSymptom\nFix\nRate limit reached (429)\nWait about 1 minute and rerun\nModel is overloaded (503)\nWait a bit and rerun. If it persists, run with AIE_MODEL=gemini-3.1-flash-lite\nEnvironment variable GEMINI_API_KEY not found\nCheck that the secret’s Repository access includes your fork → stop Codespaces and reopen\nmake_quiz is not called\nCheck it is listed with --list-tools. If not, you forgot to register it; if it is, review the docstring and INSTRUCTIONS\nlec03-start not found\nCheck that you ran git fetch … tag lec03-start from Step 1\na branch named 'lec03' already exists\nlec03 already exists. Switch to it with git switch lec03\ngit pull shows CONFLICT\nUndo with git merge --abort (your changes are kept) → start with the method on the right of Step 1 (lec03-start)\npytest fails\nRead the last line of the error. Common causes: a missing import, a mistyped function name"
+        },
+        {
+          "id": "lec03-exercise-p021",
+          "title": "Homework: complete any one",
+          "page": 21,
+          "content": "Homework: complete any one\nPick one of three levels (Basic / Implementation / Advanced). Completing any one finishes the homework.\nLevel\nContent\nBasic\nRewrite INSTRUCTIONS in app/agent.py or the tool docstrings in app/tools.py from the exercise. Run the same question with --trace, then compare and record how tool calls and answers change\nImplementation\nBuild a save_learning_log tool that saves learning records to the learning_log/ folder. Saving is hard to undo, so ask the user to confirm first (Pydantic AI’s requires_approval=True)\nAdvanced\nDo one of the following. (a) Use the same instructions and tools as the exercise agent, rewrite only the agent-building part with Google’s ADK, run it with adk run, and compare the code and answers. (b) Run the coding agent Pi in Codespaces and compare Pi’s published system prompt with your agent’s INSTRUCTIONS\nHow to proceed: explained on the next 3 slides. Write your submission in the “Homework” section of lectures/03/answer.md"
+        },
+        {
+          "id": "lec03-exercise-p022",
+          "title": "Homework steps (Basic / Implementation)",
+          "page": 22,
+          "content": "Homework steps (Basic / Implementation)\nRecord what you changed and the result, checking against the --trace output.\nBasic: change INSTRUCTIONS or a docstring and compare\nChange only one place at a time, run the same question with --trace, and compare\nPlaces to change: INSTRUCTIONS in app/agent.py (around line 31) and the tool docstrings in app/tools.py\nExample: delete the “Always check the glossary with search_glossary” line from INSTRUCTIONS. Does it answer without searching?\nExample: change “Put only one term” in the docstring to “Put several terms.” How does the number of searches change?\nRecord how tools are called (order, count, arguments) and how the answer changes\nImplementation: ask for confirmation before saving\nCreate save_learning_log in app/tools.py and register it in app/agent.py with requires_approval=True\nWhen this tool is called, execution pauses for approval and DeferredToolRequests is returned\nSo add DeferredToolRequests to the agent’s output_type (code below)\nIn the CLI, ask the user whether to save, then pass the result back and continue\nWriting output_type\nfrom pydantic_ai import Agent, DeferredToolRequests\nagent = Agent(instructions=INSTRUCTIONS,\n              output_type=[str, DeferredToolRequests])\nReference: Pydantic AI official docs, “Deferred Tools”, Human-in-the-Loop Tool Approval (pydantic.dev/docs/ai/tools-toolsets/deferred-tools/)"
+        },
+        {
+          "id": "lec03-exercise-p023",
+          "title": "Homework steps (Advanced a): rebuild with ADK",
+          "page": 23,
+          "content": "Homework steps (Advanced a): rebuild with ADK\nUse the same instructions and tools as the exercise agent and rewrite only the agent-building part with ADK.\nScope\nContent\nReuse as is\nINSTRUCTIONS in app/agent.py, and search_glossary and get_lecture_summary in app/tools.py (also make_quiz if you built it in the exercise)\nWrite new\nIn the adk_agent/glossary_agent/ folder, create agent.py (code on the right) and __init__.py (one line: from . import agent)\nNot needed\nCommand features such as --trace, tests, and tools with approval. Don’t change files in app/\nCompare\nThe code (how instructions and tools are passed) and how the answers differ from the same questions in the exercise\nadk_agent/glossary_agent/agent.py\nfrom google.adk.agents import Agent\nfrom app import tools\nfrom app.agent import INSTRUCTIONS\nroot_agent = Agent(\n    model=\"gemini-3.5-flash-lite\",\n    name=\"glossary_agent\",\n    instruction=INSTRUCTIONS,\n    tools=[...],  # tools used in the exercise\n)\nRun (from the repo root)\nPYTHONPATH=. uv run --with google-adk \\\n  adk run adk_agent/glossary_agent\nType a question and press Enter. Type exit to quit. The first run takes about 1 minute to fetch ADK\nADK changed significantly in 2.0. Web articles may contain outdated information that doesn’t reflect the changes, so implementing from the official docs (adk.dev) should reduce mistakes"
+        },
+        {
+          "id": "lec03-exercise-p024",
+          "title": "Homework steps (Advanced b): run Pi in Codespaces",
+          "page": 24,
+          "content": "Homework steps (Advanced b): run Pi in Codespaces\nPi edits files and runs commands without asking for confirmation. Try it inside Codespaces.\n1\nInstall\nnpm install -g --ignore-scripts \\\n  @earendil-works/pi-coding-agent\n2\nLaunch\npi\n3\nSet the model\nIn Pi, type /model and choose a Gemini model. The Codespaces secret GEMINI_API_KEY is used as the API key as is\n4\nCompare\nCompare Pi’s system prompt (packages/coding-agent/src/core/system-prompt.ts in github.com/earendil-works/pi) with your INSTRUCTIONS, and record what is written and what is not\nPi official docs: github.com/earendil-works/pi/tree/main/packages/coding-agent/docs"
+        },
+        {
+          "id": "lec03-exercise-p025",
+          "title": "Submitting the homework",
+          "page": 25,
+          "content": "Submitting the homework\nWrite it in the “Homework” section of the same lectures/03/answer.md as the exercise, and submit.\nWhat to write in the “Homework” section of answer.md\nLevel you worked on (Basic / Implementation / Advanced)\nWhat you did\nResults (--trace output and comparison)\nObservations and questions\nDeadline: in principle, 1 week from the lecture day\nCompletion: any one level completes the homework\nAI tools: allowed. Write what you verified yourself"
+        },
+        {
+          "id": "lec03-exercise-p026",
+          "title": "Summary: today’s achievements and next session",
+          "page": 26,
+          "content": "Summary: today’s achievements and next session\nYou verified how an agent works with your own code and run results.\n1\nAn agent is “model + loop + tools.” The model picks tools from their descriptions\n2\nWith --trace, you read which tool was called, with which arguments, and how many times\n3\nYou added one tool and got the model to use it\nHomework: any one of Basic / Implementation / Advanced. Deadline: in principle, 1 week from the lecture day\nLecture 4: details of content and preparation will be given in the Lecture 4 materials\nStop Codespaces when you finish using it"
+        }
+      ]
+    }
+  ]
+}
