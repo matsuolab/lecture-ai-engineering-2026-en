@@ -36,7 +36,7 @@ See [lectures/01/problem.md](lectures/01/problem.md) for detailed instructions.
 
 ## Lecture 05: Search the Lecture Materials
 
-The bundled search database covers 214 pages from the main materials for Lectures 01–03. It reuses the Japanese source vectors and returns translated text. Full context currently covers 6 documents and 342 pages. The opening orientation and the Lecture 01 and 02 exercises are pending.
+The bundled search database covers 214 pages from the main materials for Lectures 01–03. It reuses the Japanese source vectors and returns translated text. Full context covers 8 documents and 398 pages, including the Lecture 01 and 02 exercises.
 
 See [lectures/05/problem.md](lectures/05/problem.md) for the exercises and homework, and record results in [lectures/05/answer.md](lectures/05/answer.md).
 

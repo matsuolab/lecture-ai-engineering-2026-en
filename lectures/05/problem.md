@@ -1,6 +1,6 @@
 # Lecture 05 Exercises and Homework: Answer Questions by Searching Lecture Materials
 
-The bundled search database covers 214 pages from the main materials for Lectures 01–03. It reuses the Japanese source vectors and returns translated text. Full context currently covers 6 documents and 342 pages. The opening orientation and the Lecture 01 and 02 exercises are pending.
+The bundled search database covers 214 pages from the main materials for Lectures 01–03. It reuses the Japanese source vectors and returns translated text. Full context covers 8 documents and 398 pages, including the Lecture 01 and 02 exercises.
 
 ## Goals for This Session
 
@@ -24,7 +24,7 @@ Use Lecture 03's "model + loop + tools" structure while changing how lecture mat
 | [app/agent.py](../../app/agent.py) | Instructions, tool registration, and mode selection |
 | [app/config.py](../../app/config.py) | Settings such as target materials, result counts, and Graph traversal limits |
 
-**Current scope**: Vector search, Tree, and Graph use 214 pages from the main materials for Lectures 01–03. Full context reads the 6 documents and 342 pages currently supplied in the materials JSON. This exercise explores different retrieval paths. To compare the methods under the same conditions, first align their target materials.
+**Current scope**: Vector search, Tree, and Graph use 214 pages from the main materials for Lectures 01–03. Full context reads the 8 documents and 398 pages currently supplied in the materials JSON. This exercise explores different retrieval paths. To compare the methods under the same conditions, first align their target materials.
 
 ## Preparation
 

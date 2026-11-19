@@ -1965,6 +1965,356 @@
       ]
     },
     {
+      "id": "lec01-exercise",
+      "kind": "document",
+      "title": "Lecture 1 Exercises and Homework — Set Up the Development Environment and Use an LLM",
+      "children": [
+        {
+          "id": "lec01-exercise-p001",
+          "kind": "page",
+          "title": "Set Up the Development Environment and Use an LLM",
+          "page": 1
+        },
+        {
+          "id": "lec01-exercise-p002",
+          "kind": "page",
+          "title": "Goals of this session",
+          "page": 2
+        },
+        {
+          "id": "lec01-exercise-p003",
+          "kind": "page",
+          "title": "What you need: 2 personal accounts",
+          "page": 3
+        },
+        {
+          "id": "lec01-exercise-p004",
+          "kind": "page",
+          "title": "45-minute exercise flow",
+          "page": 4
+        },
+        {
+          "id": "lec01-exercise-p005",
+          "kind": "page",
+          "title": "Step 1 Fork the course repo",
+          "page": 5
+        },
+        {
+          "id": "lec01-exercise-p006",
+          "kind": "page",
+          "title": "Step 2 Issue a Gemini API key",
+          "page": 6
+        },
+        {
+          "id": "lec01-exercise-p007",
+          "kind": "page",
+          "title": "Step 3 Register a Codespaces secret",
+          "page": 7
+        },
+        {
+          "id": "lec01-exercise-p008",
+          "kind": "page",
+          "title": "Step 4 Launch Codespaces",
+          "page": 8
+        },
+        {
+          "id": "lec01-exercise-p009",
+          "kind": "page",
+          "title": "Step 5 Ask the LLM",
+          "page": 9
+        },
+        {
+          "id": "lec01-exercise-p010",
+          "kind": "page",
+          "title": "Step 5 What to observe",
+          "page": 10
+        },
+        {
+          "id": "lec01-exercise-p011",
+          "kind": "page",
+          "title": "Step 6 Show token counts with Copilot",
+          "page": 11
+        },
+        {
+          "id": "lec01-exercise-p012",
+          "kind": "page",
+          "title": "Step 7 Create a branch and open a PR",
+          "page": 12
+        },
+        {
+          "id": "lec01-exercise-p013",
+          "kind": "page",
+          "title": "Step 8 Stop Codespaces",
+          "page": 13
+        },
+        {
+          "id": "lec01-exercise-p014",
+          "kind": "page",
+          "title": "Homework: complete any one",
+          "page": 14
+        },
+        {
+          "id": "lec01-exercise-p015",
+          "kind": "page",
+          "title": "Homework submission and rules",
+          "page": 15
+        },
+        {
+          "id": "lec01-exercise-p016",
+          "kind": "page",
+          "title": "Switching models and caveats",
+          "page": 16
+        },
+        {
+          "id": "lec01-exercise-p017",
+          "kind": "page",
+          "title": "Preview of Lecture 2: Fundamentals of Foundation Models",
+          "page": 17
+        },
+        {
+          "id": "lec01-exercise-p018",
+          "kind": "page",
+          "title": "Summary: today and next time",
+          "page": 18
+        },
+        {
+          "id": "lec01-exercise-p019",
+          "kind": "page",
+          "title": "Appendix",
+          "page": 19
+        },
+        {
+          "id": "lec01-exercise-p020",
+          "kind": "page",
+          "title": "Why context files are needed",
+          "page": 20
+        },
+        {
+          "id": "lec01-exercise-p021",
+          "kind": "page",
+          "title": "Main files and how they're read",
+          "page": 21
+        },
+        {
+          "id": "lec01-exercise-p022",
+          "kind": "page",
+          "title": "Minimal setup: what to include and exclude",
+          "page": 22
+        },
+        {
+          "id": "lec01-exercise-p023",
+          "kind": "page",
+          "title": "Always-read instructions vs. task-specific Skills",
+          "page": 23
+        },
+        {
+          "id": "lec01-exercise-p024",
+          "kind": "page",
+          "title": "Evidence: writing one doesn't always help",
+          "page": 24
+        },
+        {
+          "id": "lec01-exercise-p025",
+          "kind": "page",
+          "title": "Don't write it and forget it",
+          "page": 25
+        }
+      ]
+    },
+    {
+      "id": "lec02-exercise",
+      "kind": "document",
+      "title": "Lecture 2 Exercises and Homework — Learn an Answer Format with LoRA and Compare Before and After Training",
+      "children": [
+        {
+          "id": "lec02-exercise-p001",
+          "kind": "page",
+          "title": "Learn an Answer Format with LoRA and Compare Before and After Training",
+          "page": 1
+        },
+        {
+          "id": "lec02-exercise-p002",
+          "kind": "page",
+          "title": "Lecture 1 homework review",
+          "page": 2
+        },
+        {
+          "id": "lec02-exercise-p003",
+          "kind": "page",
+          "title": "Basic review: the same question can get different answers",
+          "page": 3
+        },
+        {
+          "id": "lec02-exercise-p004",
+          "kind": "page",
+          "title": "Implementation review: what keeping conversation history means",
+          "page": 4
+        },
+        {
+          "id": "lec02-exercise-p005",
+          "kind": "page",
+          "title": "Implementation review: app/ask.py before the fix",
+          "page": 5
+        },
+        {
+          "id": "lec02-exercise-p006",
+          "kind": "page",
+          "title": "Implementation review: chat() after the fix (sample solution)",
+          "page": 6
+        },
+        {
+          "id": "lec02-exercise-p007",
+          "kind": "page",
+          "title": "Implementation review: what is sent each time",
+          "page": 7
+        },
+        {
+          "id": "lec02-exercise-p008",
+          "kind": "page",
+          "title": "Advanced review: response time, token count, rate limits",
+          "page": 8
+        },
+        {
+          "id": "lec02-exercise-p009",
+          "kind": "page",
+          "title": "Common pitfalls and cautions",
+          "page": 9
+        },
+        {
+          "id": "lec02-exercise-p010",
+          "kind": "page",
+          "title": "How this leads to today's exercise",
+          "page": 10
+        },
+        {
+          "id": "lec02-exercise-p011",
+          "kind": "page",
+          "title": "Goals of this session",
+          "page": 11
+        },
+        {
+          "id": "lec02-exercise-p012",
+          "kind": "page",
+          "title": "What we'll check",
+          "page": 12
+        },
+        {
+          "id": "lec02-exercise-p013",
+          "kind": "page",
+          "title": "Material: a fictional course FAQ and the desired output",
+          "page": 13
+        },
+        {
+          "id": "lec02-exercise-p014",
+          "kind": "page",
+          "title": "Data split: no training sentences in evaluation",
+          "page": 14
+        },
+        {
+          "id": "lec02-exercise-p015",
+          "kind": "page",
+          "title": "Two-part evaluation: format and content kept separate",
+          "page": 15
+        },
+        {
+          "id": "lec02-exercise-p016",
+          "kind": "page",
+          "title": "Preparation (optional, 5 min) and what we use",
+          "page": 16
+        },
+        {
+          "id": "lec02-exercise-p017",
+          "kind": "page",
+          "title": "45-min exercise flow (starting with the Lecture 1 homework review)",
+          "page": 17
+        },
+        {
+          "id": "lec02-exercise-p018",
+          "kind": "page",
+          "title": "Steps 1–2 Make your own copy and select T4 GPU",
+          "page": 18
+        },
+        {
+          "id": "lec02-exercise-p019",
+          "kind": "page",
+          "title": "Step 3 Sections 0–3: evaluate before training (~5 min)",
+          "page": 19
+        },
+        {
+          "id": "lec02-exercise-p020",
+          "kind": "page",
+          "title": "Step 4 Section 4: train with LoRA (4–5 min)",
+          "page": 20
+        },
+        {
+          "id": "lec02-exercise-p021",
+          "kind": "page",
+          "title": "LoRA vs. QLoRA",
+          "page": 21
+        },
+        {
+          "id": "lec02-exercise-p022",
+          "kind": "page",
+          "title": "Step 5 Section 5: evaluate after training and compare with before",
+          "page": 22
+        },
+        {
+          "id": "lec02-exercise-p023",
+          "kind": "page",
+          "title": "Step 5 Section 6: knowledge questions",
+          "page": 23
+        },
+        {
+          "id": "lec02-exercise-p024",
+          "kind": "page",
+          "title": "Steps 6–7 Create and submit result.json, then delete the runtime",
+          "page": 24
+        },
+        {
+          "id": "lec02-exercise-p025",
+          "kind": "page",
+          "title": "If you couldn't train (notebook 4b)",
+          "page": 25
+        },
+        {
+          "id": "lec02-exercise-p026",
+          "kind": "page",
+          "title": "Advanced: load in 4-bit quantization (Section 8, optional, ~2 min)",
+          "page": 26
+        },
+        {
+          "id": "lec02-exercise-p027",
+          "kind": "page",
+          "title": "Homework: complete any one",
+          "page": 27
+        },
+        {
+          "id": "lec02-exercise-p028",
+          "kind": "page",
+          "title": "Homework: how to proceed and cautions",
+          "page": 28
+        },
+        {
+          "id": "lec02-exercise-p029",
+          "kind": "page",
+          "title": "Submitting homework",
+          "page": 29
+        },
+        {
+          "id": "lec02-exercise-p030",
+          "kind": "page",
+          "title": "Lecture 3 preview",
+          "page": 30
+        },
+        {
+          "id": "lec02-exercise-p031",
+          "kind": "page",
+          "title": "Summary: what we achieved today, and next time",
+          "page": 31
+        }
+      ]
+    },
+    {
       "id": "lec03-exercise",
       "kind": "document",
       "title": "Lecture 3 Exercises and Homework: Build a Learning Support Agent",

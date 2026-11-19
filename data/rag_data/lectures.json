@@ -2220,6 +2220,420 @@
     ]
   },
   {
+    "id": "lec01-exercise",
+    "title": "Lecture 1 Exercises and Homework — Set Up the Development Environment and Use an LLM",
+    "content": [
+      {
+        "section": "All slides",
+        "content": [
+          {
+            "id": "lec01-exercise-p001",
+            "title": "Set Up the Development Environment and Use an LLM",
+            "page": 1,
+            "content": "Set Up the Development Environment and Use an LLM\nAI Engineering Practical Course 2026\nLecture 1 | Exercises & Homework\nIntroduction to AI Engineering and AI-Assisted Coding\n2026/10/19  Exercise: Yoshiaki Sato\nOpen your fork in Codespaces, set up the Gemini API and GitHub Copilot, and submit via PR\nPhotography and disclosure to third parties\nwithout permission are prohibited.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.1"
+          },
+          {
+            "id": "lec01-exercise-p002",
+            "title": "Goals of this session",
+            "page": 2,
+            "content": "Goals of this session\nSet up the dev environment and submission workflow used in later lectures.\n1\nOpen your fork in Codespaces and call\nthe Gemini API\n2\nMake small code fixes with GitHub\nCopilot\n3\nSubmit via a PR from a working branch (later\nlectures use the same flow)\nTools: GitHub Codespaces (browser-based dev environment), Gemini API (Google's LLM), GitHub Copilot (AI coding tool).\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.2"
+          },
+          {
+            "id": "lec01-exercise-p003",
+            "title": "What you need: 2 personal accounts",
+            "page": 3,
+            "content": "What you need: 2 personal accounts\nYou will use GitHub and Google accounts for homework submission and exercises.\nPersonal GitHub account\nUsed for: fork, Codespaces, Copilot, PR\nA GitHub account also gives you Codespaces (a virtual\nenvironment) and Copilot (an agent).\nPersonal Google account\nUsed for: Google AI Studio (issuing a Gemini API key)\nLets you do exercises using an LLM API.\nUse personal accounts for both\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.3"
+          },
+          {
+            "id": "lec01-exercise-p004",
+            "title": "45-minute exercise flow",
+            "page": 4,
+            "content": "45-minute exercise flow\n8 steps in order, from fork to stopping Codespaces.\n1\nFork the course repo\n5\nAsk a plain LLM\n2\nIssue a Gemini API key\n6\nShow token counts with Copilot\n3\nRegister a Codespaces secret\n7\nCreate a branch and open a PR\n4\nLaunch Codespaces\n8\nStop Codespaces\n1–4  Set up the environment\n5–8  Use the LLM and Copilot, submit, and clean up\nMind the order: register the secret (step 3) before launching Codespaces (step 4).\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.4"
+          },
+          {
+            "id": "lec01-exercise-p005",
+            "title": "Step 1 Fork the course repo",
+            "page": 5,
+            "content": "Step 1 Fork the course repo\nStep 1  Fork the course repo\nUse Fork (top right) on the course repo to create a fork under your account.\n1\nOpen the course repo:\nhttps://github.com/matsuolab/lecture-ai-engineering-2026-en\n2\nClick Fork (top right)\n3\nChoose your account as Owner and click Create fork\n4\nCheck that the fork appears under your account\nFork source\nCourse repo\nmatsuolab/lecture-ai-engineering-2026-en\n↓ Fork\nYour fork\n<your-account>/<repository-name>\nCodespaces, commit, push, PR: all here\nDo all further work in your fork. Do not open PRs to the course repo.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.5"
+          },
+          {
+            "id": "lec01-exercise-p006",
+            "title": "Step 2 Issue a Gemini API key",
+            "page": 6,
+            "content": "Step 2 Issue a Gemini API key\nStep 2  Issue a Gemini API key\nCreate an API key in Google AI Studio and copy it. You will use it in step 3.\n1\nOpen Google AI Studio with your personal Google account:\nhttps://aistudio.google.com/apikey\n2\nCreate an API key\n3\nCopy the key (register it right away in step 3)\nNever paste the key into\n• Code\n• Chat\n• Commits\nAPI keys are secrets. Do not paste them into code, chat, or commits.\nIf leaked, delete the key in AI Studio and create a new one.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.6"
+          },
+          {
+            "id": "lec01-exercise-p007",
+            "title": "Step 3 Register a Codespaces secret",
+            "page": 7,
+            "content": "Step 3 Register a Codespaces secret\nStep 3  Register a Codespaces secret\nDon't write the API key in code; register it as a Codespaces secret.\nSettings\n→\nCodespaces\n→\nSecrets\n→\nNew secret\nCareful: GitHub's Settings and your forked repo's Settings are easy to confuse.\nHere, configure it from GitHub's Settings.\nField\nWhat to enter\nName\nGEMINI_API_KEY\nValue\nKey from step 2\nRepository access\nSelect your fork\nRegister before launching Codespaces. If you register after launch, restart Codespaces.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nGitHub settings path: profile picture (top right) → Settings → Codespaces → Secrets → New secret.",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.7"
+          },
+          {
+            "id": "lec01-exercise-p008",
+            "title": "Step 4 Launch Codespaces",
+            "page": 8,
+            "content": "Step 4 Launch Codespaces\nStep 4  Launch Codespaces\nCreate a codespace in your fork and check that the tests pass in the terminal.\n1\nClick Code on your fork's page\n2\nChoose Codespaces and click Create codespace on main\n3\nFirst setup takes a few minutes\n4\nRun the following in the terminal and check that the tests pass\nuv run pytest -q\nYour fork's page\nScreenshot of GitHub\n2-core machine recommended (default): more cores use up the free quota faster. Free quota and stopping: step 8.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nCodespaces screenshot: “Your workspaces in the cloud”, “You don't have any codespaces with this repository checked out”, and “Learn more about codespaces”.",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.8"
+          },
+          {
+            "id": "lec01-exercise-p009",
+            "title": "Step 5 Ask the LLM",
+            "page": 9,
+            "content": "Step 5 Ask the LLM\nStep 5  Ask the LLM\nAsk about a general term and a course-specific topic; compare the answers.\nuv run python -m app.ask \"What is LoRA?\"\nGeneral term\nMostly correct answer\nuv run python -m app.ask \"What are the “3 levels”\nin the AIE2026 course homework?\"\nCourse-specific “3 homework levels”\nA plain LLM doesn't know the course, so it says “I don't know” or\ngives a plausible generic answer\nThe correct content is in homework-levels in data/glossary.json. Compare it with the model's answer.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.9"
+          },
+          {
+            "id": "lec01-exercise-p010",
+            "title": "Step 5 What to observe",
+            "page": 10,
+            "content": "Step 5 What to observe\nStep 5  What to observe\nThe same question gets different answers each run. It may answer confidently even when it doesn't know.\nIf you have time, try other course-specific questions\nuv run python -m app.ask \"What is the “lecNN tag” used in the AIE2026 course?\"\nuv run python -m app.ask \"What will we learn in Lecture 2 of AIE2026?\"\nGeneral term\nMostly correct\nCourse-specific topics\nDoesn't know, so says “I don't know” or\nanswers plausibly in general terms\nWhen repeated\nAnswers vary each run; can be confidently\nwrong\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nThe correct content is in homework-levels in data/glossary.json. Compare it with the model's answer.",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.10"
+          },
+          {
+            "id": "lec01-exercise-p011",
+            "title": "Step 6 Show token counts with Copilot",
+            "page": 11,
+            "content": "Step 6 Show token counts with Copilot\nStep 6  Show token counts with Copilot\nAt TODO in app/ask.py, modify the code to display input and output token counts.\n1\nOpen app/ask.py and find TODO\n2\nModify it to show input and output token counts. Copilot completion and chat are\nallowed\n3\nRead and understand suggested code before accepting it\nGitHub Copilot\nFeatures: completion, chat, agent\nCopilot Free: up to 2,000 code completions/month\nStudents: verified students get Copilot Student for\nfree\nRead and understand suggested code before accepting it.\nSource: docs.github.com  https://docs.github.com/en/copilot/get-started/plans\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nAbout AGENT.md / CLAUDE.md\nCoding agents have a mechanism for passing on tacit\nknowledge (also covered in Lecture 3). See the appendix\nat the end.",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.11"
+          },
+          {
+            "id": "lec01-exercise-p012",
+            "title": "Step 7 Create a branch and open a PR",
+            "page": 12,
+            "content": "Step 7 Create a branch and open a PR\nStep 7  Create a branch and open a PR\nOpen a PR from working branch lec01 to main in your fork. Later lectures use the same flow.\ngit switch -c lec01\n# write lectures/01/answer.md\ngit add -A\ngit commit -m \"Lecture 1 exercise\"\ngit push -u origin lec01\nWorking branch\nlec01\n↓ PR\nbase repository: your fork\nmain\nNot here\nCourse repo\nDeliverable: a PR containing lectures/01/answer.md. On GitHub, open a lec01 → main PR in your fork.\nMake sure the base repository is your fork (do not open a PR to the course repo).\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.12"
+          },
+          {
+            "id": "lec01-exercise-p013",
+            "title": "Step 8 Stop Codespaces",
+            "page": 13,
+            "content": "Step 8 Stop Codespaces\nStep 8  Stop Codespaces\nA running codespace keeps using the free quota. Always stop it when done.\nLower left\nCodespaces\n→\nStop Current Codespace\nCodespaces free quota (personal account, monthly)\nPlan\nStorage\nCompute\nGitHub Free\n15 GB-month\n120 hours\nGitHub Pro\n20 GB-month\n180 hours\nMultiplier: per machine type (2-core = 2, 4-core = 4).\nMore cores use the quota faster, so choose 2-core\nWhen used up: without a payment method, unavailable\nuntil next month's reset (no charges)\nSource: docs.github.com  https://docs.github.com/en/billing/concepts/product-billing/github-codespaces\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.13"
+          },
+          {
+            "id": "lec01-exercise-p014",
+            "title": "Homework: complete any one",
+            "page": 14,
+            "content": "Homework: complete any one\nChoose one of three levels: Basic, Implementation, or Advanced.\nLevel\nTask\nBasic\nRun the same question 3 times each while changing the model (AIE_MODEL env var) or temperature; summarize the\ndifferences in answer.md\nImplementation\nModify app/ask.py so you can ask follow-up questions while keeping the conversation history\nAdvanced\nMeasure response time and token count; compare across models and questions. Also discuss the relation to free-quota\nrate limits\nModel and temperature: how to switch and caveats on the next slide\nSubmission: write in lectures/01/answer.md and submit via PR.\nRules on the slide after next\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.14"
+          },
+          {
+            "id": "lec01-exercise-p015",
+            "title": "Homework submission and rules",
+            "page": 15,
+            "content": "Homework submission and rules\nWrite in answer.md and submit via PR, same flow as the exercise. Any one level completes it.\n1\nWork on a working branch in your fork. If you changed code (Implementation/Advanced), commit it too\n2\nWrite in lectures/01/answer.md: level chosen, what you did, results, model used\n3\nCommit, push, and open a PR. Check the base repository is your fork\nEvaluation: complete at least one level\nAI tools: allowed. Write what you verified\nyourself\nAPI keys: never in answer.md, code, logs,\nor screenshots\nReport failed results or no-difference results as they are\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.15"
+          },
+          {
+            "id": "lec01-exercise-p016",
+            "title": "Switching models and caveats",
+            "page": 16,
+            "content": "Switching models and caveats\nSwitch models with the AIE_MODEL env var. Record which model you ran.\nAIE_MODEL=gemini-3.8-flash uv run python -m app.ask \"What is LoRA?\"\nAIE_MODEL=gemini-3.5-flash-lite uv run python -m app.ask \"What is LoRA?\"\nModel\nFree-quota limits (measured by the course)\nBest for\ngemini-3.5-flash-lite\n15/min, 500 requests/day\nHigh limits. Repeated runs for comparison\ngemini-3.8-flash (higher tier)\n5/min, about 10–20/day. May return 503\nTry a few questions on a stronger model\nDon't use: gemini-3.5-flash (without lite).\nDeprecated on 2026-10-08; auto-redirected to\ngemini-3.6-flash\ntemperature: check the config argument of\ngenerate_content. Deprecated by Google on\n2026-07-21, so it may be ignored or error.\nRecord results as is\nLimits vary by model: check current limits in AI\nStudio. Check your usage limits (quota) to\nconfirm the API is usable\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.16"
+          },
+          {
+            "id": "lec01-exercise-p017",
+            "title": "Preview of Lecture 2: Fundamentals of Foundation Models",
+            "page": 17,
+            "content": "Preview of Lecture 2: Fundamentals of Foundation Models\nIn the exercise, use LoRA on Colab to train an answer format and compare.\nLecture\n• Fundamentals of Foundation Models\n• Generation settings & output variation\n• How LoRA and QLoRA work\nExercise\n• Train LoRA on Colab\n• Compare format and content before/after training\nThe “variability” and “answering what it doesn't know” seen today lead into Lecture 2's discussion of how models work\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO\nObserved today\nCovered in Lecture 2\nThe same question gets different answers each run\nGeneration settings & output variation\nAnswers plausibly even without knowing the course\nWhat a model does and doesn't learn through training",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.17"
+          },
+          {
+            "id": "lec01-exercise-p018",
+            "title": "Summary: today and next time",
+            "page": 18,
+            "content": "Summary: today and next time\nWe covered the dev environment and submission workflow for later lectures.\n1\nOpened your fork in Codespaces and\ncalled the Gemini API\n2\nUsed Copilot to modify code to show\ntoken counts\n3\nOpened a PR from lec01 to main in your\nfork\nHomework: complete any one of Basic, Implementation, or Advanced.\nDeadline: generally 1 week (10/26)\nLecture 2: Fundamentals of Foundation Models. Use LoRA on Colab\nStop Codespaces when you're done\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.18"
+          },
+          {
+            "id": "lec01-exercise-p019",
+            "title": "Appendix",
+            "page": 19,
+            "content": "Appendix\nReusable context\n(AGENTS.md / CLAUDE.md)\nGive agents that start from scratch every time what they can't infer, in writing\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.19"
+          },
+          {
+            "id": "lec01-exercise-p020",
+            "title": "Why context files are needed",
+            "page": 20,
+            "content": "Why context files are needed\nAgents start from scratch every time. Write down the repo's tacit knowledge and give the same premises every time.\nWithout them\n• Guesses run and test commands\n• Unaware of non-default conventions and common pitfalls\n• You repeat the same explanation in every request\nWith them\n• Loaded from the file at the start of work\n• Committed to the repo; shared and reviewed by the team\n• Requests can focus on task-specific details\nAGENTS.md\n“a README for agents.” No required fields; a plain Markdown file. A\ncommon format read by many tools\nCLAUDE.md\nRead by Claude Code at startup. Used as context, not enforced settings. For\nthings that must always run, use a separate mechanism: hook\nSource: agents.md “AGENTS.md”, Claude Code Docs “How Claude remembers your project”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.20"
+          },
+          {
+            "id": "lec01-exercise-p021",
+            "title": "Main files and how they're read",
+            "page": 21,
+            "content": "Main files and how they're read\nThe common AGENTS.md plus tool-specific files. Each tool decides which to read and how.\nFile\nMain tools\nHow it's read\nAGENTS.md\nCodex, Cursor,\nGitHub Copilot, etc.\nCan be nested; the closest wins. Codex concatenates from root to working\ndirectory (32 KiB by default)\nCLAUDE.md\nClaude Code\nParent directories' files concatenated at startup. Subdirectory files read\nwhen files there are touched. Reads AGENTS.md if no CLAUDE.md\n.github/copilot-instructions.md\n.github/instructions/*.instructions.md\nGitHub Copilot\nWhole repo / paths via applyTo. The cloud agent also uses AGENTS.md and\nroot CLAUDE.md / GEMINI.md\n.mdc files in .cursor/rules\nCursor\ndescription, globs, and alwaysApply set when to read. Also supports\nAGENTS.md\nGEMINI.md\nGemini CLI\nConcatenated: global → workspace → accessed directories. Can also read\nAGENTS.md via settings\nSource: agents.md; OpenAI “Custom instructions with AGENTS.md”; Claude Code Docs “How Claude remembers your project”; GitHub Docs “Adding repository\ncustom instructions”; Cursor Docs “Rules”; Gemini CLI Docs “GEMINI.md”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.21"
+          },
+          {
+            "id": "lec01-exercise-p022",
+            "title": "Minimal setup: what to include and exclude",
+            "page": 22,
+            "content": "Minimal setup: what to include and exclude\nAsk of each line: “Would removing it cause mistakes?” Aim for under 200 lines per file.\nInclude\n• Run, test, and lint commands that can't be guessed\n• Key points of directory structure and non-default conventions\n• Things not to do\n• Definition of done (which tests must pass)\n• Repo conventions (branch names, PR rules)\nExclude\n• Secrets (API keys, etc.)\n• Things evident from the code; general language conventions\n• Long explanations, detailed API docs\n• Frequently changing info\n• Self-evident instructions like “write clean code”\nUnder 200 lines\nLonger files use more context and lower\ninstruction adherence\nImport with @path\nUp to 4 levels of recursion. Importing doesn't\nreduce the context cost\nNot enforced\nSet things that must always run as a hook\nSource: Claude Code Docs “How Claude remembers your project”, “Best practices for Claude Code”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.22"
+          },
+          {
+            "id": "lec01-exercise-p023",
+            "title": "Always-read instructions vs. task-specific Skills",
+            "page": 23,
+            "content": "Always-read instructions vs. task-specific Skills\nKeep always-read instructions short. Put per-task procedures in Skills, loaded only when used.\nAlways read\nCLAUDE.md / AGENTS.md\nAlways in context, so keep it short and limited to what all tasks share\nRead per task\nSkill: .claude/skills/<name>/SKILL.md\nOnly the description is always loaded; the body loads when used (progressive disclosure).\nAim for SKILL.md under 500 lines\nDiscovery\nFound via description\nActivation\nBody read when used\nExecution\nFollows the steps\nTypical split in a repository\nRoot AGENTS.md / CLAUDE.md\nAlways-read instructions: unguessable commands, non-\ndefault conventions, test steps\n.claude/skills/<name>/SKILL.md\nPer-task procedures (official guide examples: API\nconventions, steps to fix an issue)\nRule of thumb: needed for all tasks, or only specific ones?\nAgent Skills: released as an open standard in 2025-12. Also supported by Codex, GitHub Copilot, Cursor, Gemini CLI, and more.\nSource: Claude Code Docs “Skills”, “Best practices for Claude Code”; Anthropic “Introducing Agent Skills” (2025-10-16, updated 2025-12-18); agentskills.io “Agent\nSkills Overview”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.23"
+          },
+          {
+            "id": "lec01-exercise-p024",
+            "title": "Evidence: writing one doesn't always help",
+            "page": 24,
+            "content": "Evidence: writing one doesn't always help\nLLM-generated files lowered success rates; developer-written ones raised them. But costs increase.\nAbout −3%\nLLM-generated context file: task success\nrate\nAbout +4%\nDeveloper-written context file: task success\nrate\nOver 20%\nIncrease in inference cost\nGloaguen et al. (ETH Zurich and others) evaluated 3 coding agents on AGENTbench (12 repos, 138 tasks) and SWE-bench Lite. Agents followed instructions; repo\noverviews didn't help, but conveying non-standard conventions did.\nAnother study (Lulla et al.): with AGENTS.md, median runtime was 28.64% shorter and output tokens 16.58% fewer, with similar task completion\n(10 repos, 124 PRs).\nDon't just auto-generate: keep it short, human-written, and verify its effect\nSource: Gloaguen et al. “Evaluating AGENTS.md” arXiv:2602.11988 (2026-02-12, v3 2026-09-29); Lulla et al. “On the Impact of AGENTS.md Files on the Efficiency\nof AI Coding Agents” arXiv:2601.20404 (2026-01-28). Both are preprints\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.24"
+          },
+          {
+            "id": "lec01-exercise-p025",
+            "title": "Don't write it and forget it",
+            "page": 25,
+            "content": "Don't write it and forget it\nContext files are like code: commit, review, and grow them.\n1 Add a line after failures\nIf the agent repeats a mistake,\nadd one line to prevent it\n2 Review\nCommitted to git; humans\nread it as a PR diff\n3 Verify the effect\nCompare the same request\nbefore/after the addition\n4 Remove stale content\nUpdate when commands or structure\nchange. Prune with “Would removing it\ncause mistakes?”\nRepeat with every task\nOfficial guide: commit CLAUDE.md to git, and review and prune it\nlike code.\nChecking the effect: after a change, observe whether the agent's\nbehavior actually changed.\nSource: Claude Code Docs “Best practices for Claude Code”\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 1 Exercises and Homework · translated PDF p.25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lec02-exercise",
+    "title": "Lecture 2 Exercises and Homework — Learn an Answer Format with LoRA and Compare Before and After Training",
+    "content": [
+      {
+        "section": "All slides",
+        "content": [
+          {
+            "id": "lec02-exercise-p001",
+            "title": "Learn an Answer Format with LoRA and Compare Before and After Training",
+            "page": 1,
+            "content": "Learn an Answer Format with LoRA and Compare Before and After Training\nAI Engineering Practical Course 2026\nLecture 2 | Exercises & Homework\nFundamentals of Foundation Models\n2026/10/26  Exercise: Yoshiaki Sato\nBriefly train a small model with LoRA and check, with numbers and outputs, what changes and what doesn't\nPhotography and disclosure to third parties\nwithout permission are prohibited.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.1"
+          },
+          {
+            "id": "lec02-exercise-p002",
+            "title": "Lecture 1 homework review",
+            "page": 2,
+            "content": "Lecture 1 homework review\nOrganize what we saw by asking a plain LLM, and connect it to today's exercise (first 5–10 min).\nBasic\nAsk the same question 3 times each, varying\nthe model and temperature, and summarize\nhow the answers differ\nImplementation\nModify app/ask.py so you can keep asking questions\nwhile preserving the conversation history\nAdvanced\nMeasure response time and token count, compare\nacross models and questions, and consider how this\nrelates to free-quota rate limits\nFocus on “what happened” and “why.” It's not about hitting the right numbers\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.2"
+          },
+          {
+            "id": "lec02-exercise-p003",
+            "title": "Basic review: the same question can get different answers",
+            "page": 3,
+            "content": "Basic review: the same question can get different answers\nGeneration is probabilistic: answers vary even under the same conditions. This ties into “sampling” in Lecture 2.\nWhat you see\n• Asking 3 times under the same conditions gives a different answer each run\n• Changing the model (AIE_MODEL) changes wording, length, and how it answers what it\ndoesn't know\nWhat to compare\n• Wording\n• Length\n• Factual accuracy\n• Confidence\n• Answers to course-specific questions\ntemperature: deprecated by Google on 2026-07-21. Gemini 3.6 and later\nmodels ignore it. If it has no effect or errors out, just record that result\n\ngemini-3.5-flash (no lite): Due to changes to the Gemini API specifications in\nOctober, gemini-3.5-flash has been deprecated. API requests to\ngemini-3.5-flash are now redirected to gemini-3.6-flash. Since LLM API\nspecifications change frequently, it is important to stay informed about updates and\nverify that the intended model is being used when integrating LLM APIs into\napplications.\nFor the homework assignment, you may compare model outputs using any\ncombination of models, such as gemini-3.5-flash-lite and\ngemini-3.8-flash.\nReference: https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash?hl=en\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.3"
+          },
+          {
+            "id": "lec02-exercise-p004",
+            "title": "Implementation review: what keeping conversation history means",
+            "page": 4,
+            "content": "Implementation review: what keeping conversation history means\nThe model doesn't remember earlier turns. Each time, the conversation so far is sent as part of the input.\nMethod 1: use the SDK's Chat\nCreate a Chat with client.chats.create, then keep sending with\nsend_message\nChat holds the history and sends it all each time\nMethod 2: manage the history yourself\nAccumulate user and model messages in a list\nPass that list to generate_content's contents each time\nSample solution: fix app/ask.py with Method 1. The next 3 slides show before, after, and what is actually sent.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.4"
+          },
+          {
+            "id": "lec02-exercise-p005",
+            "title": "Implementation review: app/ask.py before the fix",
+            "page": 5,
+            "content": "Implementation review: app/ask.py before the fix\nask() just takes one question, calls generate_content once, and returns the answer.\nBefore (excerpt)\n```python\ndef ask(question: str) -> str:\n    client = genai.Client(api_key=get_api_key())\n    response = client.models.generate_content(model=MODEL, contents=question)\n    # TODO (Lecture 1 exercise): from response.usage_metadata,\n    #   display the input and output token counts (you may ask Copilot)\n    return response.text\n```\nmain takes question via argparse (DEFAULT_QUESTION if omitted) and prints the result of ask(). On errors.APIError, it prints api_error_message and exits.\nMissing 1: each call makes just one fresh generate_content call\nMissing 2: earlier questions and answers aren't in the input, so\nfollow-ups aren't remembered\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.5"
+          },
+          {
+            "id": "lec02-exercise-p006",
+            "title": "Implementation review: chat() after the fix (sample solution)",
+            "page": 6,
+            "content": "Implementation review: chat() after the fix (sample solution)\nAdd chat() so you can keep asking questions while Chat holds the history.\nAfter (sample solution, added function)\n```python\ndef chat(first_question: str) -> None:\n    client = genai.Client(api_key=get_api_key())\n    session = client.chats.create(model=MODEL)  # the SDK's Chat holds the history\n    question = first_question\n    while question:\n        response = session.send_message(question)  # sends history so far + this question\n        print(response.text)\n        usage = response.usage_metadata\n        print(f\"[tokens] input {usage.prompt_token_count} / output {usage.candidates_token_count}\")\n        question = input(\"\\n[Next question (blank line to quit)] \").strip()\n```\n1\nCreate a Chat with client.chats.create (holds\nthe history)\n2\nCall send_message in a loop (blank line to\nquit)\n3\nAdd a --chat option and keep ask() (don't break\nexisting usage and tests)\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.6"
+          },
+          {
+            "id": "lec02-exercise-p007",
+            "title": "Implementation review: what is sent each time",
+            "page": 7,
+            "content": "Implementation review: what is sent each time\nSent = history so far + this question. It grows with every turn.\nuv run python -m app.ask --chat \"What is LoRA?\"  # blank line to quit\nTurn 1\nQ1\nTurn 2\nQ1\nA1\nQ2\nTurn 3\nQ1\nA1\nQ2\nA2\nQ3\n→ prompt_token_count grows each turn\nNavy: current question   Gray: earlier questions   Light blue: earlier answers\nMore input tokens affect cost and limits. Old history must be truncated or summarized\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.7"
+          },
+          {
+            "id": "lec02-exercise-p008",
+            "title": "Advanced review: response time, token count, rate limits",
+            "page": 8,
+            "content": "Advanced review: response time, token count, rate limits\nDon't decide from a single value; measure several times and compare. Token counts are in the response.\nResponse time\n• Measure before and after the call with\ntime.perf_counter()\n• The first call can be slow, so measure several times\n• Compare medians\nToken count (usage_metadata)\n• Input prompt_token_count\n• Output candidates_token_count\n• Thinking thoughts_token_count\n• Total total_token_count\nThinking is counted separately, so input + output\nmay not match the total\nRate limits\n• Per-model, per-project caps, e.g. requests per\nminute and per day\n• Exceeding them gives a 429 error (e.g. 429\nRESOURCE_EXHAUSTED). Wait and retry\n• Check current limits in AI Studio\nObserved in this course (for reference): gemini-3.5-flash-lite 15/min, 500/day; gemini-3.8-flash 5/min, about 10–20/day. Limits change.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.8"
+          },
+          {
+            "id": "lec02-exercise-p009",
+            "title": "Common pitfalls and cautions",
+            "page": 9,
+            "content": "Common pitfalls and cautions\nLet's revisit common pitfalls in the Lecture 1 steps and homework.\n1\nAPI key\nNever put it in code, answer.md, logs, or screenshots. If leaked, delete and recreate it in AI Studio\n2\nPR direction\nIs base repository set to the course repo? Target the main of your own fork\n3\nCodespaces\nStop it when done. If left running, it keeps using your free quota\n4\nRate limits\nIf you hit a limit, wait or reduce the number of calls. Note any reduction in answer.md\nSame for today's Colab: delete the runtime when you're done\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.9"
+          },
+          {
+            "id": "lec02-exercise-p010",
+            "title": "How this leads to today's exercise",
+            "page": 10,
+            "content": "How this leads to today's exercise\nIn Lecture 1 we “asked” a model. Today we “train” a small model ourselves.\nLecture 1\nAsked a model behind an API\nIt sometimes answered confidently even when it didn't know\n→\nToday (Lecture 2)\nTrain a small model with LoRA\nTraining changes the format, but judgment on unknowns isn't guaranteed\nToday we check the “answering what it doesn't know” from Lecture 1 before and after training\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.10"
+          },
+          {
+            "id": "lec02-exercise-p011",
+            "title": "Goals of this session",
+            "page": 11,
+            "content": "Goals of this session\nBe able to explain, with your own results, what training changes and what it doesn't.\n1\nBriefly train a small model with LoRA and check, with\nnumbers and outputs, what changes and what doesn't\nbefore vs. after training\n2\nExplain with your own results that “training\nteaches the format, but doesn't guarantee\njudgment on unknowns (asking for review vs.\nasserting)”\n3\nExplain in your own words when\nfine-tuning fits and when it doesn't\nUsed in the exercise: Google Colab (T4 GPU, free quota)\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.11"
+          },
+          {
+            "id": "lec02-exercise-p012",
+            "title": "What we'll check",
+            "page": 12,
+            "content": "What we'll check\nTraining fixes the format; judgment may not follow. We check this step by step.\n1\nEven when prompted for a format, a small model may not follow it\nSection 3, before training\n2\nA few minutes of LoRA training makes it follow the format almost always\nSection 5, after training\n3\nEven with the right format, judgment on questions not in the FAQ (asking for review vs. asserting) isn't\nguaranteed\nSections 5, 6\n4\nAdvanced: loading the same model with 4-bit quantization changes outputs even without training\nSection 8 (optional)\nSection: heading number in the notebook notebooks/lora_format_tuning.ipynb. Run cells in order from the top.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.12"
+          },
+          {
+            "id": "lec02-exercise-p013",
+            "title": "Material: a fictional course FAQ and the desired output",
+            "page": 13,
+            "content": "Material: a fictional course FAQ and the desired output\nGive the FAQ and a question; have it answer in one line of JSON. All FAQ content is fictional.\nFictional FAQ (5 items)\nItem\nContent (fictional)\nDeadline\nSept 30, 23:59\nWhere to submit\n“Assignments” section of the learning portal\nFormat\nOne PDF file, StudentID_AssignmentNo.pdf\nOffice hours\nTuesdays 17:00–18:00\nLate submission\nAccepted within 48 hours, with a penalty\nDesired output\n{\"answer\": <string>, \"needs_review\": <boolean>}\nGrounded (in the FAQ)\nAnswer with the FAQ text; needs_review is false\nUngrounded (not in the FAQ)\n“This FAQ doesn't cover this. Please check with the course\nstaff.” needs_review is true\nFictional data: the notebook generates the data. No real deadlines or URLs.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.13"
+          },
+          {
+            "id": "lec02-exercise-p014",
+            "title": "Data split: no training sentences in evaluation",
+            "page": 14,
+            "content": "Data split: no training sentences in evaluation\nParaphrases are assigned to train / valid / test by template.\ntrain\n14 items\n10 grounded, 4 ungrounded. Used for training\nvalid\n7 items\nTemplates separate from train and test\ntest\n21 questions\n15 grounded, 6 ungrounded. Used to\nevaluate before/after training\nAnswers kept in gold: the correct needs_review and required\nphrases aren't given to the model\nTraining amount: set by epochs, not by duplicating data\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.14"
+          },
+          {
+            "id": "lec02-exercise-p015",
+            "title": "Two-part evaluation: format and content kept separate",
+            "page": 15,
+            "content": "Two-part evaluation: format and content kept separate\nSeparate metrics for whether the JSON format is followed and whether the answer is correct.\nFormat compliance rate (format_rate)\n• Parses as JSON\n• Exactly two keys: answer and needs_review\n• Types are string and boolean\nContent accuracy (content_rate)\n• needs_review matches the correct value\n• answer contains the correct phrase\nIf a key is missing, content is ✗ even if the wording is right\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.15"
+          },
+          {
+            "id": "lec02-exercise-p016",
+            "title": "Preparation (optional, 5 min) and what we use",
+            "page": 16,
+            "content": "Preparation (optional, 5 min) and what we use\nRunning Sections 0–3 once before class reduces problems on the day.\nWhat to check in preparation (optional)\n• A GPU is assigned\n• Libraries can be installed\n• The model can be downloaded\nColab loses variables when the session ends. On the day, run again from\nSection 0\nWhat we use\n• Google Colab (T4 GPU, free quota)\n• Model Qwen/Qwen3.5-0.8B (Apache-2.0)\n• Notebook notebooks/lora_format_tuning.ipynb\nOpen in Colab\nhttps://colab.research.google.com/github/matsuolab/lecture-ai-engineering-2026-en/blob/main/notebooks/lora_format_tuning.ipynb\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.16"
+          },
+          {
+            "id": "lec02-exercise-p017",
+            "title": "45-min exercise flow (starting with the Lecture 1 homework review)",
+            "page": 17,
+            "content": "45-min exercise flow (starting with the Lecture 1 homework review)\nThe first 5–10 min review the Lecture 1 homework; the rest covers Steps 1–7.\nStep\nWhat to do\nNotebook / time\n—\nLecture 1 homework review\nFirst 5–10 min\n1\nOpen the notebook in Colab and make your own copy\n2\nSet the runtime type to T4 GPU\n3\nRun from the top and read the before-training table\nSections 0–3, ~5 min\n4\nTrain with LoRA. While waiting, read about LoRA vs. QLoRA\nSection 4, 4–5 min\n5\nEvaluate after training and compare with before. Look at the knowledge questions\nSections 5–6\n6\nCreate result.json, write answer.md, and open a PR\nSection 7\n7\nDisconnect and delete the runtime\nTimes on T4: ~5 min for Sections 0–3, ~10 min for Sections 4–7 (incl. 4–5 min of training).\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.17"
+          },
+          {
+            "id": "lec02-exercise-p018",
+            "title": "Steps 1–2 Make your own copy and select T4 GPU",
+            "page": 18,
+            "content": "Steps 1–2 Make your own copy and select T4 GPU\nSteps 1–2  Make your own copy and select T4 GPU\nCopy to your Drive before running. Choose T4 for the GPU.\n1\nOpen the notebook in Colab, then\nFile\n→\nSave a copy in Drive\n2\nIn the copied notebook\nRuntime\n→\nChange runtime type\n→\nT4 GPU\nIf you see “No GPU found”\nRuntime → Change runtime type → select T4 GPU again. If busy, wait a while. If none is assigned, follow the “If you couldn't train” slide\nRun cells in order from the top. Skipping causes “variable not found” errors\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.18"
+          },
+          {
+            "id": "lec02-exercise-p019",
+            "title": "Step 3 Sections 0–3: evaluate before training (~5 min)",
+            "page": 19,
+            "content": "Step 3 Sections 0–3: evaluate before training (~5 min)\nStep 3  Sections 0–3: evaluate before training (~5 min)\nIn the before-training table, check which keys are missing and whether the wording matches the FAQ.\nWhat to look at\n• Section 0: GPU shows as Tesla T4\n• Section 3: loads without quantization (32-bit). Weight memory, e.g. 3.01GB\n• Summary (format_rate, content_rate, etc.) and the 21-question table\n• Before training, needs_review should be missing from many outputs\nSafe to ignore\npip's red ERROR: pip's dependency resolver ... (cudf, pyarrow): ignore\nYou are sending unauthenticated requests to the HF Hub: public\nmodels need no login\n... is falling back to its reference PyTorch implementation ...: no fast\nlinear-attention kernel, so slower, but runs correctly\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.19"
+          },
+          {
+            "id": "lec02-exercise-p020",
+            "title": "Step 4 Section 4: train with LoRA (4–5 min)",
+            "page": 20,
+            "content": "Step 4 Section 4: train with LoRA (4–5 min)\nStep 4  Section 4: train with LoRA (4–5 min)\n20 epochs = 20 passes over 14 training items, 2 steps per pass, 40 steps total.\nWhat to look at\nExpected\ntrainable params ... trainable%\nOnly a few % of all parameters are trained\nTraining Loss (every 10 steps)\nDrops from ~1.5 to 0.01–0.02 by step 40\nTraining time: ... s | Steps: 40 | Epochs: 20.0\n240–290 s on T4\nKey settings (CONFIG)\nlr 2e-4, lora_r 16, lora_alpha 32, seed 42, warmup_steps 6. Generation uses do_sample:\nFalse (greedy, so before/after conditions match)\nInside one step\nBatch 4 × gradient accumulation 2 = 8 items per step. Cosine decay and warmup\nWhile waiting: read “LoRA vs. QLoRA” on the next slide.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.20"
+          },
+          {
+            "id": "lec02-exercise-p021",
+            "title": "LoRA vs. QLoRA",
+            "page": 21,
+            "content": "LoRA vs. QLoRA\nBoth freeze the foundation model's weights and train only small added matrices (adapters).\nAspect\nLoRA (this exercise)\nQLoRA (foundation model held in 4-bit)\nWeight memory\nLarge\nSmall (~1/4 of 16-bit; for 7B params, ~14GB in 16-bit, ~3.5GB in 4-bit)\nFoundation model output\nUnchanged\nMay change due to quantization error\nTraining speed\nBaseline\nNot faster; often slower\nDependencies\npeft\npeft + bitsandbytes (requires CUDA)\nEven in QLoRA, adapters aren't quantized. Compare before/after under the same quantization, and record adapters with the foundation model's ID,\nrevision, and quantization settings.\nIf the model fits on the GPU, use LoRA; if not, QLoRA or a smaller model\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.21"
+          },
+          {
+            "id": "lec02-exercise-p022",
+            "title": "Step 5 Section 5: evaluate after training and compare with before",
+            "page": 22,
+            "content": "Step 5 Section 5: evaluate after training and compare with before\nStep 5  Section 5: evaluate after training and compare with before\nSame 21 questions and generation settings as before. Only the adapter differs.\nComparison table\nHow did format_rate and content_rate\nchange before vs. after training?\nRegressions\nQuestions that passed before but fail after\ntraining. Expected: none\nRemaining failure types\n• Asserts a different FAQ item for an\nungrounded question\n• Dodges a grounded question with “not\ncovered”\nAfter training: answers come back almost verbatim from the training data (FAQ text). Format and wording align, but it may not have learned to\njudge “whether the FAQ supports it.”\nEven with a fixed seed, GPU training isn't fully reproducible. Different remaining questions from your neighbor are normal. Compare failure types\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.22"
+          },
+          {
+            "id": "lec02-exercise-p023",
+            "title": "Step 5 Section 6: knowledge questions",
+            "page": 23,
+            "content": "Step 5 Section 6: knowledge questions\nStep 5  Section 6: knowledge questions\nWhen asked about something in neither the FAQ nor the training data, did it ask for review or assert?\nQuestions\n3 facts not in the FAQ (desired response: “needs\nreview”)\n• Final assignment deadline\n• Instructor's name\n• Topic of the next lecture\n1 control: assignment deadline\nCategory\nMeaning\nformat_error\nFormat not followed (common before training)\nneeds_review\nSaid review is needed (desired)\nasserted\nStated flatly with needs_review false. For a question not in the\nFAQ, an unfounded assertion\nTypical result: before training, format violations are common; after training, both “needs review” and assertions may appear.\nDon't jump to “fine-tuning can never fix knowledge”; report the results on this data\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.23"
+          },
+          {
+            "id": "lec02-exercise-p024",
+            "title": "Steps 6–7 Create and submit result.json, then delete the runtime",
+            "page": 24,
+            "content": "Steps 6–7 Create and submit result.json, then delete the runtime\nSteps 6–7  Create and submit result.json, then delete the runtime\nCreate result.json in Section 7, write the key points in lectures/02/answer.md, and open a PR.\nWhat to write under “Exercise” in answer.md\n• Model and settings used (from config in result.json)\n• Whether you ran the training yourself (executed_training_myself)\n• format_rate and content_rate before and after training\n• Regressed questions\n• Failures remaining after training, and their types\n• Results of the knowledge questions (category before → after training)\n• What training changed and what it didn't\n1\nresult.json, eval_before.json, eval_after.json are in /content/qlora_lab.\nRight-click in the left file list → Download\n2\nWrite the key points in lectures/02/answer.md. Editing on the GitHub web\nUI is fine\n3\nOpen a PR from working branch lec02 to the main of your own fork. You\nmay include result.json in lectures/02/\nStep 7: Runtime → Disconnect and delete runtime. Colab GPU time on the free quota is limited\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.24"
+          },
+          {
+            "id": "lec02-exercise-p025",
+            "title": "If you couldn't train (notebook 4b)",
+            "page": 25,
+            "content": "If you couldn't train (notebook 4b)\nIf it stopped midway, resume. If you can't train, use the instructor's results for comparison and discussion.\nStopped midway\nResume from a checkpoint (every 10 steps, ckpt/)\ntrainer.train(resume_from_checkpoint=True)\nNo GPU assigned / doesn't finish in time\nUse the instructor's result.json, eval_before.json, eval_after.json from\na T4 run for comparison and discussion\nLocation: lectures/02/reference/ in the course repo. Open on GitHub\nor use “Download raw file”\nWhen submitting, set executed_training_myself to False and describe in answer.md how far you got yourself\nSetting USE_DRIVE in CONFIG to True also saves adapters and results to Google Drive, so they survive a session drop\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.25"
+          },
+          {
+            "id": "lec02-exercise-p026",
+            "title": "Advanced: load in 4-bit quantization (Section 8, optional, ~2 min)",
+            "page": 26,
+            "content": "Advanced: load in 4-bit quantization (Section 8, optional, ~2 min)\nLoad the same model in 4-bit (NF4) without training, and see how memory and outputs change.\nWeight memory\n32bit\n~3GB\n→\n4bit\nUnder\n1GB\nOutput changes have no consistent direction\n• Some questions improve\n• needs_review becomes \"false\" (a string) and fails the type check\n• Asserts “yes” or “none” for ungrounded questions\nHow to read it: the difference from 32-bit before training is the effect of quantization. bitsandbytes requires CUDA and takes ~1 min to install;\ncompute precision is float16 (T4 lacks bf16).\nTo try QLoRA: pass through prepare_model_for_kbit_training, then train as in Section 4. Evaluate both before and after on the 4-bit foundation\nmodel so quantization and training effects don't mix.\nQLoRA, training directly in 4-bit, is also verified on T4. Feel free to try it for homework\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.26"
+          },
+          {
+            "id": "lec02-exercise-p027",
+            "title": "Homework: complete any one",
+            "page": 27,
+            "content": "Homework: complete any one\nChoose one of three levels: Basic, Implementation, or Advanced.\nLevel\nTask\nBasic\nChange one of lora_r, lr, or num_train_epochs in CONFIG, retrain, and record format_rate, content_rate, final loss, and training time\nalongside the original settings. After changing, Runtime → Restart session and run from the top (the trained model remains otherwise).\nCompare the two result.json files\nImplementation\nReplace FAQ, GROUNDED, and UNGROUNDED with your own material (~5 items), train, and compare before vs. after. Keep the JSON\nformat and needs_review design. Also describe how you prepared the “ungrounded” questions\nAdvanced\nUse scripts/make_sft_dataset.py to build Q&A data (JSONL in messages format) from the course glossary and train on it instead of the\nFAQ. Prepare your own evaluation questions (glossary terms, rephrased questions, terms not in the glossary) and answers, and\ncompare before vs. after. Discuss the pros and cons of training the model compared with a system that searches the glossary\nHow to proceed and cautions: next slide. Submit in the “Homework” section of lectures/02/answer.md.\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.27"
+          },
+          {
+            "id": "lec02-exercise-p028",
+            "title": "Homework: how to proceed and cautions",
+            "page": 28,
+            "content": "Homework: how to proceed and cautions\nAfter changing settings or data, rerun from the top under matching conditions.\nLevel\nHow to proceed\nBasic\nAfter changing settings, Runtime → Restart session and run from the top. Put the two result.json files side by side\nImplementation\nPrepare your own “ungrounded” questions and describe how you made them\nAdvanced\nIn Codespaces, run uv run python scripts/make_sft_dataset.py > glossary_sft.jsonl and upload the file to Colab. Each line uses the same\nmessages format as to_chat, so pass it straight to Dataset.from_list and train with the SFTTrainer in Section 4. Rebuild the evaluation\n(test and gold) yourself to match the glossary\nCaution 1: after training, the adapter is also injected into the variable model.\nTo regenerate before-training outputs, use tuned.disable_adapter() (Section\n6) or restart the session\nCaution 2: libraries are pinned to tested versions (PINS in Section 0).\nChanging versions may break things\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.28"
+          },
+          {
+            "id": "lec02-exercise-p029",
+            "title": "Submitting homework",
+            "page": 29,
+            "content": "Submitting homework\nWrite it in the “Homework” section of the same lectures/02/answer.md as the exercise, and submit.\nWhat to write under “Homework” in answer.md\n• Level attempted (Basic / Implementation / Advanced)\n• Settings or data you changed\n• Results (comparison tables, numbers)\n• Discussion of when fine-tuning fits and when it doesn't\nDeadline: generally 1 week after the lecture\nCompletion: complete any one level\nAI tools: allowed. Write what you verified yourself\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.29"
+          },
+          {
+            "id": "lec02-exercise-p030",
+            "title": "Lecture 3 preview",
+            "page": 30,
+            "content": "Lecture 3 preview\nIn Lecture 3, we build an agent.\nThis lecture\nTrain a model to change how it answers\n→\nLecture 3\nBuild a “glossary search agent”\nDetails and preparation for Lecture 3 will be provided in the Lecture 3 materials\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.30"
+          },
+          {
+            "id": "lec02-exercise-p031",
+            "title": "Summary: what we achieved today, and next time",
+            "page": 31,
+            "content": "Summary: what we achieved today, and next time\nWe checked with our own results what training changed and what it didn't.\n1\nFormat changes with a few minutes of LoRA training\n2\nJudgment on unknowns (asking for review vs.\nasserting) isn't guaranteed\n3\nExplain with your own results when fine-tuning\nfits and when it doesn't\nHomework: one of Basic, Implementation, or Advanced. Deadline:\ngenerally 1 week after the lecture\nLecture 3: build an agent\nDelete the Colab runtime when you're done\n© MATSUO-IWASAWA LABORATORY, THE UNIVERSITY OF TOKYO",
+            "citation": "Lecture 2 Exercises and Homework · translated PDF p.31"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "lec03-exercise",
     "title": "Lecture 3 Exercises and Homework: Build a Learning Support Agent",
     "content": [

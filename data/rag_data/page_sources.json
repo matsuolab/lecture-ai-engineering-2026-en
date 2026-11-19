@@ -4015,5 +4015,679 @@
     },
     "content_sha256": "efe90b926636708c61dfe9fdc3891e383d33e2f3fb8aca0a948b4c224326a022",
     "origin": "newly_translated_from_canonical_japanese"
+  },
+  "lec01-exercise-p001": {
+    "canonical_japanese_page": 1,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 1,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.1"
+    },
+    "content_sha256": "00ff6c7f4b1ff16e639638d8ac05fdcf34b71e9cb99f18234f328397a8d0b8ff",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p002": {
+    "canonical_japanese_page": 2,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 2,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.2"
+    },
+    "content_sha256": "0db75068835f147e0cf9141a3021296d96e13a418c2a19f573848bd3a7554061",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p003": {
+    "canonical_japanese_page": 3,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 3,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.3"
+    },
+    "content_sha256": "f7518eab7268ae60f2f4bdf4964cced437169e39ad52cf95324e27b6409591ca",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p004": {
+    "canonical_japanese_page": 4,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 4,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.4"
+    },
+    "content_sha256": "1344aaf62736d6ddcd0002811a7d5055aa30aea8f3d3e1eb78fb74911ae7f524",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p005": {
+    "canonical_japanese_page": 5,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 5,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.5"
+    },
+    "content_sha256": "0a255a17e549e8bcdc6eb063f9a14e03d9ace256fbd1d6250d62bb29d44d5013",
+    "origin": "supplied_localized_exercise_pdf",
+    "source_correction": "Course links follow the localized repository and exercise guide."
+  },
+  "lec01-exercise-p006": {
+    "canonical_japanese_page": 6,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 6,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.6"
+    },
+    "content_sha256": "5d8b015e9dd5b8a18f0b19244f658908537ecd8de34f68e459e2bb4f2b093c79",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p007": {
+    "canonical_japanese_page": 7,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 7,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.7"
+    },
+    "content_sha256": "5cdd51907f2b1eb69c23be494b6a64e466e5f50fff2eb1f94789e895f896c9e1",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p008": {
+    "canonical_japanese_page": 8,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 8,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.8"
+    },
+    "content_sha256": "ddbaf830c795a3fbec670a6362b4c89a250b8695120bf9c4aa117a018a4f1193",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p009": {
+    "canonical_japanese_page": 9,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 9,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.9"
+    },
+    "content_sha256": "95252356f74e0b7d0f55156fba9433f4cabb2db25c428decaa11fd5f64a47376",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p010": {
+    "canonical_japanese_page": 10,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 10,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.10"
+    },
+    "content_sha256": "15383205f27c27fa5ced2f959f2d357439a143af097c7a4775b8e6ec3ea8718e",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p011": {
+    "canonical_japanese_page": 11,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 11,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.11"
+    },
+    "content_sha256": "096d7490a5a341e8c5451676d98179d40cc339862e0d9edf9db75f464fe4cb52",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p012": {
+    "canonical_japanese_page": 12,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 12,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.12"
+    },
+    "content_sha256": "ff2d48de391b2dc01cd23406847e9bc4957b5e0d0dbb07e64210298c9d70ad28",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p013": {
+    "canonical_japanese_page": 13,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 13,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.13"
+    },
+    "content_sha256": "5a49dba27f3aef1a7578749271d5bfa9a1c6d25c3f2bae5d731665ae215a8e7a",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p014": {
+    "canonical_japanese_page": 14,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 14,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.14"
+    },
+    "content_sha256": "f26d9008e1c4ed4b76c4804340caafccd9e62e3fb924dfd39944dd0e35dc2d83",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p015": {
+    "canonical_japanese_page": 15,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 15,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.15"
+    },
+    "content_sha256": "ece2e6d3c63315c2bdde7c15c98151b1359726a6e87313b2fdd187d7f2a17f72",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p016": {
+    "canonical_japanese_page": 16,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 16,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.16"
+    },
+    "content_sha256": "30282042d98d471ad8992dc8c052b6c57a9fc01116742b4df476ed83c6baa6d9",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p017": {
+    "canonical_japanese_page": 17,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 17,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.17"
+    },
+    "content_sha256": "6ded4157823be5e282819880f44110c3973f84c1299883b1a5e169396a85c4ad",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p018": {
+    "canonical_japanese_page": 18,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 18,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.18"
+    },
+    "content_sha256": "0ca66c10947bc956372b7cc6c11e5f2b4d012ebd062222ee86c91bd745df5ffb",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p019": {
+    "canonical_japanese_page": 19,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 19,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.19"
+    },
+    "content_sha256": "d3f2878161ae5371090f39b522f67d8f6821ab568628ef796e8c04905e06c96f",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p020": {
+    "canonical_japanese_page": 20,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 20,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.20"
+    },
+    "content_sha256": "8c25b5b765765ef3de3386debc00d103739ca3ac0dbcc43d9617c655ec0afcf4",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p021": {
+    "canonical_japanese_page": 21,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 21,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.21"
+    },
+    "content_sha256": "c562c640a8f7d7083e08357cb685a480edb2fcd3506e7dca5f02ed35a94c1056",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p022": {
+    "canonical_japanese_page": 22,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 22,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.22"
+    },
+    "content_sha256": "b0e6b2d3868dfcd9587ad3c20eb1f07bfe03f1d4e2469397b5798501e568d15c",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p023": {
+    "canonical_japanese_page": 23,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 23,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.23"
+    },
+    "content_sha256": "86393b87690bf81c8a0aa9b6246cb402ac5020ba4b404f9835607eaf0dd4a051",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p024": {
+    "canonical_japanese_page": 24,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 24,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.24"
+    },
+    "content_sha256": "e98103519a2368c93312d1209c85285e687cad590966c6f2895f8f42b523e143",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec01-exercise-p025": {
+    "canonical_japanese_page": 25,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 25,
+      "file": "Exercise Materials (6).pdf",
+      "file_sha256": "58f19ca7da14a868687e1d39076e5a1fb6df1aa006939357d243c911fc90d64e",
+      "label": "Lecture 1 Exercises and Homework · translated PDF p.25"
+    },
+    "content_sha256": "54e1d8dc54d34c9be369dc520517fa2723eaac1dd06b7568c25bfbb0d046e8ff",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p001": {
+    "canonical_japanese_page": 1,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 1,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.1"
+    },
+    "content_sha256": "9bda97940e2efe58009e640cf1b85eb81bf37f1e83ae1eb0c07b794e605f074b",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p002": {
+    "canonical_japanese_page": 2,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 2,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.2"
+    },
+    "content_sha256": "fff3a05ea64ca85dca2d2101e9aeedeee2836d486d887c056c363c9ad3189226",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p003": {
+    "canonical_japanese_page": 3,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 3,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.3"
+    },
+    "content_sha256": "d7933c4037b9f87641a7e4286800c04b22ec99ce949d4115cfa25162d2bc9ce5",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p004": {
+    "canonical_japanese_page": 4,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 4,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.4"
+    },
+    "content_sha256": "b241669f4db269914384447125641eb226d0bbac7dcbfa63d82a7b9899aee8d0",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p005": {
+    "canonical_japanese_page": 5,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 5,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.5"
+    },
+    "content_sha256": "e71df4284f0489687996b76aefd08dc735475f695d16912474d43695b6bdcb8d",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p006": {
+    "canonical_japanese_page": 6,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 6,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.6"
+    },
+    "content_sha256": "12454c57fd8b21df2736f21e95271013f162f4d1e6aa0c7318da9797bbbf5c4a",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p007": {
+    "canonical_japanese_page": 7,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 7,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.7"
+    },
+    "content_sha256": "b0b4af27ce61e782945f3dbca037adbfb9d7ed712bf922a33bc8fdf49099a409",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p008": {
+    "canonical_japanese_page": 8,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 8,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.8"
+    },
+    "content_sha256": "52dd42e9922a9a37b192becebbef0868c9f9ca2742fe7c5a7f7c741accea5a31",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p009": {
+    "canonical_japanese_page": 9,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 9,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.9"
+    },
+    "content_sha256": "3fec05ff5032bff508a244a375c1b95b0bf27c7a443a03fda83c7d9903191e9d",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p010": {
+    "canonical_japanese_page": 10,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 10,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.10"
+    },
+    "content_sha256": "765b856aab5df9917ed22ab31a472ac3521757f272c0eab153146a09c5706385",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p011": {
+    "canonical_japanese_page": 11,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 11,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.11"
+    },
+    "content_sha256": "c2ba4d7cc3c94c5a90dde60faf9db9c984297f92b0624a4e0b9ee7aa8a9cbda6",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p012": {
+    "canonical_japanese_page": 12,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 12,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.12"
+    },
+    "content_sha256": "f3f26709852168cf0f9ccf659f19b91a856138d69dfba056e3551b45a74c35cd",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p013": {
+    "canonical_japanese_page": 13,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 13,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.13"
+    },
+    "content_sha256": "5c4b99f4eaf615ff7fb24cb98b7674dbc1ed35bf5555630face6b3467822824e",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p014": {
+    "canonical_japanese_page": 14,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 14,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.14"
+    },
+    "content_sha256": "2f03c48cbc1ec2d0c93dba817e4f03c0f411fd0f0178daf69e8c47dea27fc3b0",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p015": {
+    "canonical_japanese_page": 15,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 15,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.15"
+    },
+    "content_sha256": "67870ccce125976f3c90b50fe08c3ca3fb56e82fe4871e776b69fdbedd8527b7",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p016": {
+    "canonical_japanese_page": 16,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 16,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.16"
+    },
+    "content_sha256": "7f9b2ff0b8719cd8d7a52849b7cb26d7ad0f64cfb5625d96c137da31080d3a87",
+    "origin": "supplied_localized_exercise_pdf",
+    "source_correction": "Course links follow the localized repository and exercise guide."
+  },
+  "lec02-exercise-p017": {
+    "canonical_japanese_page": 17,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 17,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.17"
+    },
+    "content_sha256": "a2bd3cbd0e2fca6d7d6b8fdc109f2ca5c78bb2a55ec9a3f61a8b8a4cc3c6fb3b",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p018": {
+    "canonical_japanese_page": 18,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 18,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.18"
+    },
+    "content_sha256": "6df07583c2fad3a187e75d06189b145920ac3b19d08bd0a947698007710c4611",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p019": {
+    "canonical_japanese_page": 19,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 19,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.19"
+    },
+    "content_sha256": "e56a848dd3c0cc7f1a25b4a070c069d1a2c3f7d315f5957108d6693fa43f429c",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p020": {
+    "canonical_japanese_page": 20,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 20,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.20"
+    },
+    "content_sha256": "f393f9ef820dc9a82fb795ce26461fc8c0a67c0644cd7704a5dac54b7e42b1db",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p021": {
+    "canonical_japanese_page": 21,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 21,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.21"
+    },
+    "content_sha256": "aee2164b109244125905e1ea47f5e297c1a50d02e95543fb3eb9fa45a72b6231",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p022": {
+    "canonical_japanese_page": 22,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 22,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.22"
+    },
+    "content_sha256": "08d583363bfe032f5f7c85fb182e033332279fe11ce41f72c62139e02bc59a45",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p023": {
+    "canonical_japanese_page": 23,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 23,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.23"
+    },
+    "content_sha256": "69cf30ef861e34e31b853181b94f2117bb3781e98b547e5dcb2c28cf7c1c94eb",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p024": {
+    "canonical_japanese_page": 24,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 24,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.24"
+    },
+    "content_sha256": "61420d7373da57bd7ec216a67e55dd31fdc871b0d6b8b20a812fbf9ca1c69ed6",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p025": {
+    "canonical_japanese_page": 25,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 25,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.25"
+    },
+    "content_sha256": "787a1cf25f0613927aeeff2f8a8fbc5a7729948dd88cdd7cf6517ff0ff8ff706",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p026": {
+    "canonical_japanese_page": 26,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 26,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.26"
+    },
+    "content_sha256": "7467bc0cea60526a00fc0791cb6f3d736873dfcd562dad126e58b27127453b63",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p027": {
+    "canonical_japanese_page": 27,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 27,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.27"
+    },
+    "content_sha256": "834ed6a250cdb4a0ecb9c49a724a78bbeda48990ac92c5cbdf11a0143855a730",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p028": {
+    "canonical_japanese_page": 28,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 28,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.28"
+    },
+    "content_sha256": "28f1fded8833ae514c0d5f11ee4edbdaae7b9c80b9ce5a9e49e726d12aa5cc7b",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p029": {
+    "canonical_japanese_page": 29,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 29,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.29"
+    },
+    "content_sha256": "e50e136ec3325284b4ebee1d1321dd73babe8dfe8531ab9f26360aedb20df3f6",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p030": {
+    "canonical_japanese_page": 30,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 30,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.30"
+    },
+    "content_sha256": "81506399d36c099e3d6e5976ff94da93d4f81dd65c9c1a07deb71c86a00b2913",
+    "origin": "supplied_localized_exercise_pdf"
+  },
+  "lec02-exercise-p031": {
+    "canonical_japanese_page": 31,
+    "reference": {
+      "kind": "translated_pdf",
+      "page": 31,
+      "file": "Exercise Materials (1).pdf",
+      "file_sha256": "1980141fc5adc922e5ee69f056c1b4ce69f2b16b974eb705a4f22f2af83841d8",
+      "label": "Lecture 2 Exercises and Homework · translated PDF p.31"
+    },
+    "content_sha256": "a3914d217967e280f24d0471f20001a45ba77b112e2aee9a496d299b3bc68edf",
+    "origin": "supplied_localized_exercise_pdf"
   }
 }
