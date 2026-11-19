@@ -27,7 +27,7 @@ def get_all_materials() -> str:
     return "\n\n".join(
         f"Document: {document['id']} / {document['title']}\n"
         f"Section: {section['section']}\n"
-        f"Page: PDF p.{page['page']} / {page['title']}\n{page['content']}"
+        f"Page: {page.get('citation') or ('PDF p.' + str(page['page']))} / {page['title']}\n{page['content']}"
         for document in documents
         for section in document["content"]
         for page in section["content"]
@@ -46,6 +46,8 @@ def load_pages(source: Path = RAG_SOURCE) -> list[dict]:
                               "lecture": int(document["id"][3:5]), "document_title": document["title"],
                               "section": section["section"], "title": page["title"],
                               "page": page["page"], "content": page["content"]})
+                if page.get("citation"):
+                    pages[-1]["citation"] = page["citation"]
     return pages
 
 
@@ -61,7 +63,7 @@ def browse_tree(node_id: str | None = None) -> dict:
         if node["kind"] == "page":
             info.update({key: value for key, value in pages[node["id"]].items() if key != "page_id"})
             if not full:
-                info["content"] = re.split(r"(?<=[。！？])|\n", info["content"].strip(), maxsplit=1)[0]
+                info["content"] = re.split(r"(?<=[。！？।॥])|(?<=[.!?؟])\s+|\n", info["content"].strip(), maxsplit=1)[0]
         return info
 
     remaining = [tree]
@@ -130,8 +132,11 @@ def search(query: str) -> list[dict]:
         raise ValueError("The search query is empty.")
     with open_index(RAG_DB) as db:
         vector = embed_text(query.strip(), "RETRIEVAL_QUERY")
-        rows = db.execute("""
+        columns = {column["name"] for column in db.execute("PRAGMA table_info(chunks)")}
+        citation = "citation," if "citation" in columns else ""
+        rows = db.execute(f"""
             SELECT page_id, document_id, lecture, document_title, section, title, page, content,
+                   {citation}
                    vec_distance_cosine(embedding, ?) AS distance
             FROM chunks ORDER BY distance, page_id LIMIT ?
         """, (sqlite_vec.serialize_float32(vector), RAG_TOP_K))
@@ -207,5 +212,5 @@ if __name__ == "__main__":
         print(f"Lecture: {result['document_title']}")
         print(f"Section: {result['section']}")
         print(f"Title: {result['title']}")
-        print(f"Page: {result['page']}")
+        print(f"Page: {result.get('citation') or result['page']}")
         print(f"\n{result['content']}")

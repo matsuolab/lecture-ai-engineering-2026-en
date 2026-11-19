@@ -38,14 +38,14 @@ def build_index(source: Path = r.RAG_SOURCE, destination: Path = r.RAG_DB,
             db.execute("""CREATE TABLE chunks (
                 page_id TEXT PRIMARY KEY, document_id TEXT, lecture INTEGER,
                 document_title TEXT, section TEXT, title TEXT,
-                page INTEGER, content TEXT, embedding BLOB)""")
+                page INTEGER, content TEXT, embedding BLOB, citation TEXT)""")
             for page in pages:
                 print(f"[embedding] {page['page_id']}", flush=True)
                 vector = embedder(embedding_text(page), "RETRIEVAL_DOCUMENT")
                 values = [page[key] for key in ["page_id", "document_id", "lecture", "document_title",
                                                 "section", "title", "page", "content"]]
-                db.execute("INSERT INTO chunks VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                           values + [sqlite_vec.serialize_float32(vector)])
+                db.execute("INSERT INTO chunks VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                           values + [sqlite_vec.serialize_float32(vector), page.get("citation")])
             db.commit()
         finally:
             db.close()
