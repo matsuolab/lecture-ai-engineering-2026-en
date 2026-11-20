@@ -1,0 +1,16 @@
+model,question,run,latency_s,in_tokens,out_tokens,thought_tokens,attempts,error
+gemini-3.5-flash-lite,general,1,3.33,6,689,0,1,
+gemini-3.5-flash-lite,general,2,3.65,6,727,0,1,
+gemini-3.5-flash-lite,general,3,3.45,6,634,0,1,
+gemini-3.5-flash-lite,course,1,1.21,18,51,0,1,
+gemini-3.5-flash-lite,course,2,1.28,18,42,0,1,
+gemini-3.5-flash-lite,course,3,1.48,18,88,0,1,
+gemini-3.5-flash-lite,short,1,1.64,7,38,0,1,
+gemini-3.5-flash-lite,short,2,1.16,7,38,0,1,
+gemini-3.5-flash-lite,short,3,1.11,7,38,0,1,
+gemini-3.8-flash,general,1,,,,,2,503
+gemini-3.8-flash,general,2,,,,,2,503
+gemini-3.8-flash,course,1,,,,,2,503
+gemini-3.8-flash,course,2,,,,,2,503
+gemini-3.8-flash,short,1,,,,,2,503
+gemini-3.8-flash,short,2,,,,,2,503
