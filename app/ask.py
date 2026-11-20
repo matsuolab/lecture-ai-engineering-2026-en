@@ -11,6 +11,7 @@ or gives a plausible general answer (which differs from the actual course).
 """
 
 import argparse
+from google.genai import types
 
 from google import genai
 from google.genai import errors
@@ -23,10 +24,16 @@ DEFAULT_QUESTION = "What are the 3 homework levels in the AIE2026 course?"
 
 def ask(question: str) -> str:
     client = genai.Client(api_key=get_api_key())
-    response = client.models.generate_content(model=MODEL, contents=question)
+    response = client.models.generate_content(model=MODEL, contents=question, config=types.GenerateContentConfig(temperature=0.5))
 
-    # TODO(Lecture 01 exercise): use response.usage_metadata to
-    #   display input and output token counts (you may ask Copilot)
+    usage = getattr(response, "usage_metadata", None)
+    if usage is not None:
+        input_tokens = usage.prompt_token_count or 0
+        output_tokens = usage.candidates_token_count or 0
+        total_tokens = usage.total_token_count or (input_tokens + output_tokens)
+        print(f"[usage] input tokens: {input_tokens} | output tokens: {output_tokens} | total tokens: {total_tokens}")
+    else:
+        print("[usage] token counts unavailable")
 
     return response.text
 
