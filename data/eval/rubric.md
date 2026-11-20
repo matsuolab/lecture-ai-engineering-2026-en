@@ -39,6 +39,8 @@ How to grade:
 - Judge only readability here. Correctness and suitability for the role are covered by Grounding, Scope, and Hint; do not include them in this criterion
 - The answer addresses the question directly and conveys what is needed concisely
 - Choose fail if there is excessive paraphrasing or repetition of the same content (for example, repeating the same explanation with "In other words"), or too much explanation unrelated to the question
+- Repeating the same explanation with "In other words" two or more times is excessive repetition and must fail Clarity, even if the answer remains readable.
+- For simple definition questions, answers with more than 80 words fail Clarity. Exclude the final lecture marker line from the word count.
 
 ## Unresolved Questions (Choose unsure for Answers Covered Here)
 
