@@ -1,0 +1,13 @@
+model,question_id,trial,success,error,elapsed_s,input_tokens,output_tokens,thought_tokens,total_tokens
+gemini-3.6-flash,Q1-short,1,True,,15.44199117700009,8,226,324,558
+gemini-3.6-flash,Q1-short,2,True,,4.419630566000251,8,235,290,533
+gemini-3.6-flash,Q2-explain,1,True,,19.113589019999836,19,1181,972,2172
+gemini-3.6-flash,Q2-explain,2,False,503: This model is currently experiencing high demand. Spikes in demand are usually t,,,,,
+gemini-3.6-flash,Q3-reasoning,1,True,,23.44214708499976,99,1133,1333,2565
+gemini-3.6-flash,Q3-reasoning,2,True,,32.92815076099987,99,1151,1250,2500
+gemini-3.5-flash-lite,Q1-short,1,True,,1.0919165280001835,8,111,,119
+gemini-3.5-flash-lite,Q1-short,2,True,,0.8044420290002563,8,57,,65
+gemini-3.5-flash-lite,Q2-explain,1,True,,3.3806653309998183,19,783,,802
+gemini-3.5-flash-lite,Q2-explain,2,True,,3.530072721000124,19,802,,821
+gemini-3.5-flash-lite,Q3-reasoning,1,True,,4.394874198000252,99,1038,,1137
+gemini-3.5-flash-lite,Q3-reasoning,2,True,,4.407312688999809,99,1100,,1199
