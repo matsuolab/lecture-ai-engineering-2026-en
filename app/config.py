@@ -4,11 +4,29 @@ Read API keys and model names from environment variables rather than hard-coding
 """
 
 import os
+from pathlib import Path
 
 # Default model. Set the AIE_MODEL environment variable to switch models.
 #   Example: export AIE_MODEL=gemini-3.5-flash
 DEFAULT_MODEL = "gemini-3.5-flash-lite"
 MODEL = os.getenv("AIE_MODEL", DEFAULT_MODEL)
+
+
+# Lecture 05: search with one page per chunk. Build the index with scripts/build_rag_index.py.
+ROOT = Path(__file__).resolve().parent.parent
+RAG_SOURCE = ROOT / "data/rag_data/lectures.json"
+RAG_TREE = ROOT / "data/rag_data/tree.json"
+RAG_GRAPH = ROOT / "data/rag_data/graph.json"
+RAG_DB = Path(os.getenv("AIE_RAG_DB", str(ROOT / "data/rag_data/index.sqlite3")))
+RAG_DOCUMENT_IDS = ("lec01-main", "lec02-main", "lec03-main")
+RAG_TOP_K = 5
+GRAPH_START_K = 3
+GRAPH_HOPS = 2
+GRAPH_MAX_RESULTS = 10
+EMBEDDING_MODEL = "gemini-embedding-001"
+EMBEDDING_DIMENSIONS = 768
+# Leave room below the 2,048-token limit for the task specification and other overhead. Stop instead of truncating on overflow.
+EMBEDDING_MAX_TOKENS = 2000
 
 
 def api_error_message(status: int, detail: str = "") -> str:

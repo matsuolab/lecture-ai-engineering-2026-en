@@ -512,7 +512,7 @@
       "aliases": ["tool-name prefix", "prefix", "name collision"],
       "lecture": 6,
       "category": "MCP",
-      "definition": "Adding a prefix such as \"server_name_tool_name\" to distinguish identically named tools when using multiple MCP servers. This course's app/agent.py automatically adds the server name from the configuration (for example, glossary_search_glossary; Pydantic AI's load_mcp_toolsets does the same). More tools mean more descriptions sent to the model, affecting tool-selection accuracy and token counts.",
+      "definition": "Adding a prefix such as \"server_name_tool_name\" to distinguish identically named tools when using multiple MCP servers. This course's app/mcp_agent.py automatically adds the server name from the configuration (for example, glossary_search_glossary; Pydantic AI's load_mcp_toolsets does the same). More tools mean more descriptions sent to the model, affecting tool-selection accuracy and token counts.",
       "related": ["mcp-config", "tool-description", "rate-limit"]
     },
     {

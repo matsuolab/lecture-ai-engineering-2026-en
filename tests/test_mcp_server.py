@@ -6,10 +6,11 @@ to check that tools are exposed through MCP, called, and return results.
 
 import json
 
+import pytest
 from pydantic_ai.messages import ToolCallPart, ToolReturnPart
 from pydantic_ai.models.test import TestModel
 
-from app.agent import MCP_CONFIG, build_mcp_agent
+from app.mcp_agent import MCP_CONFIG, ConfigError, build_mcp_agent, describe_servers, read_config
 
 GLOSSARY_TOOL = "glossary_search_glossary"  # Prefixed with the configuration file server name "glossary"
 
@@ -46,3 +47,37 @@ def test_glossary_result_comes_back_through_mcp(tmp_path):
     assert returns and returns[0].tool_name == GLOSSARY_TOOL
     assert str(returns[0].content).strip()  # A search result (or a "not found" message) was returned
     assert result.output
+
+
+def test_describe_servers_tells_command_from_url(tmp_path):
+    path = tmp_path / "mcp_servers.json"
+    path.write_text(
+        json.dumps(
+            {
+                "mcpServers": {
+                    "glossary": {"command": "uv", "args": ["run", "python", "-m", "app.mcp_server"]},
+                    "aws": {"url": "https://knowledge-mcp.global.api.aws"},
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+    assert describe_servers(path) == [
+        '[server] glossary: starting with command (uv run python -m app.mcp_server)',
+        '[server] aws: connecting to URL (https://knowledge-mcp.global.api.aws)',
+    ]
+
+
+@pytest.mark.parametrize(
+    ("text", "expected"),
+    [
+        ('{"mcpServers": {"a": {"command": "uv"} "b": {"url": "https://example.com"}}}', 'Invalid\\ JSON\\ near\\ line\\ 1'),
+        ('{"servers": {}}', 'Missing\\ "mcpServers"'),
+        ('{"mcpServers": {"a": {"args": []}}}', 'Server\\ "a"\\ needs\\ "command"\\ or\\ "url"'),
+    ],
+)
+def test_config_mistakes_are_reported_in_words(tmp_path, text, expected):
+    path = tmp_path / "mcp_servers.json"
+    path.write_text(text, encoding="utf-8")
+    with pytest.raises(ConfigError, match=expected):
+        read_config(path)

@@ -1,6 +1,6 @@
 # Lecture 05 Exercises and Homework: Answer Questions by Searching Lecture Materials
 
-**Release status:** These translated instructions and the answer template are available for review. The localized lecture materials, search index, and Lecture 05 runtime activation are pending. The exercise commands below are for use after the data and code update is released.
+The bundled search database covers 214 pages from the main materials for Lectures 01–03. It reuses the Japanese source vectors and returns translated text. Full context covers 8 documents and 398 pages, including the Lecture 01 and 02 exercises.
 
 ## Goals for This Session
 
@@ -12,27 +12,25 @@ Use Lecture 03's "model + loop + tools" structure while changing how lecture mat
 
 ## Materials and Code
 
-The four data links below point to the original Japanese reference data at a fixed revision; localized files are pending. The code links point to prepared English code on the preparation branch, pending activation in `main`.
-
 | File | Contents |
 |---|---|
-| [data/rag_data/lectures.json](https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/lectures.json) | Titles and text organized by lecture, section, and page. One page is used as one chunk |
-| [data/rag_data/tree.json](https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/tree.json) | Document, section, and page hierarchy |
-| [data/rag_data/graph.json](https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/graph.json) | Nodes such as pages and terms, and the relationships connecting them |
-| [data/rag_data/index.sqlite3](https://github.com/matsuolab/lecture-ai-engineering-2026/blob/1ce722c2816b70ef62891a6378b2478af555e3fd/data/rag_data/index.sqlite3) | Search database containing 214 pages from the main materials for Lectures 01–03 |
-| [scripts/build_rag_index.py](https://github.com/matsuolab/lecture-ai-engineering-2026-en/blob/feat/lecture05-rag-update-20261115/scripts/build_rag_index.py) | Embeds materials and creates a SQLite search database |
-| [app/retrieval.py](https://github.com/matsuolab/lecture-ai-engineering-2026-en/blob/feat/lecture05-rag-update-20261115/app/retrieval.py) | Vector search, Tree traversal, Graph traversal, and full-context processing |
-| [app/tools.py](https://github.com/matsuolab/lecture-ai-engineering-2026-en/blob/feat/lecture05-rag-update-20261115/app/tools.py) | Descriptions, inputs, and outputs of the tools available to the model |
-| [app/agent.py](https://github.com/matsuolab/lecture-ai-engineering-2026-en/blob/feat/lecture05-rag-update-20261115/app/agent.py) | Instructions, tool registration, and mode selection |
-| [app/config.py](https://github.com/matsuolab/lecture-ai-engineering-2026-en/blob/feat/lecture05-rag-update-20261115/app/config.py) | Settings such as target materials, result counts, and Graph traversal limits |
+| [data/rag_data/lectures.json](../../data/rag_data/lectures.json) | Titles and text organized by lecture, section, and page. One page is used as one chunk |
+| [data/rag_data/tree.json](../../data/rag_data/tree.json) | Document, section, and page hierarchy |
+| [data/rag_data/graph.json](../../data/rag_data/graph.json) | Nodes such as pages and terms, and the relationships connecting them |
+| [data/rag_data/index.sqlite3](../../data/rag_data/index.sqlite3) | Search database containing 214 pages from the main materials for Lectures 01–03 |
+| [scripts/build_rag_index.py](../../scripts/build_rag_index.py) | Embeds materials and creates a SQLite search database |
+| [app/retrieval.py](../../app/retrieval.py) | Vector search, Tree traversal, Graph traversal, and full-context processing |
+| [app/tools.py](../../app/tools.py) | Descriptions, inputs, and outputs of the tools available to the model |
+| [app/agent.py](../../app/agent.py) | Instructions, tool registration, and mode selection |
+| [app/config.py](../../app/config.py) | Settings such as target materials, result counts, and Graph traversal limits |
 
-**Scope of the prepared exercise**: Vector search, Tree, and Graph are designed to use 214 pages from the main materials for Lectures 01–03. Full context uses all 9 documents and 438 pages in the materials JSON. This exercise explores different retrieval paths. To compare the methods under the same conditions, first align their target materials.
+**Current scope**: Vector search, Tree, and Graph use 214 pages from the main materials for Lectures 01–03. Full context reads the 8 documents and 398 pages currently supplied in the materials JSON. This exercise explores different retrieval paths. To compare the methods under the same conditions, first align their target materials.
 
 ## Preparation
 
 ### 1. Get the Lecture 05 Update and Create the lec05 Branch
 
-After the Lecture 05 data and runtime update is published in the course repository, select **Sync fork → Update branch** in your fork, then run these commands in the Codespaces terminal:
+In your fork, select **Sync fork → Update branch** to update `main`. Then open the Codespaces terminal and run the commands below to create your exercise branch.
 
 ```bash
 git switch main
@@ -47,9 +45,9 @@ uv sync --frozen
 
 Use the same `GEMINI_API_KEY` environment variable as in Lecture 01. If you added the Codespaces secret after startup, restart Codespaces. See the [README](../../README.md) for setup instructions.
 
-### 2. Check the Search Database After the Data and Runtime Update
+### 2. Check the Bundled Search Database
 
-Before starting, confirm that the data and runtime update supplies the lecture materials and `data/rag_data/index.sqlite3`. Vector search and Graph use that database as provided. These prerequisites are pending in the current release. Query embedding and answer generation use `GEMINI_API_KEY`. Tree and full context do not need the search database, but still require the materials and updated code.
+Vector search and Graph use the bundled `data/rag_data/index.sqlite3` as provided. Once you have the Lecture 05 update, proceed to the exercises. Query embedding and answer generation use `GEMINI_API_KEY`. Tree and full context do not need the search database.
 
 ## Exercises
 
@@ -74,7 +72,7 @@ uv run python -m app.retrieval "LoRA QLoRA difference"
 
 This retrieves up to 5 pages similar to the question without using an agent. It displays the lecture name, section, page title, PDF page number, and text.
 
-- Do the results include pages supporting an answer, such as Lecture 02 / PDF p.52?
+- Do the results include pages supporting an answer, such as `lec02-main-p052`?
 - Can you distinguish pages that merely contain similar terms from pages that provide evidence for the answer?
 
 Open the materials JSON in the editor and search for a page ID, such as `lec02-main-p052`, to inspect that page's text.
@@ -88,7 +86,7 @@ uv run python -m app.agent --trace "$AIE_QUESTION"
 By default, the agent answers using its `search_materials(query)` tool. The model chooses the search terms and answers from the returned text.
 
 - Check the search terms and number of tool calls in `[tool call]`
-- Check whether each "Lecture N / PDF p.N" citation supports the explanation
+- Check whether each citation supports the explanation. A citation identifies the translated page when verified, or the Japanese source page for the supplied translation.
 - Distinguish failure to retrieve the evidence from failure to use retrieved evidence correctly
 
 For some questions, p.52 alone provides all the evidence needed. Increasing the number of cited pages is not a goal in itself.
@@ -129,7 +127,7 @@ If you have time, repeat the comparison with a different question. Keep separate
 
 | Type | Example question | Evidence to check |
 |---|---|---|
-| Multiple pages | In the Lecture 03 examples, how does compaction differ from memory across sessions? Do all daily notes go into long-term memory? | Lecture 03 / PDF p.13, 39, 40 |
+| Multiple pages | In the Lecture 03 examples, how does compaction differ from memory across sessions? Do all daily notes go into long-term memory? | `lec03-main-p013`, `lec03-main-p039`, `lec03-main-p040` |
 | Absent from the materials | What are the measured average response time and accuracy of the RAG system we just built? | The lecture materials contain no measurement logs for this system |
 
 ### STEP 6: Submit and Stop Codespaces
@@ -193,7 +191,7 @@ You may use AI tools. Describe what you ran and verified yourself. Follow the co
 | Symptom | What to check |
 |---|---|
 | `GEMINI_API_KEY` is missing | Did you register the Codespaces secret? If added after startup, did you restart Codespaces? |
-| "Search database not found" | The localized materials, index, and runtime update are pending in this release. After that update is available, get it and check that `data/rag_data/index.sqlite3` exists. If `AIE_RAG_DB` is set, check that destination |
+| "Search database not found" | Get the Lecture 05 update and check that `data/rag_data/index.sqlite3` exists. If `AIE_RAG_DB` is set, check that destination |
 | API rate limit reached | Wait as directed by the message, then retry |
 | The question is empty | If you opened another terminal, set `AIE_QUESTION` again |
 | Search results do not answer the question | Try search alone with `app.retrieval` and check the search terms, target materials, and result count |
