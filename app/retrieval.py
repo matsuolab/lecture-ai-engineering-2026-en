@@ -33,6 +33,7 @@ def get_all_materials() -> str:
         for page in section["content"]
     )
 
+
 def load_pages(source: Path = RAG_SOURCE) -> list[dict]:
     """Convert document → section → page JSON into a page list for the selected materials."""
     documents = json.loads(source.read_text(encoding="utf-8"))
@@ -126,8 +127,8 @@ def open_index(path: Path):
         db.close()
 
 
-def search(query: str) -> list[dict]:
-    """Embed the query and return up to RAG_TOP_K similar pages."""
+def _search_vector(query: str) -> list[dict]:
+    """Return only the top-K vector hits, without adjacent-page context."""
     if not isinstance(query, str) or not query.strip():
         raise ValueError("The search query is empty.")
     with open_index(RAG_DB) as db:
@@ -143,6 +144,44 @@ def search(query: str) -> list[dict]:
         return [dict(row) for row in rows]
 
 
+def expand_adjacent_pages(results: list[dict], pages: list[dict] | None = None) -> list[dict]:
+    """Append each hit's immediate neighbors in its document, preserving page text and citations."""
+    if not results:
+        return []
+
+    pages = load_pages(RAG_SOURCE) if pages is None else pages
+    positions = {page["page_id"]: index for index, page in enumerate(pages)}
+    original_ids = {result["page_id"] for result in results}
+    added_ids = set()
+    expanded = list(results)
+
+    for result in results:
+        position = positions.get(result["page_id"])
+        if position is None:
+            continue
+        document_id = result.get("document_id", pages[position]["document_id"])
+        for neighbor_position in (position - 1, position + 1):
+            if not 0 <= neighbor_position < len(pages):
+                continue
+            neighbor = pages[neighbor_position]
+            if (neighbor["document_id"] != document_id
+                    or neighbor["page_id"] in original_ids
+                    or neighbor["page_id"] in added_ids):
+                continue
+            context_page = dict(neighbor)
+            context_page["adjacent"] = True
+            context_page["adjacent_to"] = result["page_id"]
+            expanded.append(context_page)
+            added_ids.add(neighbor["page_id"])
+
+    return expanded
+
+
+def search(query: str) -> list[dict]:
+    """Embed the query and return top-K similar pages with deduplicated adjacent-page context."""
+    return expand_adjacent_pages(_search_vector(query))
+
+
 def search_graph(query: str) -> dict:
     """Start with vector search, then expand candidates through adjacent pages and shared terms."""
     pages = {page["page_id"]: page for page in load_pages(RAG_SOURCE)}
@@ -156,7 +195,8 @@ def search_graph(query: str) -> dict:
             adjacent[a].add(b)
             adjacent[b].add(a)
 
-    seeds = [hit for hit in search(query) if hit["page_id"] in pages][:min(GRAPH_START_K, GRAPH_MAX_RESULTS)]
+    # Graph expansion must begin with actual vector hits, not the normal search's added context pages.
+    seeds = [hit for hit in _search_vector(query) if hit["page_id"] in pages][:min(GRAPH_START_K, GRAPH_MAX_RESULTS)]
     seed_ids = {seed["page_id"] for seed in seeds}
     results, candidates = [], {}
     for rank, seed in enumerate(seeds):
@@ -190,7 +230,6 @@ def search_graph(query: str) -> dict:
             "max_hops": GRAPH_HOPS}
 
 
-
 def run_full_context(agent, question: str, model, instructions: str, prompt_template: str):
     """Pass all materials at once and answer without retrieval tools."""
     prompt = prompt_template.format(materials=get_all_materials(), question=question)
@@ -213,4 +252,6 @@ if __name__ == "__main__":
         print(f"Section: {result['section']}")
         print(f"Title: {result['title']}")
         print(f"Page: {result.get('citation') or result['page']}")
+        if result.get("adjacent"):
+            print(f"Context: adjacent to {result['adjacent_to']}")
         print(f"\n{result['content']}")

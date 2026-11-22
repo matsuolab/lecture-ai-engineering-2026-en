@@ -1,0 +1,5 @@
+{
+  "status": "not_run",
+  "message": "This file is not a grading result. The previous contents were not produced by executing app.judge and must not be used as experimental data.",
+  "next_step": "Complete human annotation in lectures/04/labels.jsonl, then run uv run python -m app.judge (or use --model test only for a fake-model workflow check)."
+}
