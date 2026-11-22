@@ -42,6 +42,39 @@ def test_built_index_can_be_searched(materials, monkeypatch):
     assert hits[0]["distance"] == pytest.approx(0)
 
 
+def test_adjacent_page_expansion_deduplicates_and_stays_within_document():
+    pages = [
+        {"page_id": "doc1-p001", "document_id": "doc1", "page": 1,
+         "content": "one", "citation": "Doc 1 p.1"},
+        {"page_id": "doc1-p002", "document_id": "doc1", "page": 2,
+         "content": "two", "citation": "Doc 1 p.2"},
+        {"page_id": "doc1-p003", "document_id": "doc1", "page": 3,
+         "content": "three", "citation": "Doc 1 p.3"},
+        {"page_id": "doc1-p004", "document_id": "doc1", "page": 4,
+         "content": "four", "citation": "Doc 1 p.4"},
+        {"page_id": "doc2-p001", "document_id": "doc2", "page": 1,
+         "content": "other document", "citation": "Doc 2 p.1"},
+    ]
+    hits = [
+        {"page_id": "doc1-p002", "document_id": "doc1", "distance": 0.1},
+        {"page_id": "doc1-p004", "document_id": "doc1", "distance": 0.2},
+    ]
+
+    expanded = retrieval.expand_adjacent_pages(hits, pages)
+
+    assert [page["page_id"] for page in expanded] == [
+        "doc1-p002", "doc1-p004", "doc1-p001", "doc1-p003"
+    ]
+    assert expanded[:2] == hits
+    assert expanded[2]["content"] == "one"
+    assert expanded[2]["citation"] == "Doc 1 p.1"
+    assert expanded[2]["adjacent"] is True
+    assert expanded[2]["adjacent_to"] == "doc1-p002"
+    assert expanded[3]["adjacent"] is True
+    assert expanded[3]["adjacent_to"] == "doc1-p002"
+    assert "doc2-p001" not in [page["page_id"] for page in expanded]
+
+
 def test_existing_index_survives_failed_rebuild(materials):
     source, database = materials
     build_index(source, database, embedder=lambda *_: [1, 0])

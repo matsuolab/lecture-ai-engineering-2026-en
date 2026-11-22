@@ -80,10 +80,12 @@ def get_lecture_summary(lecture: int) -> str:
         return f"Key points for Lecture {lecture:02d} are not available yet. Available sessions: {', '.join(available)}"
     return path.read_text(encoding="utf-8")
 
-def search_materials(query: str) -> str:
-    """Search the main materials for Lectures 01–03 and return relevant page text, titles, and page numbers.
 
-    Use query to specify what you want to look up.
+def search_materials(query: str) -> str:
+    """Search lecture pages and include each vector hit's immediate neighbors in the same document.
+
+    The returned JSON includes relevant page text and citation metadata. Added context pages have
+    `adjacent: true` and `adjacent_to` fields; use them only when their text supports the answer.
     """
     from google.genai.errors import APIError
     import sqlite3
